@@ -7,5 +7,4 @@ Journal for CS460
 The code for my GitHub Pages resides [here](https://github.com/AnthonyF747/AnthonyF747.github.io)
 
 Homework links are:
-
-    [HW1](https://github.com/AnthonyF747/anthonyfranco.github.io)
+[HW1](https://github.com/AnthonyF747/anthonyfranco.github.io)
