@@ -1,6 +1,8 @@
 # AnthonyF747.github.io
 Journal for CS460 
-## Welcome to GitHub Pages
+## Welcome to My GitHub Pages
+
+### This page is a journal for assignments pertaining to CS460
 
 You can use the [editor on GitHub](https://github.com/AnthonyF747/AnthonyF747.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
