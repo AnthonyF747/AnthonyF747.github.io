@@ -10,4 +10,4 @@ Homework links are:
 
 
 [HW1](https://github.com/AnthonyF747/anthonyfranco.github.io)
-[Demo](https://github.com/AnthonyF747/anthonyfranco.github.io/Demo/index.html)
+[Demo](https://github.com/AnthonyF747/anthonyfranco.github.io/demo/index.html)
