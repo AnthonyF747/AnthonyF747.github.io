@@ -2,12 +2,6 @@
 Journal for CS460 
 ## Welcome to My GitHub Pages
 
-### This page is a journal for assignments pertaining to CS460
+Hello. My name is Anthony Franco and I am in my final year in [Western Oregon University's Computer Science Program](http://www.wou.edu/academics/computer-science/). This site contains links to homework, demos, and code for Software Engineering I.
 
-The code for my GitHub Pages resides [here](https://github.com/AnthonyF747/AnthonyF747.github.io)
-
-Homework links are:
-
-
-[HW1](https://github.com/AnthonyF747/anthonyfranco.github.io)
-[Demo](https://AnthonyF747/anthonyfranco.github.io/index.html)
+Enter [here](https://AnthonyF747.github.io/index.md)
