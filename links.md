@@ -9,4 +9,4 @@ This page will provide the links to journals, homework, demos, and code.
 ## Homework and Demos
 
 [hw1](https://github.com/AnthonyF747/anthonyfranco.github.io)
-[demo](https://github.com/AnthonyF747.github.com/anthonyfranco.github.io/index.html)
+[demo](https://anthonyf747.github.com/anthonyfranco.github.io/index.html)
