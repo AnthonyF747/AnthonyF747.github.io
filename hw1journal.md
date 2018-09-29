@@ -60,8 +60,16 @@ My multicolumn code is composed of three cards that contain a picture and some t
 Single column item is a jumbotron: ![alt text](img/singlecol.png)
 I'm sure I needed to add a `col-12` designation for this to count as a single column.
 
+I made a table to display the trait type and result pertaining to rat terriers.
 Table code: ![alt text](img/table.png)
 
+My pages didn't include too much `.css` code. I used it for text-alignment mostly.
 CSS code: ![alt text](img/css.png)
 
+Since the index page has a black-and-white picture, I thought a dark navigation bar would work out best, but on the other two pages, I left a lighter color because the dark color didn't mesh well with the colors currently on those pages. I will adjust colors later due to time constraints on the project.
 Navigation bar code: ![alt text](img/navbar.png)
+
+I still need to add a footer and contact information along with some social media links, but those items were not required on the rubric.
+
+Overall, the project was fun to complete, it was just the deadline that made it stressful.
+
