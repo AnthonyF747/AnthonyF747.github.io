@@ -15,10 +15,28 @@ Git Pages was the next hurdle I had to get over and yet again, problems held me 
 
 Setting up Git was pretty easy since it was already on my machine. Apparently, it comes with the Windows Linux sub-system, so the only thing to do was to set up your user.name and user.email. You have to set the `congif --global` command to set up the user.name and user.email. Most of the documentation on how to set your configuration is available [online](https://git-scm.com/docs). This was probably the easiest part of this assignment.
 
+Through Git, you can get a log of all the commits you made. I made probably more commits then needed but practice makes perfect, right? Here is a pic of part of the log showing where the **HEAD** is currently: ![alt text](img/log.png)
+
 ## Bootstrap
 
 I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learn how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs](https://developer.mozilla.org/en-US/docs/Web/HTML) and [css](https://developer.mozilla.org/en-US/docs/Web/CSS).
 
 ## Code
 
-Coding is where I started. I really didn't know what kind of website to build. The subject and content took some time, but I figured since I had pictures of my dogs and had some stories to share about them, a website devoted to them would work. The first part of `.html` contains the declaration that the page is `.html`. The browser reads this and works with that code and finds the .css sheet located in the `<meta>` tag within the `<head></head>` tags. 
+Coding is where I started. I really didn't know what kind of website to build. The subject and content took some time, but I figured since I had pictures of my dogs and had some stories to share about them, a website devoted to them would work. The first part of an `.html` file is a declaration statement that tells the browser the type of file being presented. This statement is `<!DOCTYPE html>`. The next pair of tags will be `<html></html>` then `<head></head>`, and `<body></body>`. These are the main parts of `.html` and they look similar to:
+
+``` html
+<!DOCTYPE html>
+<html>
+   
+    <head>
+    
+    </head>
+    
+    <body>
+    
+    </body>
+    
+</html>
+```
+
