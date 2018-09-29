@@ -60,4 +60,4 @@ My multicolumn code is composed of three cards that contain a picture and some t
 Single column item is a jumbotron: ![alt text](img/singlecol.png)
 I'm sure I needed to add a `col-12` designation for this to count as a single column.
 
-Table code: ![alt text](table.png)
+Table code: ![alt text](img/table.png)
