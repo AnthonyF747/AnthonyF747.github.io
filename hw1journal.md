@@ -19,6 +19,8 @@ Through Git, you can get a log of all the commits you made. I made probably more
 
 Here is a pic of part of the log showing where the **HEAD** is currently:![alt text](img/log.png)
 
+This is a pic of cloning the master: [alt text](img/clone.png)
+
 ## Bootstrap
 
 I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learn how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs](https://developer.mozilla.org/en-US/docs/Web/HTML) and [css](https://developer.mozilla.org/en-US/docs/Web/CSS).
