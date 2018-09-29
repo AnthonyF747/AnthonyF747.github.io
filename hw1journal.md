@@ -19,7 +19,7 @@ Through Git, you can get a log of all the commits you made. I made probably more
 
 Here is a pic of part of the log showing where the **HEAD** is currently:![alt text](img/log.png)
 
-This is a pic of cloning the master: [alt text](img/clone.png)
+This is a pic of cloning the master: ![alt text](img/clone.png)
 
 ## Bootstrap
 
