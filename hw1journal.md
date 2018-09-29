@@ -42,3 +42,13 @@ Coding is where I started. I really didn't know what kind of website to build. T
 </html>
 ```
 
+After setting up Git and GitHub, I was able to start saving my code to the repository in the GitHub cloud (I guess it resides there?). With just a few simple commands, you can make your local file which holds your code to a GitHub repository, add changes to it, commit them, and push them to the remote copy in the cloud. The commands are:
+
+```
+git init
+git add .
+git commit -m "message"
+git push origin master
+```
+
+Use `git status` to see if you have any files waiting to be staged, committed, or the overall status.  
