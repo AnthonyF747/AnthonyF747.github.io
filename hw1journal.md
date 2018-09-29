@@ -1,6 +1,6 @@
 # Homework 1
 
-Not to say this homework assignment was a slight challenge, but [GitHub](https://github.com/) really tried my patience so let's start with Git. 
+Not to say this homework assignment was a slight challenge, but [GitHub](https://github.com/) really tried my patience so let's start with GitHub. 
 There might not be pictures because I was running out of time.
 
 ## GitHub
