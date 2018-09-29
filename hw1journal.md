@@ -15,7 +15,9 @@ Git Pages was the next hurdle I had to get over and yet again, problems held me 
 
 Setting up Git was pretty easy since it was already on my machine. Apparently, it comes with the Windows Linux sub-system, so the only thing to do was to set up your user.name and user.email. You have to set the `congif --global` command to set up the user.name and user.email. Most of the documentation on how to set your configuration is available [online](https://git-scm.com/docs). This was probably the easiest part of this assignment.
 
-Through Git, you can get a log of all the commits you made. I made probably more commits then needed but practice makes perfect, right? Here is a pic of part of the log showing where the **HEAD** is currently: ![alt text](img/log.png)
+Through Git, you can get a log of all the commits you made. I made probably more commits then needed but practice makes perfect, right? Here is a pic of part of the log showing where the **HEAD** is currently:
+
+![alt text](img/log.png)
 
 ## Bootstrap
 
