@@ -17,4 +17,8 @@ Setting up Git was pretty easy since it was already on my machine. Apparently, i
 
 ## Bootstrap
 
-I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learn how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs]()
+I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learn how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs](https://developer.mozilla.org/en-US/docs/Web/HTML) and [css](https://developer.mozilla.org/en-US/docs/Web/CSS).
+
+## Code
+
+Coding is where I started. I really didn't know what kind of website to build. The subject and content took some time, but I figured since I had pictures of my dogs and had some stories to share about them, a website devoted to them would work. The first part of `.html` contains the declaration that the page is `.html`. The browser reads this and works with that code and finds the .css sheet located in the `<meta>` tag within the `<head></head>` tags. 
