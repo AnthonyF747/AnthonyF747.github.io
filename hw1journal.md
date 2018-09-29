@@ -53,4 +53,8 @@ git commit -m "message"
 git push origin master
 ```
 
-Use `git status` to see if you have any files waiting to be staged, committed, or the overall status.  
+Use `git status` to see if you have any files waiting to be staged, committed, or the overall status.
+
+My multicolumn code is composed of three cards that contain a picture and some text below the picture. Here is the code for the columns: ![alt text](img/multicol.png)
+
+Single column item is a jumbotron: ![alt text](img/singlecol.png)
