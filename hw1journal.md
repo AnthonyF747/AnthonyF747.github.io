@@ -58,3 +58,6 @@ Use `git status` to see if you have any files waiting to be staged, committed, o
 My multicolumn code is composed of three cards that contain a picture and some text below the picture. Here is the code for the columns: ![alt text](img/multicol.png)
 
 Single column item is a jumbotron: ![alt text](img/singlecol.png)
+I'm sure I needed to add a `col-12` designation for this to count as a single column.
+
+Table code: ![alt text](table.png)
