@@ -23,7 +23,7 @@ This is a pic of cloning the master from the command line: ![alt text](img/clone
 
 ## Bootstrap
 
-I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learn how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs](https://developer.mozilla.org/en-US/docs/Web/HTML) and [css](https://developer.mozilla.org/en-US/docs/Web/CSS).
+I have some `.html` and `.css` experience, but I didn't have Bootstrap experience. I used the docs on their [website](https://getbootstrap.com/docs/4.1/getting-started/introduction/) and a video to learn how to work with this software. Bootstrap totally makes building a website so much easier than when I learned how to use `.html`. The software makes it easy to make rows and columns along with the page being dynamic and adjusts to the screen (browser) size. It definitely made coding in `.html` fun. If you need help with `.html` or `.css`, you can look through their docs at: [html docs](https://developer.mozilla.org/en-US/docs/Web/HTML) and [css](https://developer.mozilla.org/en-US/docs/Web/CSS).
 
 ## Code
 
@@ -44,7 +44,7 @@ Coding is where I started. I really didn't know what kind of website to build. T
 </html>
 ```
 
-After setting up Git and GitHub, I was able to start saving my code to the repository in the GitHub cloud (I guess it resides there?). With just a few simple commands, you can make your local file which holds your code to a GitHub repository, add changes to it, commit them, and push them to the remote copy in the cloud. The commands are:
+After setting up Git and GitHub, I was able to start saving my code to the repository in the GitHub cloud (I guess it resides there?). With just a few simple commands, you can make changes to your local file, add changes through Git, commit them, and push them to the remote copy in the cloud. The commands are:
 
 ```
 git init
