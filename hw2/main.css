@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    width: 100%;  
+    background-color: cornsilk;
+}
+
+.navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {
+    background-color: tan !important;
+    text-align: right;
+}
+
+
+.fab.fa-the-red-yeti {
+    color: red;
+    padding: 5px;
+}
+
+
+.jumbotron {
+    background-color: orange !important;
+}
