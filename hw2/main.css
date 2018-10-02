@@ -6,7 +6,6 @@ html, body {
 
 .navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {
     background-color: tan !important;
-    text-align: right;
 }
 
 
@@ -18,4 +17,8 @@ html, body {
 
 .jumbotron {
     background-color: orange !important;
+}
+
+.col-4.col-md-4 {
+    background-color: #F2F5A9;
 }
