@@ -15,5 +15,5 @@ This page will provide the links to journals, homework, demos, and code.
 [demo](https://anthonyf747.github.io/anthonyfranco.github.io/index.html)
 
 ### Homework 2
-[code](https://github.com/AnthonyF747/AnthonyF747.github.io/hw2)
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io)
 
