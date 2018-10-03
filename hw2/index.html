@@ -27,7 +27,7 @@
    <!--Navigation bar-->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
        <div class="container-fluid">
-           <div class="navbar-brand" href="#"><i class="fab fa-the-red-yeti fa-3x"></i></div>
+           <a class="navbar-brand" mdbTooltip="Tooltip on bottom" placement="mdbRippleRadius"><i class="fab fa-the-red-yeti fa-3x" alt="Courtesy of: Font Awesome and The Red Yeti"></i></a>
                <ul class="navbar-nav ml-auto">
                     <li class="active"><a class="nav-link" href="index.html">Home</a></li>                   
                     <li><a class="nav-link" href="about.html">About</a></li>                  
@@ -69,6 +69,11 @@
             <!--Div for Image-->
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     
 </body>
 </html>
