@@ -35,14 +35,14 @@ html, body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .input-control.input-sm {
-        width: 100%;
+        width: 300%;
 }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
     .input-control.input-sm {
-        width: 100%;
+        width: 300%;
 }
 }
 
