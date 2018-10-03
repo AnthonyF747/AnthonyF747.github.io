@@ -19,14 +19,17 @@ html, body {
     background-color: orange !important;
 }
 
-.input-group {
+/*.input-group {
     background-color: #F2F5A9;
-}
+}*/
 
 .sub-but {
     padding-top: 10px;
 }
 
+.sub-but-temp {
+    padding-top: 10px;
+}
 
 
 // Extra small devices (portrait phones, less than 576px)
@@ -34,16 +37,17 @@ html, body {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .input-control.input-sm {
-        width: 300%;
-}
+    .card {
+        width: 300px;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-    .input-control.input-sm {
-        width: 300%;
-}
+    .card {
+        width: 300px;
+    }
+    
 }
 
 // Large devices (desktops, 992px and up)
