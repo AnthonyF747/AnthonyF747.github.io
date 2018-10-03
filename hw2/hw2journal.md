@@ -7,5 +7,6 @@ This week we are to build a webpage (or use the one from homework 1) that uses J
 ## Webpage
 
 The webpage I am creating will contain text-boxes, radio buttons, and a card that will contain a photo area and button to move through pictures of your favorite season. There is also a temperature converter so the user can enter a number to convert and select the radio button to return the selected temperature reading type.
+The page will look something like: 
 
-The page will look something like: ![alt-text](img/sketchofpage-crop.jpg) 
+![alt-text](img/sketchofpage-crop.jpg) 
