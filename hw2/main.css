@@ -31,22 +31,35 @@ html, body {
     padding-top: 10px;
 }
 
+.card {
+    width: 100%;
+}
+
+.card-img-top {
+    width: 100%;
+}
+
+#temp-form {
+    padding: 10px 10px 10px 10px;
+}
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .card {
-        width: 300px;
-    }
+    
+    .card-img-top {
+    width: 100%;
+}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-    .card {
-        width: 300px;
-    }
+    
+    .card-img-top {
+    width: 100%;
+}
     
 }
 
