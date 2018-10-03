@@ -49,17 +49,10 @@ html, body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     
-    .card-img-top {
-    width: 100%;
-}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
-    
-    .card-img-top {
-    width: 100%;
-}
     
 }
 
