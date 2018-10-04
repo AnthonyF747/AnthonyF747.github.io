@@ -23,11 +23,17 @@ The items which will need Javascript code in order to capture input, choices, an
      
   * Form2 is part of the temperature converter which includes radio buttons, an input box, and a submit button
     be converted.
+    
      / Radio buttons are to select fahrenheit or celsius
+     
      / The input box accepts user input and returns the converted temperature according to the radio button selected
+     
      / The select button will be used to send input and selection to a function
+     
   * The card will display pictures that match the season selected by the user
+  
      / A clickon event will occur when the picture is clicked-on which advances through selected photos matching selection
+     
      / Text, which displays the credits to the source and photographer of the photo, will be displayed in the bottom section of the card
         
 I wrote out a "script list" before beginning the code:
