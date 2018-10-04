@@ -15,9 +15,12 @@ The page will look something like:
 
 The items which will need Javascript code in order to capture input, choices, and other actions from the user include:
   * The navbar menu item will have a hover event which will change the color of "Menu" when the cursor is on the item
-  * Form1 will have a name and season input and a button to move input to a function 
+  * Form1 will have a name and season input and a button to move input to a function
+  
      / The name will be returned to the screen inside a welcome message
+     
      / The season input will be used to select the pictures that match the input
+     
   * Form2 is part of the temperature converter which includes radio buttons, an input box, and a submit button
     be converted.
      / Radio buttons are to select fahrenheit or celsius
