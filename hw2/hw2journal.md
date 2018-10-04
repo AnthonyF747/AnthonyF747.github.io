@@ -39,3 +39,7 @@ The items which will need Javascript code in order to capture input, choices, an
 I wrote out a "script list" before beginning the code:
 
 ![alt-text](img/scriptItems.jpg)
+
+## Coding
+
+
