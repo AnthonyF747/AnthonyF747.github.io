@@ -2,6 +2,7 @@ html, body {
     height: 100%;
     width: 100%;  
     background-color: #F2F5A9;
+    color: #483D8B;
 }
 
 .navbar.navbar-expand-md.navbar-light.bg-light.sticky-top {
@@ -43,13 +44,19 @@ html, body {
     padding: 10px 10px 10px 10px;
 }
 
+.footer {
+    background-color: tan;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     
-}
+background-color: 
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 

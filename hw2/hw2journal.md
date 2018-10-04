@@ -26,7 +26,7 @@ The items which will need Javascript code in order to capture input, choices, an
     
      / Radio buttons are to select fahrenheit or celsius
      
-     / The input box accepts user input and returns the converted temperature according to the radio button selected
+     / The input box accepts user input and returns the converted temperature to the webpage according to the radio button selected
      
      / The select button will be used to send input and selection to a function
      
