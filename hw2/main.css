@@ -40,7 +40,7 @@ html, body {
     width: 100%;
 }
 
-#temp-form {
+#form2 {
     padding: 10px 10px 10px 10px;
 }
 
@@ -56,7 +56,7 @@ html, body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     
-background-color: 
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) { 
