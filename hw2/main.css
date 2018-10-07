@@ -55,6 +55,21 @@ html, body {
     color: firebrick;
 }
 
+#imgpane {
+    padding-right: 50px;
+}
+
+#imggallery {
+    width: 250px;
+    float: left;
+    padding-top: 20px;
+}
+
+#imggallery img {
+    width: 100px;
+    margin: 10px;
+}
+
 .footer {
     background-color: tan;
     margin-bottom: 0px;
