@@ -42,4 +42,10 @@ I wrote out a "script list" before beginning the code:
 
 ## Coding
 
+Coding was a nightmare this time around. Not the webpage code, but learning how to get values in jQuery and learning how to apply those values was tough. I still need to figure out how to set my pictures up to go through the selection after entering the season. That input should be a drop-down, but I had to leave it for now and move on before getting completely shutout on turning in the link. I've watched numerous youTube videos on different subjects because the text wasn't getting through my thick skull. So, here is the run-down on my code.
 
+### HTML
+
+We were told to put the jQuery stuff at the bottom of the page that caused the first of many issues that I needed to research. I kept getting errors when loading the page, and they were errors that I never have seen before. It was in the jQuery library and when researching the error, I found out that jQuery had to be loaded before Bootstrap. So, I moved everything to the bottom of the page which left the head section looking pretty skimpy:
+
+![alt-text](img/head.jpg)
