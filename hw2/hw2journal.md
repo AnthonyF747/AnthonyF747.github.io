@@ -62,4 +62,18 @@ The next section is the temperature converter that allows the user to enter a nu
 
 ![alt-text](img/convert.JPG)
 
+### jQuery
+
+Before I attemped to write any jQuery code, I went through a couple online tutorials and thought, "this will be easy enough". Boy, was I wrong. I absolutely understand the things that you can do with jQuery, but for some reason, I just couldn't get the code part of it to work from a separate file. I had `<script></script>` tags on the top of the page, like I thought I was supposed to but the errors told me I was wrong. Then, I tried `$(document).ready(function{ });` with some functions inside of it, but it didn't like that either. I really was beside myself why this wasn't working. I know I had the correct link on the `index.html` page, but why? WHY WON'T IT WORK!!!!! At one point to prove to myself that the code I wrote actually worked, I added it to the `index.html` page and sure enough it worked. Yet again, more research only to find that I really was close to getting it to work. FINALLY!!!!! I got the link to work. The `$(document).ready(function{ });` at the top of the page was correct, and I put the functions I wrote outside of the function then added the functions to the `.ready(function{ });`.
+
+After getting the pages to link, the first form which takes the user's name and their favorite season input to return this information within a welcome statement. I wanted the textboxes to reset after the button was clicked to clear the data from them. Since I was having trouble with jQuery, I wrote the code in Javascript to make sure I was getting the values from the input after the button was clicked. The values were correct, but the code was not jQuery. Back to researching. Once I got some code together that actually worked, I was able to find some fixes for the things that were irritating me. The button object will continue to print out data which was pretty annoying. I found `.one();` to solve that problem. This is the `btn1()` code:
+
+![alt-text](img/btn1.JPG)
+
+Although not perfect, it will return the inputs in the welcome script. I still want to make the `#season` input a dropdown and link the season to a list of images pertaining to the selected season. The images will be advanced by clicking on the image. I'm hoping to finish this part of the project.
+
+The conversion section was a little easier to code, but I still needed to figure out how to get the value of a radio button and compare it to a `string` for the `if` statement. The value being returned was `undefined` and not what I wanted or needed to keep the code running. Looking through example after example I found `$('input:radio[name=temperature]:checked').val();` which returned exactly what I wanted. From there, I set up a check to make sure that the data entered was numeric, and if it isn't, it will return an `alert();` to inform the user that the data entered was not a number. Code:
+
+![alt-text](img/conbtn2.JPG)
+
 
