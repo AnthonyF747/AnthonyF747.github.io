@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    btn1();
-    convert();
+    btn1();                 // Stage all three functions when document is finished loading
+    convert(); 
     mvimg();
 });
 
