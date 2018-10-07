@@ -76,6 +76,10 @@ html, body {
     padding-bottom: 0px;
 }
 
+div.cherry {
+    background: url('imgSpring/fangGuo.jpg') no-repeat left top);
+}
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
 

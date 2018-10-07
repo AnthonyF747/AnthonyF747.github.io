@@ -50,8 +50,12 @@ function convert() {
 }
 
 function mvimg() {
-    var i = 0;
-    $('#cdimg').on('click', function() {
-        $(this).append("<img src='imgSpring/" + (i++) + ".jpg' width='100%' height='100%' />");
+    $("img").click(function(e) {
+        var preimg = $(this).attr("id");
+        var nextimg = $('#cdimg').attr('class');
+
+        $('#cdimg').fadeOut(function() {
+            $('#cdimg').removeClass(preimg).addClass(nextimg).fadeIn('slow');
+        });
     });
 }
