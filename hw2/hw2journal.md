@@ -48,4 +48,4 @@ Coding was a nightmare this time around. Not the webpage code, but learning how 
 
 We were told to put the jQuery stuff at the bottom of the page that caused the first of many issues that I needed to research. I kept getting errors when loading the page, and they were errors that I never have seen before. It was in the jQuery library and when researching the error, I found out that jQuery had to be loaded before Bootstrap. So, I moved everything to the bottom of the page which left the head section looking pretty skimpy:
 
-![alt-text](img/head.jpg)
+![alt-text](img/head.JPG)
