@@ -58,6 +58,8 @@ I liked the way the navbar and jumbotron look together, so I used both these ele
 
 ![alt-text](img/card.JPG)
 
+![alt-text](img/web1.JPG)
+
 The next section is the temperature converter that allows the user to enter a number and receive the temperature in the opposite reading. The default selection of the radio buttons is fahrenheit, but the user is able to select celsius and get the fahrenheit equivilent of the temperature they would like to convert. The code for this section is:
 
 ![alt-text](img/convert.JPG)
@@ -70,12 +72,22 @@ After getting the pages to link, the first form which takes the user's name and 
 
 ![alt-text](img/btn1.JPG)
 
+![alt-text](img/web2.JPG)
+
 Although not perfect, it will return the inputs in the welcome script. I still want to make the `#season` input a dropdown and link the season to a list of images pertaining to the selected season. The images will be advanced by clicking on the image. I'm hoping to finish this part of the project.
 
 The conversion section was a little easier to code, but I still needed to figure out how to get the value of a radio button and compare it to a `string` for the `if` statement. The value being returned was `undefined` and not what I wanted or needed to keep the code running. Looking through example after example I found `$('input:radio[name=temperature]:checked').val();` which returned exactly what I wanted. From there, I set up a check to make sure that the data entered was numeric, and if it isn't, it will return an `alert();` to inform the user that the data entered was not a number. Code:
 
 ![alt-text](img/conbtn2.JPG)
 
+![alt-text](img/web3.JPG)
+
 Once the numeric checked is passed, it will drop down to be evaluated again. This time the radio button is checked to select the correct conversion formula to use. Then, the result will be displayed on screen below the button and the input box will be cleared. 
 
 ![alt-text](img/conbtn2.2.JPG)
+
+![alt-text](img/web4.JPG)
+
+![alt-text](img/web5.JPG)
+
+
