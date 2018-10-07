@@ -36,7 +36,6 @@ function convert() {
         else {
             if(radval == "fahrenheit") {
                 ans = (temp1 - 32) * .5556;
-                ans.toPrecision(2);
                 $('#frm2div').append(ans.toPrecision(2) + " C");
             }
             else if(radval == "celsius") {

@@ -76,4 +76,6 @@ The conversion section was a little easier to code, but I still needed to figure
 
 ![alt-text](img/conbtn2.JPG)
 
+Once the numeric checked is passed, it will drop down to be evaluated again. This time the radio button is checked to select the correct conversion formula to use. Then, the result will be displayed on screen below the button and the input box will be cleared. 
 
+![alt-text](img/conbtn2.2.JPG)
