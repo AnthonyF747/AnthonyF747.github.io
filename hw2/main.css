@@ -1,7 +1,7 @@
 html, body {
     height: 100%;
     width: 100%;  
-    background-color: #F2F5A9;
+    background-color: #F2F5A9 !important;
     color: #483D8B;
 }
 
@@ -20,16 +20,22 @@ html, body {
     background-color: orange !important;
 }
 
-/*.input-group {
-    background-color: #F2F5A9;
-}*/
-
 .sub-but {
     padding-top: 10px;
 }
 
 .sub-but-temp {
     padding-top: 10px;
+}
+
+#fid {
+    background-color: #F2F5A9;
+}
+
+#response {
+    font-weight: bold;
+    color: red;
+    padding: 7px 7px 7px 7px;
 }
 
 .card {
@@ -42,6 +48,11 @@ html, body {
 
 #form2 {
     padding: 10px 10px 10px 10px;
+}
+
+#frm2div {
+    font-weight: bold;
+    color: firebrick;
 }
 
 .footer {

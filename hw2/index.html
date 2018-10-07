@@ -47,7 +47,7 @@
                 <form id="form1">
                     <label><h2>Get your special season photos</h2></label><br>
                       <div class="col-xs-2">
-                           Enter Your First Name:<br><input class="input-control input-sm" type="text" placeholder="Enter Name" onclick="btn1func()" maxlength="14" id="name" title="Enter Name" autofocus required><br>
+                           Enter Your First Name:<br><input class="input-control input-sm" type="text" placeholder="Enter Name" maxlength="14" id="name" title="Enter Name" autofocus required><br>
                       </div>
                       <div class="col-xs-2">
                            Enter your favorite season:<br><input class="input-control input-sm" type="text" placeholder="Enter Season" maxlength="6" id="season" title="Enter Season" required><br>
@@ -56,6 +56,7 @@
                           <input type="button" value="Submit" title="Submit" id="button1">
                       </div>
                 </form>
+                   <div id="response"></div>
             </div>
            </div>
             
@@ -74,7 +75,7 @@
     <!--Temperature Converter-->
     <div class="container-fluid">
         <div class="row" padding>
-           <div class="col-md-4">
+           <div class="col-md-4" id="contemp">
             <form id="form2">
                 <label><h2>Temperature Converter</h2></label>
                      <p> Depending on where you live in the world, temperatures are measured by Fahrenheit or Celsius</p>
@@ -82,16 +83,17 @@
                      
                      <!--RADIO BUTTONS-->
                      <h3>Select the temperature type to convert:</h3>
-                     <input type="radio" name="temperature" value="Fahrenheit" checked> Fahrenheit<br>
-                     <input type="radio" name="temperature" value="Celsius"> Celsius<br>
+                     <input type="radio" name="temperature" value="fahrenheit" checked> Fahrenheit<br>
+                     <input type="radio" name="temperature" value="celsius"> Celsius<br>
                  <h3>Enter the temperature to convert:</h3>
                  
                  <!--INPUT-->
                  <div class="col-xs-2">
-                        <input class="input-control input-sm" type="text" placeholder="Enter Temperature" maxlength="14" id="name" title="Enter Temperature" required><br>
+                        <input class="input-control input-sm" type="text" placeholder="Enter Temperature" maxlength="14" id="temp" title="Enter Temperature" required><br>
                    </div>
                     <div class="sub-but-temp">
                        <input type="button" value="Submit" title="Submit" id="button2">
+                        <div id="frm2div"><h3></h3></div>
                    </div>
             </form>
             </div>
