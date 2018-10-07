@@ -92,4 +92,10 @@ Once the numeric checked is passed, it will drop down to be evaluated again. Thi
 
 ![alt-text](img/web5.JPG)
 
+A last minute effort to get the images to change through the card has failed, so since time has run out and we will move on to the next project, I made a simple thumbnail gallery at the bottom of the page which displays the image in the same window.
+
+![alt-text](img/thumb.JPG)
+
+![alt-text](img/samewindow.JPG)
+
 

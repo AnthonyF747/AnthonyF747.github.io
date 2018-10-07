@@ -52,10 +52,10 @@ function convert() {
 function mvimg() {
     $("img").click(function(e) {
         var preimg = $(this).attr("id");
-        var nextimg = $('#cdimg').attr('class');
+        var nextimg = $('#galimg').attr('class');
 
-        $('#cdimg').fadeOut(function() {
-            $('#cdimg').removeClass(preimg).addClass(nextimg).fadeIn('slow');
+        $('#galimg').fadeOut(function() {
+            $('#galimg').removeClass(preimg).addClass(nextimg).fadeIn('slow');
         });
     });
 }

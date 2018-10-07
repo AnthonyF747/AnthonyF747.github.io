@@ -76,7 +76,20 @@ html, body {
     padding-bottom: 0px;
 }
 
-div.cherry {
+#galpne {
+    float:left;
+    width: 320px;
+    height: 400px;
+    margin: 10px;
+    padding-top: 15px;
+    background-size: contain;
+}
+
+.hummingbird {
+    background: url('imgSpring/hummingbird.jpg') no-repeat left top);
+}
+
+.cherry {
     background: url('imgSpring/fangGuo.jpg') no-repeat left top);
 }
 
