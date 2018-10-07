@@ -49,3 +49,17 @@ Coding was a nightmare this time around. Not the webpage code, but learning how 
 We were told to put the jQuery stuff at the bottom of the page that caused the first of many issues that I needed to research. I kept getting errors when loading the page, and they were errors that I never have seen before. It was in the jQuery library and when researching the error, I found out that jQuery had to be loaded before Bootstrap. So, I moved everything to the bottom of the page which left the head section looking pretty skimpy:
 
 ![alt-text](img/head.JPG)
+
+This is the bottom of the page:
+
+![alt-text](img/bottom.JPG)
+
+I liked the way the navbar and jumbotron look together, so I used both these elements again. For the form, I used a col-md-4 div and on the same row, I used a col-md-8 div to hold the card which contains a picture on the top half and text on the bottom half. I'm still working on writing the code so the user can go through pictures and text of their season of choice. Here is some of that code:
+
+![alt-text](img/card.JPG)
+
+The next section is the temperature converter that allows the user to enter a number and receive the temperature in the opposite reading. The default selection of the radio buttons is fahrenheit, but the user is able to select celsius and get the fahrenheit equivilent of the temperature they would like to convert. The code for this section is:
+
+![alt-text](img/convert.JPG)
+
+
