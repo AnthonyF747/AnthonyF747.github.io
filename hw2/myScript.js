@@ -1,6 +1,7 @@
 $(document).ready(function() {
     btn1();
     convert();
+    mvimg();
 });
 
 function btn1() {
@@ -44,5 +45,12 @@ function convert() {
             }
         }
         $('#temp').val('');
+    });
+}
+
+function mvimg() {
+    var i = 0;
+    $('#cdimg').on('click', function(i) {
+        $(this).append("<img src='imgSpring/" + (i++) + ".jpg' width='100%' height='100%' />");
     });
 }
