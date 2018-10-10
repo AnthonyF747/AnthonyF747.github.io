@@ -8,12 +8,12 @@ namespace BinaryConverter
 
     /// A single linked node class
 {
-    public class Node<T>
+    public class LinkedListNode<T>
     { 
         public T data;                      // data is within the node
-        public Node<T> next;                // next is the next node (reference to)
+        public LinkedListNode<T> next;                // next is the next node (reference to)
     
-        public Node(T data, Node<T> next)
+        public LinkedListNode(T data, LinkedListNode<T> next)
         {
             this.data = data;              // current data 
             this.next = next;              // current reference to next node
