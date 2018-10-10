@@ -6,17 +6,16 @@ using System.Threading.Tasks;
 
 namespace BinaryConverter
 
+    /// <summary>
     /// A single linked node class
+    /// 
+    /// </summary>>
 {
     public class LinkedListNode<T>
     { 
-        public T data;                      // data is within the node
-        public LinkedListNode<T> next;                // next is the next node (reference to)
-    
-        public LinkedListNode(T data, LinkedListNode<T> next)
-        {
-            this.data = data;              // current data 
-            this.next = next;              // current reference to next node
-        }
+        public T Data { get; set; }                             // data is within the node
+        public LinkedListNode<T> Next { get; set; };            // next is the next node (reference to)
+
+        public LinkedListNode(T Data) => this.Data = Data;      // current data 
     }
 }

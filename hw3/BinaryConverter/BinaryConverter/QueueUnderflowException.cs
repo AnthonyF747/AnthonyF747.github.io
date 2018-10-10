@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BinaryConverter
 {
+    /// <summary>
+    /// Exception class for pop()
+    /// </summary>
     [Serializable]
     class QueueUnderflowException : System.Exception
     {
