@@ -25,19 +25,11 @@ namespace BinaryConverter
         /// <summary>
         /// Remove and return the front element
         /// 
-<<<<<<< HEAD
         /// </summary>>
         /// <throws><thrown>if queue is empty</thrown></throws>
         /// <returns></returns>
         T Pop();
 
-=======
-        /// </summary>> 
-        /// <throws><thrown>if queue is empty</thrown></throws>
-        /// <returns></returns>
-        T Pop();
-        
->>>>>>> 596c671fad1782e29581716875bd630eacd8d3ce
         /// <summary>
         /// Test if the queue is empty
         /// 

@@ -13,20 +13,13 @@ namespace BinaryConverter
 {
     public class LinkedListNode<T>
     { 
-<<<<<<< HEAD
         public T Data { get; set; }                             // data is within the node
-        public LinkedListNode<T> Next { get; set; };            // next is the next node (reference to)
-
-        public LinkedListNode(T Data) => this.Data = Data;      // current data 
-=======
-        public T Data { get; set; }                         // data is within the node
-        public LinkedListNode<T> Next { get; set; }         // next is the next node (reference to)
+        public LinkedListNode<T> Next { get; set; }           // next is the next node (reference to)
 
         /// <summary>
         /// Constructor for a node
         /// </summary>
         /// <param name="Data"></param>
         public LinkedListNode(T Data) => this.Data = Data;  // current data 
->>>>>>> 596c671fad1782e29581716875bd630eacd8d3ce
     }
 }
