@@ -80,8 +80,8 @@ namespace BinaryConverter
         /// Use to push an element into the queue
         /// </summary>
         /// <param name="element"></param>
-        /// <exception name="NullReferenceException">Null element</exception>>
-        /// <returns name="element">Returns the element</returns>
+        /// <exception name="NullReferenceException">Null element</exception>
+        /// <returns name="element">Returns the element</returns>>
         public T Push(T element)
         {
             if(element == null)                             // Check if there is a null element
