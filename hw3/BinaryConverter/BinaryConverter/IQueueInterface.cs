@@ -29,7 +29,11 @@ namespace BinaryConverter
         /// <throws><thrown>if queue is empty</thrown></throws>
         /// <returns></returns>
         T Pop();
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> 95a141800cae33eaf90fef4042ba010c21c0e8c5
         /// <summary>
         /// Test if the queue is empty
         /// 
