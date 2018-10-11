@@ -19,22 +19,21 @@ namespace BinaryConverter
         /// 
         /// </summary>>
         /// <param name="element"></param>
-        /// <returns>element that was enqueued</returns>
+        /// <returns name="element"></returns>>
         T Push(T element);
 
         /// <summary>
         /// Remove and return the front element
         /// 
         /// </summary>>
-        /// <throws><thrown>if queue is empty</thrown></throws>
-        /// <returns></returns>
+        /// <returns name="tmp"></returns>>
         T Pop { get; }
 
         /// <summary>
         /// Test if the queue is empty
         /// 
         /// </summary>>
-        /// <returns>true if the queue is empty; otherwise false</returns>
+        /// <returns name="bool"></returns>>
         bool IsEmpty { get; }
     }
 }

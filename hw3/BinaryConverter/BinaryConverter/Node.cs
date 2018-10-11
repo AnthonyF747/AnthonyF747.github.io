@@ -14,7 +14,7 @@ namespace BinaryConverter
     public class Node<T>
     {
         public T Data { get; set; }                   // data is within the node
-        public Node<T> Next { get; set; };            // next is the next node (reference to)
+        public Node<T> Next { get; set; }            // next is the next node (reference to)
 
         /// <summary>
         /// Constructor for a node
