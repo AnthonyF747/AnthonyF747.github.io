@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 namespace BinaryConverter
 {
     /// <summary>
-<<<<<<< HEAD
     /// Exception class for pop()
-=======
     /// Exception class for linked-list queue pop() attribute
->>>>>>> 596c671fad1782e29581716875bd630eacd8d3ce
     /// </summary>
     [Serializable]
     class QueueUnderflowException : System.Exception
