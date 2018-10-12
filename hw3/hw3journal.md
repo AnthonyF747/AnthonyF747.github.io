@@ -44,3 +44,35 @@ I've worked with Visual Studio what seems to be eons ago, so I had to refamiliar
         public Node(T Data, Node<T> Next) => this.Data = Data;    // current data 
     }
 }
+
+The inline `get` and `set` methods are sweet! I know I read about them or have seen them before, but I totally forgot about them until I was researching the C# language (thank you Microsoft for wonderful online documentation on the language!). Generics in C# appear similar to Java so that conversion wasn't difficult. In Visual Studio, it's added to the page through `using System.Collections.Generic;`. In the constructor, I wasn't sure if I was supposed to add the `this.next = next;` portion of the code because Visual Studio detested it every time added it to the code. I figured the program would crash if it really needed that piece of code. I'm not sure if the `HML` stuff works? It looks really bulky though. Moving on...
+
+### QueueInterface
+
+The QueueInterface is used to set up the LinkedQueue class to act as a queue (FIFO). There was not much in the class written in Java:
+
+public interface QueueInterface<T>
+{
+    /**
+     * Add an element to the rear of the queue
+     * 
+     * @return the element that was enqueued
+     */
+    T push(T element);
+
+    /**
+     * Remove and return the front element.
+     * 
+     * @throws Thrown if the queue is empty
+     */
+    T pop() throws QueueUnderflowException;
+
+    /**
+     * Test if the queue is empty
+     * 
+     * @return true if the queue is empty; otherwise false
+     */
+    boolean isEmpty();
+}
+
+There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new node in the linked list, `pop` removes the node from the linked list, and `isEmpty` checks the list to see if any nodes are present in the linked list. This is an interface and Visual Studio does have the option to create one from the *project* tab (*add class* scroll down to *interface*).
