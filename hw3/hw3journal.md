@@ -3,13 +3,14 @@
 We didn't have a webpage to build this week, but we did have to use our brains and try to convert a program written in Java to a C# program. Since Western Oregon University has two required courses which teach you programming in Java, I felt pretty confident going into this week's homework.
 
 There are five classes:
-    * Node
-    * QueueInterface
-    * QueueUnderflowException
-    * LinkedQueue
-    * Main
 
-### __Node:__
+* Node
+* QueueInterface
+* QueueUnderflowException
+* LinkedQueue
+* Main
+
+### Node:
 
 This is the original code in Java:
 
@@ -47,7 +48,7 @@ I've worked with Visual Studio what seems to be eons ago, so I had to refamiliar
 
 The inline `get` and `set` methods are sweet! I know I read about them or have seen them before, but I totally forgot about them until I was researching the C# language (thank you Microsoft for wonderful online documentation on the language!). Generics in C# appear similar to Java so that conversion wasn't difficult. In Visual Studio, it's added to the page through `using System.Collections.Generic;`. In the constructor, I wasn't sure if I was supposed to add the `this.next = next;` portion of the code because Visual Studio detested it every time added it to the code. I figured the program would crash if it really needed that piece of code. I'm not sure if the `HML` stuff works? It looks really bulky though. Moving on...
 
-### __QueueInterface__
+### QueueInterface
 
 The QueueInterface is used to set up the LinkedQueue class to act as a queue (FIFO). There was not much in the class written in Java:
 
@@ -105,7 +106,7 @@ There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new 
     
 In the C# version, Visual Studio wanted the `{ get; }` method for `Pop` and `IsEmpty`. If I'm remembering this correctly, I couldn't add the `throw new QueueUnderflowException()` to `Pop`. I will go back and double check that because it might not work. Oh! DON'T FORGET THE 'I' IN FRONT OF THE INTERFACE'S NAME! => IQueueInterface (Use Visual Studio, I think it added it automatically)
 
-### __QueueUnderflowException__
+### QueueUnderflowException
 
 Java provides a simple way of setting up your own exception class:
 
@@ -137,7 +138,7 @@ The original Java version of this code `extends` the system `RuntimeException` a
     
 By researching the `Exception` class in C# through the docs, I found that the `extends` command is `:`. The constructors are built a slight bit different than Java also. `base` is the `super` class and is where the system will default to for any errors that are caught regarding this issue. The system will send back a `Unhandled Exception` error message. The second constructor allows for custom messages that will be returned to the user from the system. There are two other constructors, one that is not in this code segment, but I'm not too clear on what they do. Dr. Morse told me not to worry about the one that has been removed and explained what the third one is but I need more knowledge to discuss what it does exactly. Apparently, you don't need to list all four constructors in a custom exception as I thought when reading the docs.
 
-### __LinkedQueue__
+### LinkedQueue
 
 Java offers a linked list class that accepts generics. The original code:
 
@@ -311,7 +312,7 @@ The first difference is the use of the `throw new NotImplementedException`. What
 
 `IsEmpty` appears to be something I could have made into one line by using a `null` verifier (I'm still learning folks) like `?`. I'll figure it out but for now, I need to move on to keep up with the pace of the class.
 
-### __Main (TestConverter)__
+### Main (TestConverter)
 
 I did not name my `Main` class *Main* and named it `TestConverter`.
 
