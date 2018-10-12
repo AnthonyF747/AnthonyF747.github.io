@@ -1,4 +1,4 @@
-# Homework 3
+# Journal for Homework 3
 
 We didn't have a webpage to build this week, but we did have to use our brains and try to convert a program written in Java to a C# program. Since Western Oregon University has two required courses which teach you programming in Java, I felt pretty confident going into this week's homework.
 
