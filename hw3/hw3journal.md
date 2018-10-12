@@ -47,7 +47,7 @@ I've worked with Visual Studio what seems to be eons ago, so I had to refamiliar
 
 The inline `get` and `set` methods are sweet! I know I read about them or have seen them before, but I totally forgot about them until I was researching the C# language (thank you Microsoft for wonderful online documentation on the language!). Generics in C# appear similar to Java so that conversion wasn't difficult. In Visual Studio, it's added to the page through `using System.Collections.Generic;`. In the constructor, I wasn't sure if I was supposed to add the `this.next = next;` portion of the code because Visual Studio detested it every time added it to the code. I figured the program would crash if it really needed that piece of code. I'm not sure if the `HML` stuff works? It looks really bulky though. Moving on...
 
-### QueueInterface
+### __QueueInterface__
 
 The QueueInterface is used to set up the LinkedQueue class to act as a queue (FIFO). There was not much in the class written in Java:
 
@@ -105,7 +105,7 @@ There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new 
     
 In the C# version, Visual Studio wanted the `{ get; }` method for `Pop` and `IsEmpty`. If I'm remembering this correctly, I couldn't add the `throw new QueueUnderflowException()` to `Pop`. I will go back and double check that because it might not work. Oh! DON'T FORGET THE 'I' IN FRONT OF THE INTERFACE'S NAME! => IQueueInterface (Use Visual Studio, I think it added it automatically)
 
-### QueueUnderflowException
+### __QueueUnderflowException__
 
 Java provides a simple way of setting up your own exception class:
 
@@ -137,7 +137,7 @@ The original Java version of this code `extends` the system `RuntimeException` a
     
 By researching the `Exception` class in C# through the docs, I found that the `extends` command is `:`. The constructors are built a slight bit different than Java also. `base` is the `super` class and is where the system will default to for any errors that are caught regarding this issue. The system will send back a `Unhandled Exception` error message. The second constructor allows for custom messages that will be returned to the user from the system. There are two other constructors, one that is not in this code segment, but I'm not too clear on what they do. Dr. Morse told me not to worry about the one that has been removed and explained what the third one is but I need more knowledge to discuss what it does exactly. Apparently, you don't need to list all four constructors in a custom exception as I thought when reading the docs.
 
-### LinkedQueue
+### __LinkedQueue__
 
 Java offers a linked list class that accepts generics. The original code:
 
@@ -210,5 +210,109 @@ Java offers a linked list class that accepts generics. The original code:
 	}
 
 }
+
+There are some differences between the two codes:
+
+    class LinkedQueue<T> : IQueueInterface<T>           // LinkedList of generic type which implements IQueueInterface
+                                                        // which is a queue interface
+    {
+        private Node<T> Front;                          // The first node
+        private Node<T> Rear;                           // The last node
+
+        public LinkedQueue()                            // Constructor
+        {
+            Front = null;                               // Set Front to null
+            Rear = null;                                // Set Rear to null
+        }
+
+        /// <summary>
+        /// Used to check if the list is empty
+        /// </summary>
+        /// <returns name="bool">Returns true is list is empty, otherwise false</returns>
+        public bool IsEmpty()
+        {
+            if(Front == null && Rear == null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        T IQueueInterface<T>.Pop => throw new NotImplementedException();
+
+        bool IQueueInterface<T>.IsEmpty => throw new NotImplementedException();
+
+        /// <summary>
+        /// Removes a node from the front of the queue
+        /// </summary>
+        /// <exception name="QueueUnderflowException">throw QueueUnderflowException if list is empty on pop() request</exception>>
+        /// <returns name="tmp">returns tmp node</returns>
+        public T Pop()
+        {
+            T tmp;                            // New node
+
+            if(IsEmpty())                     // Check if list is empty
+            {
+                Exception message = null;     // Set up message for exception; if list is empty, throw exception with message
+                throw new QueueUnderflowException("Message: The list is empty\n{0}", message);
+            }
+            else if(Front == Rear)            // Check if there is one item in the list       
+            {
+                tmp = Front.Data;             // If one node, assign that node to tmp
+                Front = null;                 // Set front to null
+                Rear = null;                  // Set rear to null
+            }
+            else                              // General case
+            {
+                tmp = Front.Data;             // Assign the first node in the list to tmp
+                Front = Front.Next;           // The next node becomes the first node in the list
+            }
+            return tmp;                       // Return tmp node
+        }
+
+        /// <summary>
+        /// Use to push an element into the queue
+        /// </summary>
+        /// <param name="element"></param>
+        /// <exception name="NullReferenceException">Null element</exception>
+        /// <returns name="element">Returns the element</returns>>
+        public T Push(T element)
+        {
+            if(element == null)                             // Check if there is a null element
+            {
+                throw new NullReferenceException();         // System exception default
+            }
+
+            if(IsEmpty())                                   // Check if the list is empty
+            {
+                Node<T> tmp = new Node<T>(element, null);   // If empty, make a new node
+                Rear = Front = tmp;                         // Make new node front and rear element in the list
+            }
+            else                                            // General case
+            {
+                Node<T> tmp = new Node<T>(element, null);   // Make a new node
+                Rear.Next = tmp;                            // Put new node at the end of the queue
+                Rear = tmp;                                 // Assign that node last element in the list
+            }
+            return element;                                 // Return the element
+        }
+
+        T IQueueInterface<T>.Push(T element)
+        {
+            throw new NotImplementedException();
+        }
+    }
+}
+
+The first difference is the use of the `throw new NotImplementedException`. What is that? And why do I have to have it? Visual Studio was not happy with me when I tried to take these out, so I left them in. I need to figure out why this happens. Another difference is the capitalization of the node names. Java accepted lowercase letters while C# wanted these names in uppercase. I'm sure the constructor could have been added inline when creating the `Front` and `Rear` nodes, but I think I failed on a couple of attempts to get it correct and decided to move on in case there were problems later down the road. I can understand trying to rewrite things, but if they're working I feel I should leave as much of the original code intact to cause fewer disruptions in the program. So, if the C# code looks like the Java code, you're right. I only changed what needed to be changed to make the Java code work in C#.
+
+`IsEmpty` appears to be something I could have made into one line by using a `null` verifier (I'm still learning folks) like `?`. I'll figure it out but for now, I need to move on to keep up with the pace of the class.
+
+### __Main (TestConverter)__
+
+I did not name my `Main` class *Main* and named it `TestConverter`.
 
 
