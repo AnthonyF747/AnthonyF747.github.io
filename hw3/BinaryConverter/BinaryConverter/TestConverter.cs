@@ -24,7 +24,7 @@ namespace BinaryConverter
             if(n < 1)
             {
                 // Binary representation of negative values are not supported; return an empty list
-                throw new InvalidOperationException();
+                return output;
             }
 
             // Enqueue the first binary number. Use a dynamic string to avoid string concat
@@ -73,6 +73,7 @@ namespace BinaryConverter
                 return;
             }
             
+            // Check for negative number
             if(n < 0)
             {
                 throw new InvalidOperationException(message: "Message: Negative numbers are not supported");
