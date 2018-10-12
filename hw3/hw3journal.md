@@ -479,5 +479,7 @@ In the *BFS* section, I was adding to the queue from the front using `AddFront(s
 
 C# seems to be something that I could get to enjoy using as a programming language. I just don't like Visual Studio when it freezes up, the load time, update time, etc... I just need to learn all the stuff from the toolbars and dropdowns and how to use them. I cringe every time I select one not knowing if my code is going to disappear. Be safe, read your docs!!!!
 
+### Code in Action
 
+![alt-text](img/fileShot.JPG)
 
