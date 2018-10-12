@@ -102,4 +102,36 @@ There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new 
             bool IsEmpty { get; }
         }
     }
+    
+In the C# version, Visual Studio wanted the `{ get; }` method for `Pop` and `IsEmpty`. If I'm remembering this correctly, I couldn't add the `throw new QueueUnderflowException()` to `Pop`. I will go back and double check that because it might not work. Oh! DON'T FORGET THE 'I' IN FRONT OF THE INTERFACE'S NAME! => IQueueInterface (Use Visual Studio, I think it added it automatically)
+
+### QueueUnderflowException
+
+Java provides a simple way of setting up your own exception class:
+
+    public class QueueUnderflowException extends RuntimeException
+    {
+        public QueueUnderflowException()
+        {
+            super();
+        }
+
+        public QueueUnderflowException(String message)
+        {
+            super(message);
+        }
+}
+
+The original Java version of this code `extends` the system `RuntimeException` and sets up two constructors. One constructor is the default constructor that the system will generate through it's `super` class. The second constructor includes a message that is sent to the user to provide information about the error. Here is the converted code for the QueueUnderflowException class:
+
+    class QueueUnderflowException : System.Exception
+        {
+            /// <summary>
+            /// Multiple constructors for different situations
+            /// </summary>
+            public QueueUnderflowException() : base() { }   // Default constructor
+            public QueueUnderflowException(string message) : base(message) { }    // Constructor that sets message property
+            public QueueUnderflowException(string message, System.Exception inner) : base(message, inner) { }   // Sets message and inner properties
+        }
+    }
 
