@@ -12,7 +12,7 @@ There are five classes:
 
 ### Node:
 
-This is the original code in Java:
+<span style="color=orange">This is the original code in Java:</span>
 
     public class Node<T>
     {   
@@ -26,7 +26,7 @@ This is the original code in Java:
 	}
 }
 
-I've worked with Visual Studio what seems to be eons ago, so I had to refamiliarize myself with the program to get going, but once that was semi-under control, I started with research and coding. I did have some knowledge of C and some C# and know that it really is close to Java, but I didn't know too much about the "fancy" syntax that C# includes. My knowledge of C# is pretty basic stuff, so I wrote the code pretty much as was given until my research showed some cool stuff. So, I rewrote my code:
+I've worked with Visual Studio what seems to be eons ago, so I had to refamiliarize myself with the program to get going, but once that was semi-under control, I started with research and coding. I did have some knowledge of C and some C# and know that it really is close to Java, but I didn't know too much about the "fancy" syntax that C# includes. My knowledge of C# is pretty basic stuff, so I wrote the code pretty much as was given until my research showed some cool stuff. So, <span style="color=orange">I rewrote my code:</span>
 
     /// <summary>
     /// A single linked node class
@@ -50,7 +50,7 @@ The inline `get` and `set` methods are sweet! I know I read about them or have s
 
 ### QueueInterface
 
-The QueueInterface is used to set up the LinkedQueue class to act as a queue (FIFO). There was not much in the class written in Java:
+The QueueInterface is used to set up the LinkedQueue class to act as a queue (FIFO). There was not much in the class written in <span style="color=orange">Java:</span>
 
     public interface QueueInterface<T>
     {
@@ -76,7 +76,7 @@ The QueueInterface is used to set up the LinkedQueue class to act as a queue (FI
         boolean isEmpty();
 }
 
-There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new node in the linked list, `pop` removes the node from the linked list, and `isEmpty` checks the list to see if any nodes are present in the linked list. This is an interface and Visual Studio does have the option to create one from the *project* tab (*add class* scroll down to *interface*). The converted code is again similar to Java:
+There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new node in the linked list, `pop` removes the node from the linked list, and `isEmpty` checks the list to see if any nodes are present in the linked list. This is an interface and Visual Studio does have the option to create one from the *project* tab (*add class* scroll down to *interface*). The <span style="color=orange">converted code</span> is again similar to Java:
 
     public interface IQueueInterface<T>
         {
@@ -108,7 +108,7 @@ In the C# version, Visual Studio wanted the `{ get; }` method for `Pop` and `IsE
 
 ### QueueUnderflowException
 
-Java provides a simple way of setting up your own exception class:
+<span style="color=orange">Java</span> provides a simple way of setting up your own exception class:
 
     public class QueueUnderflowException extends RuntimeException
     {
@@ -123,7 +123,7 @@ Java provides a simple way of setting up your own exception class:
         }
 }
 
-The original Java version of this code `extends` the system `RuntimeException` and sets up two constructors. One constructor is the default constructor that the system will generate through it's `super` class. The second constructor includes a message that is sent to the user to provide information about the error. Here is the converted code for the QueueUnderflowException class:
+The original Java version of this code `extends` the system `RuntimeException` and sets up two constructors. One constructor is the default constructor that the system will generate through it's `super` class. The second constructor includes a message that is sent to the user to provide information about the error. Here is the <span style="color=orange">converted code</span> for the QueueUnderflowException class:
 
     class QueueUnderflowException : System.Exception
         {
@@ -140,7 +140,7 @@ By researching the `Exception` class in C# through the docs, I found that the `e
 
 ### LinkedQueue
 
-Java offers a linked list class that accepts generics. The original code:
+Java offers a linked list class that accepts generics. <span style="color=orange">The original code:</span>
 
     public class LinkedQueue<T> implements QueueInterface<T>
     {
@@ -212,7 +212,7 @@ Java offers a linked list class that accepts generics. The original code:
 
 }
 
-There are some differences between the two codes:
+<span style="color=orange">There are some differences between the two codes:</span>
 
     class LinkedQueue<T> : IQueueInterface<T>           // LinkedList of generic type which implements IQueueInterface
                                                         // which is a queue interface
@@ -314,7 +314,7 @@ The first difference is the use of the `throw new NotImplementedException`. What
 
 ### Main (TestConverter)
 
-I did not name my `Main` class *Main* and named it `TestConverter`. Sorry, not to confuse you. I'm sure it's called `Main` in industry. This class is to run the program and combine all the other classes. If this class is put together properly, everything should work as planned, lol. I pretty much copied the code into C# (I did type it in Dr. Morse). Original Java code:
+I did not name my `Main` class *Main* and named it `TestConverter`. Sorry, not to confuse you. I'm sure it's called `Main` in industry. This class is to run the program and combine all the other classes. If this class is put together properly, everything should work as planned, lol. I pretty much copied the code into C# (I did type it in Dr. Morse). <span style="color=orange">Original Java code:</span>
 
     static LinkedList<String> generateBinaryRepresentationList(int n) 
         { 
@@ -388,7 +388,7 @@ I did not name my `Main` class *Main* and named it `TestConverter`. Sorry, not t
     } 
 } 
 
-The converted code:
+<span style="color=orange">The converted code:</span>
 
     private static LinkedList<string> GenerateBinaryRepresentationList(int n)
         {
