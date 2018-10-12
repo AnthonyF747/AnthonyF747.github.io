@@ -24,7 +24,7 @@ namespace BinaryConverter
             if(n < 1)
             {
                 // Binary representation of negative values are not supported; return an empty list
-                return output;
+                throw new InvalidOperationException();
             }
 
             // Enqueue the first binary number. Use a dynamic string to avoid string concat
@@ -72,17 +72,22 @@ namespace BinaryConverter
                 Console.WriteLine("I'm sorry, I can't understand the number: {0}", args[0]);
                 return;
             }
+            
+            if(n < 0)
+            {
+                throw new InvalidOperationException(message: "Message: Negative numbers are not supported");
+            }
 
             LinkedList<string> output = GenerateBinaryRepresentationList(n);
 
             // Print right justified. Longest string is last one.
             // Print enough spaces to move it over the correct distance
-            int maxLength = output.First().Count();
-            foreach(string s in output)
+            int maxLength = output.Last().Length;
+            foreach (string s in output)
             {
-                for(int i = 0; i < maxLength - s.Length; ++i)
+                for (int i = 0; i < maxLength - s.Length + 1; ++i)
                 {
-                    Console.WriteLine(" " + " " + " ");
+                    Console.Write(" ");
                 }
                 Console.WriteLine(s);
             }
