@@ -314,6 +314,170 @@ The first difference is the use of the `throw new NotImplementedException`. What
 
 ### Main (TestConverter)
 
-I did not name my `Main` class *Main* and named it `TestConverter`.
+I did not name my `Main` class *Main* and named it `TestConverter`. Sorry, not to confuse you. I'm sure it's called `Main` in industry. This class is to run the program and combine all the other classes. If this class is put together properly, everything should work as planned, lol. I pretty much copied the code into C# (I did type it in Dr. Morse). Original Java code:
+
+    static LinkedList<String> generateBinaryRepresentationList(int n) 
+        { 
+        // Create an empty queue of strings with which to perform the traversal
+        LinkedQueue<StringBuilder> q = new LinkedQueue<StringBuilder>(); 
+
+        // A list for returning the binary values
+        LinkedList<String> output = new LinkedList<String>();
+        
+        if(n < 1)
+        {
+            // binary representation of negative values is not supported
+            // return an empty list
+            return output;
+        }
+          
+        // Enqueue the first binary number.  Use a dynamic string to avoid string concat
+        q.push(new StringBuilder("1")); 
+          
+        // BFS 
+        while(n-- > 0) 
+        { 
+            // print the front of queue 
+            StringBuilder sb = q.pop(); 
+            output.add(sb.toString()); 
+            
+            // Make a copy
+            StringBuilder sbc = new StringBuilder(sb.toString());
+
+            // Left child
+            sb.append('0');
+            q.push(sb);
+            // Right child
+            sbc.append('1');
+            q.push(sbc); 
+        }
+        return output;
+    } 
+      
+    // Driver program to test above function 
+    public static void main(String[] args)  
+    { 
+        int n = 10;
+        if(args.length < 1)
+        {
+            System.out.println("Please invoke with the max value to print binary up to, like this:");
+            System.out.println("\tjava Main 12");
+            return;
+        }
+        try 
+        {
+            n = Integer.parseInt(args[0]);
+        } 
+        catch (NumberFormatException e) 
+        {
+            System.out.println("I'm sorry, I can't understand the number: " + args[0]);
+            return;
+        }
+        LinkedList<String> output = generateBinaryRepresentationList(n);
+        // Print it right justified.  Longest string is the last one.
+        // Print enough spaces to move it over the correct distance
+        int maxLength = output.getLast().length();
+        for(String s : output)
+        {
+            for(int i = 0; i < maxLength - s.length(); ++i)
+            {
+                System.out.print(" ");
+            }
+            System.out.println(s);
+        }
+    } 
+} 
+
+The converted code:
+
+    private static LinkedList<string> GenerateBinaryRepresentationList(int n)
+        {
+            // Create an empty queue of strings with which to perform the traversal
+            LinkedQueue<StringBuilder> q = new LinkedQueue<StringBuilder>();
+
+            // A list for returning the binary numbers
+            LinkedList<string> output = new LinkedList<string>();
+
+            if(n < 1)
+            {
+                // Binary representation of negative values are not supported; return an empty list
+                return output;
+            }
+
+            // Enqueue the first binary number. Use a dynamic string to avoid string concat
+            q.Push(new StringBuilder("1"));
+
+            // BFS
+            while(n-- > 0)
+            {
+                // Print the front of the queue
+                StringBuilder sb = q.Pop();
+                output.AddLast(sb.ToString());
+
+                // Make a copy
+                StringBuilder sbc = new StringBuilder(sb.ToString());
+
+                // Left child
+                sb.Append('0');
+                q.Push(sb);
+
+                // Right child
+                sbc.Append('1');
+                q.Push(sbc);
+            }
+            return output;
+        }
+
+        //Driver program to test above function
+        static void Main(string[] args)
+        {
+            int n = 0;
+
+            if(args.Length < 1)
+            {
+                Console.WriteLine("Please invoke with the max value to print binary up to, like this: ");
+                Console.WriteLine("\t BinaryConverter.exe 12");
+                return;
+            }
+
+            try
+            {
+                n = Int32.Parse(args[0]);
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("I'm sorry, I can't understand the number: {0}", args[0]);
+                return;
+            }
+            
+            // Check for negative number
+            if(n < 0)
+            {
+                throw new InvalidOperationException(message: "Message: Negative numbers are not supported");
+            }
+
+            LinkedList<string> output = GenerateBinaryRepresentationList(n);
+
+            // Print right justified. Longest string is last one.
+            // Print enough spaces to move it over the correct distance
+            int maxLength = output.Last().Length;
+            foreach (string s in output)
+            {
+                for (int i = 0; i < maxLength - s.Length + 1; ++i)
+                {
+                    Console.Write(" ");
+                }
+                Console.WriteLine(s);
+            }
+        }
+    }
+}
+
+Luckily enough, C# offers the same class types as Java for things such as `linkedListNodes`, `linkedList`, and `Stringbuilder`, so those parts of the original code remained the same. `parseInt` is replaced with `Int32.Parse` to parse the input from the user into a 32-bit integer. I'm not sure if I'm supposed to use *system Exceptions* in my code but there was an `Unhandled` error that drove me insane. Oh wait, we moved on because the code is really similar. I couldn't figure out why I got different warning/messages from the multiple command line tools I was using to run the program. The quickest way to figure it out was to ask Dr. Morse. I think I had under 10 questions to solve this puzzle. Not too bad. He told me to build then run and it worked as he said it would. The program ran but the tree was upside-down and not right justified. AH, problem-solving is beginning. The first problem I tackled was the tree being upside down. 
+
+In the *BFS* section, I was adding to the queue from the front using `AddFront(sb.ToString())` and once I changed it to `AddLast(sb.ToString())` it fixed the issue, and the tree was being formed in the correct direction. The next issue was why it wasn't placing the spaces in front of the smaller binary numbers to make them right justified. I tried all kinds of little tweeks to try getting it to work and went to bed thinking about it. This morning I decided to put an `if` statement but it didn't make sense. I got the numbers to shift right at one point but still left justified. Then I noticed the `Console.WriteLine(" ");` and thought, the line is moving and that's why I'm getting spaces in between the numbers and not in front of the numbers, so I took *Line* out and tried to run the program again and voila, it worked! 
+
+C# seems to be something that I could get to enjoy using as a programming language. I just don't like Visual Studio when it freezes up, the load time, update time, etc... I just need to learn all the stuff from the toolbars and dropdowns and how to use them. I cringe every time I select one not knowing if my code is going to disappear. Be safe, read your docs!!!!
+
 
 
