@@ -134,4 +134,10 @@ The original Java version of this code `extends` the system `RuntimeException` a
             public QueueUnderflowException(string message, System.Exception inner) : base(message, inner) { }   // Sets message and inner properties
         }
     }
+    
+By researching the `Exception` class in C# through the docs, I found that the `extends` command is `:`. The constructors are built a slight bit different than Java also. `base` is the `super` class and is where the system will default to for any errors that are caught regarding this issue. The system will send back a `Unhandled Exception` error message. The second constructor allows for custom messages that will be returned to the user from the system. There are two other constructors, one that is not in this code segment, but I'm not too clear on what they do. Dr. Morse told me not to worry about the one that has been removed and explained what the third one is but I need more knowledge to discuss what it does exactly. Apparently, you don't need to list all four constructors in a custom exception as I thought when reading the docs.
+
+### LinkedQueue
+
+
 
