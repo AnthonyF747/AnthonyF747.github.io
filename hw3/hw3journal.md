@@ -14,10 +14,10 @@ There are five classes:
 
 This is the original code in Java:
 
-public class Node<T>
-{
-	public T data;
-	public Node<T> next;
+    public class Node<T>
+    {   
+	   public T data;
+	   public Node<T> next;
 	
 	public Node( T data, Node<T> next )
 	{
