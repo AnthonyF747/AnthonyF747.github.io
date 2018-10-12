@@ -11,7 +11,6 @@ namespace BinaryConverter
     /// Exception class for linked-list queue pop() attribute
     /// 
     /// </summary>
-    [Serializable]
     class QueueUnderflowException : System.Exception
     {
         /// <summary>
@@ -20,10 +19,5 @@ namespace BinaryConverter
         public QueueUnderflowException() : base() { }   // Default constructor
         public QueueUnderflowException(string message) : base(message) { }    // Constructor that sets message property
         public QueueUnderflowException(string message, System.Exception inner) : base(message, inner) { }   // Sets message and inner properties
-
-        // Constructor for Serialization; Exception propagates from remote server to client
-        protected QueueUnderflowException(System.Runtime.Serialization.SerializationInfo info,
-            System.Runtime.Serialization.StreamingContext context)
-        { }
     }
 }

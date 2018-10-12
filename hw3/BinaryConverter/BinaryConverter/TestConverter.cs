@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace BinaryConverter
 {
@@ -36,7 +35,7 @@ namespace BinaryConverter
             {
                 // Print the front of the queue
                 StringBuilder sb = q.Pop();
-                output.AddFirst(sb.ToString());
+                output.AddLast(sb.ToString());
 
                 // Make a copy
                 StringBuilder sbc = new StringBuilder(sb.ToString());
@@ -55,12 +54,12 @@ namespace BinaryConverter
         //Driver program to test above function
         static void Main(string[] args)
         {
-            int n = 10;
+            int n = 0;
 
             if(args.Length < 1)
             {
                 Console.WriteLine("Please invoke with the max value to print binary up to, like this: ");
-                Console.WriteLine("\t .//TestConverter 12");
+                Console.WriteLine("\t BinaryConverter.exe 12");
                 return;
             }
 
@@ -71,18 +70,19 @@ namespace BinaryConverter
             catch(FormatException)
             {
                 Console.WriteLine("I'm sorry, I can't understand the number: {0}", args[0]);
+                return;
             }
 
             LinkedList<string> output = GenerateBinaryRepresentationList(n);
 
             // Print right justified. Longest string is last one.
             // Print enough spaces to move it over the correct distance
-            int maxLength = output.Last().Count();
+            int maxLength = output.First().Count();
             foreach(string s in output)
             {
                 for(int i = 0; i < maxLength - s.Length; ++i)
                 {
-                    Console.WriteLine(" ");
+                    Console.WriteLine(" " + " " + " ");
                 }
                 Console.WriteLine(s);
             }
