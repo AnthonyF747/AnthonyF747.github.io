@@ -75,4 +75,31 @@ The QueueInterface is used to set up the LinkedQueue class to act as a queue (FI
         boolean isEmpty();
 }
 
-There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new node in the linked list, `pop` removes the node from the linked list, and `isEmpty` checks the list to see if any nodes are present in the linked list. This is an interface and Visual Studio does have the option to create one from the *project* tab (*add class* scroll down to *interface*).
+There is a `push`, `pop`, and `isEmpty` method in this class. `push` puts a new node in the linked list, `pop` removes the node from the linked list, and `isEmpty` checks the list to see if any nodes are present in the linked list. This is an interface and Visual Studio does have the option to create one from the *project* tab (*add class* scroll down to *interface*). The converted code is again similar to Java:
+
+    public interface IQueueInterface<T>
+        {
+            /// <summary>
+            /// Add an element to the end of the queue
+            /// 
+            /// </summary>>
+            /// <param name="element"></param>
+            /// <returns name="element"></returns>>
+            T Push(T element);
+
+            /// <summary>
+            /// Remove and return the front element
+            /// 
+            /// </summary>>
+            /// <returns name="tmp"></returns>>
+            T Pop { get; }
+
+            /// <summary>
+            /// Test if the queue is empty
+            /// 
+            /// </summary>>
+            /// <returns name="bool"></returns>>
+            bool IsEmpty { get; }
+        }
+    }
+
