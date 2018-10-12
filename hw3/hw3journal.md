@@ -481,5 +481,25 @@ C# seems to be something that I could get to enjoy using as a programming langua
 
 ### Code in Action
 
+This is where my code lives:
+
 ![alt-text](img/fileShot.JPG)
+
+The message returned to user that failed to enter a number after the `.exe` command:
+
+![alt-text](img/NoNum.JPG)
+
+I tried to fix the `Unhandled` error. I don't think it's correct, but it does return my message:
+
+![alt-text](img/ExHandler.JPG)
+
+Here is the program running as planned:
+
+![alt-text](img/ItWorks.JPG)
+
+
+
+
+
+
 
