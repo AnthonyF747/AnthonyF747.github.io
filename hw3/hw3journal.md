@@ -27,7 +27,7 @@ public class Node<T>
 
 I've worked with Visual Studio what seems to be eons ago, so I had to refamiliarize myself with the program to get going, but once that was semi-under control, I started with research and coding. I did have some knowledge of C and some C# and know that it really is close to Java, but I didn't know too much about the "fancy" syntax that C# includes. My knowledge of C# is pretty basic stuff, so I wrote the code pretty much as was given until my research showed some cool stuff. So, I rewrote my code:
 
- /// <summary>
+    /// <summary>
     /// A single linked node class
     /// 
     /// </summary>
