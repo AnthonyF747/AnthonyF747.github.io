@@ -7,6 +7,8 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw2 journal](hw2/hw2journal.md)
 
+[hw3 journal](hw3/hw3journal.md)
+
 
 ## Homework and Demos
 
@@ -17,3 +19,6 @@ This page will provide the links to journals, homework, demos, and code.
 ### Homework 2
 [code](https://github.com/AnthonyF747/AnthonyF747.github.io)
 [demo](https://anthonyf747.github.io/hw2/index.html)
+
+### Homework 3
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/blob/master/hw3/hw3journal.md)
