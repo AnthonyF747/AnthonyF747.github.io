@@ -141,31 +141,31 @@ By researching the `Exception` class in C# through the docs, I found that the `e
 
 Java offers a linked list class that accepts generics. The original code:
 
-public class LinkedQueue<T> implements QueueInterface<T>
-{
-	private Node<T> front;
-	private Node<T> rear;
+    public class LinkedQueue<T> implements QueueInterface<T>
+    {
+	   private Node<T> front;
+	   private Node<T> rear;
 
-	public LinkedQueue()
-	{
-		front = null;
-		rear = null;
-	}
+	   public LinkedQueue()
+	   {
+		  front = null;
+		  rear = null;
+	   }
 
-	public T push(T element)
-	{ 
-		if( element == null )
-		{
+	   public T push(T element)
+	   { 
+		  if( element == null )
+		  {
 			throw new NullPointerException();
-		}
+		  }
 		
-		if( isEmpty() )
-		{
+		  if( isEmpty() )
+		  {
 			Node<T> tmp = new Node<T>( element, null );
 			rear = front = tmp;
-		}
-		else
-		{		
+		  }
+		  else
+		  {		
 			// General case
 			Node<T> tmp = new Node<T>( element, null );
 			rear.next = tmp;
