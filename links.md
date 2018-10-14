@@ -17,8 +17,8 @@ This page will provide the links to journals, homework, demos, and code.
 [demo](https://anthonyf747.github.io/anthonyfranco.github.io/index.html)
 
 ### Homework 2
-[code](https://github.com/AnthonyF747/AnthonyF747.github.io)
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw2)
 [demo](https://anthonyf747.github.io/hw2/index.html)
 
 ### Homework 3
-[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw3)
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw3/BinaryConverter/BinaryConverter)
