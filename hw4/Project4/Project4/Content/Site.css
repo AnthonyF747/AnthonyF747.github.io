@@ -22,9 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-
-/* Change btn-default color to blue */
-.btn-default {
-    background-color: #0174DF;
-    color: white;
-}
