@@ -8,11 +8,13 @@ namespace Project4.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
         }
 
+        [HttpGet]
         public ActionResult Converter()
         {
             ViewBag.Message = "Your application description page.";
@@ -20,6 +22,7 @@ namespace Project4.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult ColorChooser()
         {
             ViewBag.Message = "Your contact page.";
