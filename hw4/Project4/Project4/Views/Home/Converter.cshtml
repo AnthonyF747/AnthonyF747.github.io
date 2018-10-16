@@ -8,33 +8,35 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="milestoconvert">Miles:</label>
-                <input type="text" class="form-control" id="milestoconvert">
+        <form action="" method="post">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="milestoconvert">Miles:</label>
+                    <input type="text" class="form-control" id="milestoconvert">
+                </div>
             </div>
-        </div>
-        <div class="col-md-6">
-            <h3>Select a unit</h3>
-            <hr />
-            <div class="radio">
-                <label><input type="radio" name="units" checked><strong>millimeters</strong></label>
+            <div class="col-md-6">
+                <h3>Select a unit</h3>
+                <hr />
+                <div class="radio">
+                    <label><input type="radio" name="units" checked><strong>millimeters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="units"><strong>centimeters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="units"><strong>meters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="units"><strong>kilometers</strong></label>
+                </div>
             </div>
-            <div class="radio">
-                <label><input type="radio" name="units"><strong>centimeters</strong></label>
+            <div align="center">
+                <input type="submit" class="btn btn-primary" value="Convert" />
             </div>
-            <div class="radio">
-                <label><input type="radio" name="units"><strong>meters</strong></label>
-            </div>
-            <div class="radio">
-                <label><input type="radio" name="units"><strong>kilometers</strong></label>
-            </div>
-            
-        </div>
-        <div align="center">
-            <button type="button" class="btn btn-primary">Convert</button>
-        </div>
+        </form>
     </div>
+    
     <p>This is the last div in "container-fluid"</p>
 </div>
 
