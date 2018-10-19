@@ -16,7 +16,7 @@ namespace Project4
             routes.MapRoute(
                 name: "ColorChanger",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "ColorController", action = "ColorChooser", id = UrlParameter.Optional }
+                defaults: new { controller = "Color", action = "ColorChooser", id = UrlParameter.Optional }
                 );
 
             routes.MapRoute(

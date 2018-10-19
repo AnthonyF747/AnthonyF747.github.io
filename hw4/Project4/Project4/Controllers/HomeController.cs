@@ -27,19 +27,5 @@ namespace Project4.Controllers
         {
             return View();
         }
-
-        [HttpGet]
-        public ActionResult ColorChooser()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult ColorChooser(int color1, int color2)
-        {
-            return View();
-        }
     }
 }
