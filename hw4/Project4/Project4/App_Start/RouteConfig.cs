@@ -14,6 +14,12 @@ namespace Project4
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "ColorChanger",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "ColorController", action = "ColorChooser", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
