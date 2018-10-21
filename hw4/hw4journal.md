@@ -16,3 +16,11 @@ The web view of the new project:
 
 ![alt-text](img/webView1.JPG)
 
+After changing the `_Layout.cshtml` page, I recoded the `Index.cshtml` page to get the required start page.
+
+![alt-text](img/newIndex.JPG)
+
+The new start page:
+
+![alt-text](img/newStartPage.JPG)
+
