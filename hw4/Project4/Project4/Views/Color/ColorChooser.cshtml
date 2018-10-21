@@ -8,6 +8,7 @@
 
 <p>Please enter color in HTML hexadecimal format: #AABBCC</p>
 
+
 <div class="container-fluid">
     <div class="col-md-12">
         @using (Html.BeginForm("ColorChooser", "ColorController", FormMethod.Post))
@@ -20,7 +21,7 @@
                 @Html.Label("secondcolor", "Second Color")
                 @Html.TextBox("secondcolor", null, htmlAttributes: new { @class = "form-control" })
             </div>
-            @Html.ActionLink("Mix Colors", "ColorChooser", "ColorController", new { @class = "btn btn-primary" })
+            @Html.ActionLink("Mix Colors", "ColorChooser", "ColorController", new { @class = "btn btn-primary", type="text" })
         }
 
         @ViewBag.Message

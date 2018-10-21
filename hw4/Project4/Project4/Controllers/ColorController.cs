@@ -17,21 +17,23 @@ namespace Project4.Controllers
         }
 
         [HttpPost]
-        public ActionResult ColorChooser(string firstcolor, string secondcolor)
+        public ActionResult ColorChooser(string colorOne, string colorTwo)
         {
-            if(firstcolor == null || secondcolor == null)
+            if(colorOne == null || colorTwo == null)
             {
                 @ViewBag.Message = "Nothing is in here";
             }
             else
             {
-                Debug.WriteLine(firstcolor);
-                Debug.WriteLine(secondcolor);
-                @ViewBag.Message = "something is here" + firstcolor + " " + secondcolor;
+                //colorOne = Int32.Parse(firstcolor.Text, System.Globalization.NumberStyles.HexNumber);
+                //colorTwo = Int32.Parse(secondcolor.Text, System.Globalization.NumberStyles.HexNumber);
+                Debug.WriteLine(colorOne);
+                Debug.WriteLine(colorTwo);
+                @ViewBag.Message = "something is here" + colorOne + " " + colorTwo;
             }
             if (@ViewBag.Message != null)
             {
-                @ViewBag.Message = "something is here" + firstcolor + " " + secondcolor;
+                @ViewBag.Message = "something is here" + colorOne + " " + colorTwo;
             }
             else
             {
