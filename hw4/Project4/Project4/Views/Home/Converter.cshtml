@@ -8,11 +8,11 @@
 
 <div class="container-fluid">
     <div class="row">
-        <form action="" method="post">
+        <form action="/Home/Converter" method="post">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label for="milestoconvert">Miles:</label>
-                    <input type="text" class="form-control" id="milestoconvert">
+                    <label for="MilesToConvert">Miles:</label>
+                    <input class="form-control" id="MilesToConvert" type="number">
                 </div>
             </div>
             <div class="col-md-6">
@@ -36,7 +36,7 @@
             </div>
         </form>
     </div>
-    <p>@ViewBag.Message</p>
+    <h3 style="color: darkred">@ViewBag.Message</h3>
 </div>
 
 
