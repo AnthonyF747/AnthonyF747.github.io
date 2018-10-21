@@ -13,6 +13,7 @@ namespace Project4.Controllers
         // GET: Color
         public ActionResult ColorChooser()
         {
+            ViewBag.Message = "Where am I"
             return View();
         }
 
@@ -21,23 +22,22 @@ namespace Project4.Controllers
         {
             if(colorOne == null || colorTwo == null)
             {
-                @ViewBag.Message = "Nothing is in here";
+                ViewBag.Message = "Nothing is in here";
             }
             else
             {
                 //colorOne = Int32.Parse(firstcolor.Text, System.Globalization.NumberStyles.HexNumber);
                 //colorTwo = Int32.Parse(secondcolor.Text, System.Globalization.NumberStyles.HexNumber);
-                Debug.WriteLine(colorOne);
-                Debug.WriteLine(colorTwo);
-                @ViewBag.Message = "something is here" + colorOne + " " + colorTwo;
+                Debug.WriteLine(colorOne.GetType());
+                Debug.WriteLine(colorTwo.GetType());
             }
-            if (@ViewBag.Message != null)
+            if (ViewBag.Message != null)
             {
-                @ViewBag.Message = "something is here" + colorOne + " " + colorTwo;
+                ViewBag.Message = "something is here" + colorOne + " " + colorTwo;
             }
             else
             {
-                @ViewBag.Message = "There's nothing here";
+                ViewBag.Message = "There's nothing here";
             }
             return View();
         }

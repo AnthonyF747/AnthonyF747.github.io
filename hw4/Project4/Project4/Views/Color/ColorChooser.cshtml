@@ -8,7 +8,6 @@
 
 <p>Please enter color in HTML hexadecimal format: #AABBCC</p>
 
-
 <div class="container-fluid">
     <div class="col-md-12">
         @using (Html.BeginForm("ColorChooser", "ColorController", FormMethod.Post))
@@ -23,7 +22,7 @@
             </div>
             @Html.ActionLink("Mix Colors", "ColorChooser", "ColorController", new { @class = "btn btn-primary", type="text" })
         }
-
+        The viewbag should be here
         @ViewBag.Message
 
     </div>
