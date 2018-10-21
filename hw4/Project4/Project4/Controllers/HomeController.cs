@@ -34,7 +34,7 @@ namespace Project4.Controllers
             string radbtn = Request.QueryString["Units"];
             double miles = 0;
             double sum = 0;
-            Regex regex = new Regex(@"^\d+(\.\d*)?|\.\d+");
+            Regex regex = new Regex(@"\d+(\.\d)?|\.\d+");
 
             if (mile != null)
             {
