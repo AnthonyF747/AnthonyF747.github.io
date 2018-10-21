@@ -44,3 +44,9 @@ I was having issues with getting a tooltip stlye alert to work if a `string` or 
 
 ![alt-text](img/conWString.JPG)
 
+The next thing I did was add the `ColorController` and configured the route.
+
+![alt-text](img/slnOverview.JPG)
+
+
+
