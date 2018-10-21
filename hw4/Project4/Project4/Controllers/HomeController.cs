@@ -26,5 +26,10 @@ namespace Project4.Controllers
 
             return View();
         }
+
+        public ActionResult Converter()
+        {
+            return View();
+        }
     }
 }

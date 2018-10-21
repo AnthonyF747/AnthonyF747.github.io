@@ -24,3 +24,15 @@ The new start page:
 
 ![alt-text](img/newStartPage.JPG)
 
+In the next step, I created a new `Converter` controller in the `Home` controller.
+
+![alt-text](img/createConvertControl.JPG)
+
+The `Converter` view code to set up radio buttons and textbox:
+
+![alt-text](img/setRadioBtns.JPG)
+
+Here is the `Converter` view:
+
+![alt-text](img/convertView.JPG)
+
