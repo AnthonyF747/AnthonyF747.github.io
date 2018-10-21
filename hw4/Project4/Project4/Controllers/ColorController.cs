@@ -13,7 +13,7 @@ namespace Project4.Controllers
         // GET: Color
         public ActionResult ColorChooser()
         {
-            ViewBag.Message = "Where am I"
+            ViewBag.Message = "Where am I";
             return View();
         }
 
