@@ -36,3 +36,11 @@ Here is the `Converter` view:
 
 ![alt-text](img/convertView.JPG)
 
+After adding input to `Converter`:
+
+![alt-text](img/conViewWData.JPG)
+
+I was having issues with getting a tooltip stlye alert to work if a `string` or `char` is entered into the miles textbox, so I added a ViewBag that displays a message if a number is not entered.
+
+![alt-text](img/conWString.JPG)
+
