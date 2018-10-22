@@ -137,3 +137,9 @@ Now GitHub isn't working correctly, or I messed something up with my link page. 
 
 Ok, I got everything together...I think. At least the journal and code links showed up when I came to check. Thank you reboot!!!! 
 
+Here is the Color Chooser:
+
+![alt-text](img/webColorView.JPG)
+
+So far, I haven't been able to figure out the code for the converter. :( 
+
