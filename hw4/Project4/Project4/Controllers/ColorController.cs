@@ -35,7 +35,13 @@ namespace Project4.Controllers
                 Color colorOne = ColorTranslator.FromHtml(firstColor);
                 Color colorTwo = ColorTranslator.FromHtml(secondColor);
 
-               // Color newColor = colorOne + colorTwo;
+                byte r1 = colorOne.R;
+                byte g1 = colorOne.G;
+                byte b1 = colorOne.B;
+
+                byte r2 = colorTwo.R;
+                byte g2 = colorTwo.G;
+                byte b2 = colorTwo.B;
 
                 ViewBag.NewColor = "it matches";
             }
@@ -43,9 +49,6 @@ namespace Project4.Controllers
             {
                 ViewBag.RegexFail = "The value entered was not is proper form. Try #AABBCC pattern";
             }
-            Debug.WriteLine(firstColor);
-            Debug.WriteLine(secondColor);
-
             return View();
         }
     }
