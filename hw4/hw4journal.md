@@ -44,7 +44,13 @@ I was having issues with getting a tooltip stlye alert to work if a `string` or 
 
 ![alt-text](img/conWString.JPG)
 
+The next thing I did was add the `ColorController` and configured the route.
 
+![alt-text](img/slnOverview.JPG)
+
+I'm trying to figure out the `ColorTranslator` and `System.Drawing` to get the colors, but haven't figured it out yet. In this image, I'm trying to verify if the input is in the hexidecimal pattern as shown on the view page.
+
+![alt-text](img/colorControl.JPG)
 
 
 
