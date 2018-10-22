@@ -52,3 +52,5 @@ I'm trying to figure out the `ColorTranslator` and `System.Drawing` to get the c
 
 ![alt-text](img/colorControl.JPG)
 
+
+
