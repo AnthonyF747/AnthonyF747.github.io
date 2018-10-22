@@ -24,19 +24,18 @@ namespace Project4.Controllers
         }
 
         [HttpPost]
-        public ActionResult ColorChooser(string x, string y)
+        public ActionResult ColorChooser(FormCollection frm)
         {
-            Color colorOne;
-            Color colorTwo;
+            string firstColor = frm["firstColor"].ToString();
+            string secondColor = frm["secondColor"].ToString();
             Regex regex = new Regex("^#[A-Fa-f0-9]{6} | [A-Fa-f0-9]{3}");
 
-            if(regex.IsMatch(x) && regex.IsMatch(y))
+            if(regex.IsMatch(firstColor) && regex.IsMatch(secondColor))
             {
-                colorOne = ColorTranslator.FromHtml(x);
-                colorTwo = ColorTranslator.FromHtml(y);
+                Color colorOne = ColorTranslator.FromHtml(firstColor);
+                Color colorTwo = ColorTranslator.FromHtml(secondColor);
 
-                Debug.WriteLine(colorOne.ToString());
-                Debug.WriteLine(colorTwo.ToString());
+               // Color newColor = colorOne + colorTwo;
 
                 ViewBag.NewColor = "it matches";
             }
@@ -44,9 +43,8 @@ namespace Project4.Controllers
             {
                 ViewBag.RegexFail = "The value entered was not is proper form. Try #AABBCC pattern";
             }
-
-            
-            //Color newColor = colorOne + colorTwo;
+            Debug.WriteLine(firstColor);
+            Debug.WriteLine(secondColor);
 
             return View();
         }
