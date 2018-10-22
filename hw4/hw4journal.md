@@ -133,5 +133,5 @@ I'm trying to figure out the `ColorTranslator` and `System.Drawing` to get the c
         }
     }
 
-
+Now GitHub isn't working correctly, or I messed something up with my link page. I can't get the link to Homework 4 to stay on the GitHub page. Once I close the browser and go back to GitHub, my link is gone to the code and journal. I'm so confused!!!!
 
