@@ -30,7 +30,42 @@ In the next step, I created a new `Converter` controller in the `Home` controlle
 
 The `Converter` view code to set up radio buttons and textbox:
 
-![alt-text](img/setRadioBtns.JPG)
+<h2>Convert Miles to Metric</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <form action="/Home/Converter" method="get" name="form1">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="MilesToConvert">Miles:</label>
+                    <input type="text" name="MilesToConvert" value="" class="form-control"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Select a Unit</h3>
+                <hr />
+                <div class="radio">
+                    <label><input type="radio" name="Units" value="millimeters" checked/><strong>millimeters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="Units" value="centimeters" /><strong>centimeters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="Units" value="meters" /><strong>meters</strong></label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" name="Units" value="kilometers" /><strong>kilometers</strong></label>
+                </div>
+            </div>
+            <div align="center">
+                <input type="submit" value="Convert" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <h3 style="color: red">@ViewBag.RegexMessage</h3>
+    <h3 style="color: darkred">@ViewBag.Message</h3>
+</div>
+
 
 Here is the `Converter` view:
 
