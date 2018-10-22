@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -33,6 +34,9 @@ namespace Project4.Controllers
             {
                 colorOne = ColorTranslator.FromHtml(x);
                 colorTwo = ColorTranslator.FromHtml(y);
+
+                Debug.WriteLine(colorOne.ToString());
+                Debug.WriteLine(colorTwo.ToString());
 
                 ViewBag.NewColor = "it matches";
             }
