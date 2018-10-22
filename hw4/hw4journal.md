@@ -18,7 +18,29 @@ The web view of the new project:
 
 After changing the `_Layout.cshtml` page, I recoded the `Index.cshtml` page to get the required start page.
 
-![alt-text](img/newIndex.JPG)
+<div class="jumbotron">
+    <h1>CS 460 Homework 4</h1>
+    <p class="lead">A few forms and some simple server-side logic -- learning the basics of GET, POST, query strings, form data
+    and handling it all from an ASP.NET MVC 5 application.</p>
+    <p><a href="/Home/Index" class="btn btn-info btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Mile to Metric Converter</h2>
+        <p>
+            Want to know how many millimeters there are in 26.2 miles? This calculator is for you. Use query strings to send
+            form data to the server, which performs the calculation and returns the answer in the requested page.
+        </p>
+        <p><a class="btn btn-primary" href="/Home/Converter">Try it out &raquo;</a></p>  
+    </div>
+    <div class="col-md-6">
+        <h2>Color Chooser</h2>
+        <p>Typical online color choosers are way too useful. We wanted something fun and completely useless. This form POSTs
+        the data to the server.</p>
+        <p><a class="btn btn-primary" href="/Color/ColorChooser">Check it out &raquo;</a></p>
+    </div>
+</div>
 
 The new start page:
 
