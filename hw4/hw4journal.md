@@ -18,14 +18,14 @@ The web view of the new project:
 
 After changing the `_Layout.cshtml` page, I recoded the `Index.cshtml` page to get the required start page.
 
-<div class="jumbotron">
-    <h1>CS 460 Homework 4</h1>
-    <p class="lead">A few forms and some simple server-side logic -- learning the basics of GET, POST, query strings, form data
-    and handling it all from an ASP.NET MVC 5 application.</p>
-    <p><a href="/Home/Index" class="btn btn-info btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="jumbotron">
+        <h1>CS 460 Homework 4</h1>
+        <p class="lead">A few forms and some simple server-side logic -- learning the basics of GET, POST, query strings, form data
+        and handling it all from an ASP.NET MVC 5 application.</p>
+        <p><a href="/Home/Index" class="btn btn-info btn-lg">Learn more &raquo;</a></p>
+    </div>
 
-<div class="row">
+    <div class="row">
     <div class="col-md-6">
         <h2>Mile to Metric Converter</h2>
         <p>
@@ -40,7 +40,7 @@ After changing the `_Layout.cshtml` page, I recoded the `Index.cshtml` page to g
         the data to the server.</p>
         <p><a class="btn btn-primary" href="/Color/ColorChooser">Check it out &raquo;</a></p>
     </div>
-</div>
+    </div>
 
 The new start page:
 
@@ -52,17 +52,17 @@ In the next step, I created a new `Converter` controller in the `Home` controlle
 
 The `Converter` view code to set up radio buttons and textbox:
 
-<h2>Convert Miles to Metric</h2>
+    <h2>Convert Miles to Metric</h2>
 
-<div class="container-fluid">
-    <div class="row">
-        <form action="/Home/Converter" method="get" name="form1">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="MilesToConvert">Miles:</label>
-                    <input type="text" name="MilesToConvert" value="" class="form-control"/>
+    <div class="container-fluid">
+        <div class="row">
+            <form action="/Home/Converter" method="get" name="form1">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="MilesToConvert">Miles:</label>
+                        <input type="text" name="MilesToConvert" value="" class="form-control"/>
+                    </div>
                 </div>
-            </div>
             <div class="col-md-6">
                 <h3>Select a Unit</h3>
                 <hr />
@@ -86,7 +86,7 @@ The `Converter` view code to set up radio buttons and textbox:
     </div>
     <h3 style="color: red">@ViewBag.RegexMessage</h3>
     <h3 style="color: darkred">@ViewBag.Message</h3>
-</div>
+    </div>
 
 
 Here is the `Converter` view:
