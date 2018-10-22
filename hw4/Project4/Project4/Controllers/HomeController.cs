@@ -72,7 +72,7 @@ namespace Project4.Controllers
                 // the result after the conversion, and what conversion took place
                 ViewBag.Message = miles + " miles is equal to " + sum + " " + radbtn;
             }
-            return View();
+            return View();                                     // return the Converter view
         }
     }
 }
