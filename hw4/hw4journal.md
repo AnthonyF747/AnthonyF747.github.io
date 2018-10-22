@@ -145,3 +145,7 @@ So far, I haven't been able to figure out the code for the converter. :(
 
 I really don't get how the query strings work either. While entering numbers and checking radio buttons, I've never seen the address bar give back responses and when I enter data into the address bar, it breaks. I bought the ASP.NET MVC 5 book and hope I can read more for the next project. 
 
+Wait, I went back to double check the converter and...
+
+![alt-text](img/queryString.JPG)
+
