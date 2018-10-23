@@ -50,9 +50,7 @@ namespace Project4.Controllers
                 int g = g1 + g2;
                 int b = b1 + b2;
 
-                //string temp = (r, g, b).ToString();
-
-                //Color newColor = ColorTranslator.ToHtml(r, g, b);
+                Color newColor = Color.FromArgb(r, g, b);
 
                 ViewBag.NewColor = "it matches";
             }
