@@ -28,7 +28,10 @@ namespace Project4.Controllers
         {
             string firstColor = frm["firstColor"].ToString();
             string secondColor = frm["secondColor"].ToString();
-            Regex regex = new Regex("^#[A-Fa-f0-9]{6} | [A-Fa-f0-9]{3}");
+            Regex regex = new Regex("^#[A-Fa-f0-9]{6, 8} | [A-Fa-f0-9]{3}");
+
+            Debug.WriteLine(firstColor);
+            Debug.WriteLine(secondColor);
 
             if(regex.IsMatch(firstColor) && regex.IsMatch(secondColor))
             {
@@ -42,6 +45,8 @@ namespace Project4.Controllers
                 byte r2 = colorTwo.R;
                 byte g2 = colorTwo.G;
                 byte b2 = colorTwo.B;
+
+                //Color newColor = (r1 + r2)(g1 + g2)(b1 + b2);
 
                 ViewBag.NewColor = "it matches";
             }

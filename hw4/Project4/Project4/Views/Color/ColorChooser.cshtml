@@ -19,8 +19,8 @@
                 @Html.Label("secondColor", "Second Color")
                 @Html.TextBox("secondColor", null, htmlAttributes: new { @class = "form-control" })
             </div>
-            @Html.ActionLink("Mix Colors", "ColorChooser", "ColorChooser", new { @class = "btn btn-primary" })
         }
+        @Html.ActionLink("Mix Colors", "ColorChooser", "ColorChooser", htmlAttributes: new { @class = "btn btn-primary" })
     </div>
     @ViewBag.RegexFail
     @ViewBag.NewColor

@@ -21,8 +21,8 @@ namespace Project4
 
             routes.MapRoute(
                 name: "Color",
-                url: "{ controller}/{action}/{name}/{id}"
-                );
+                url: "{ controller}/{action}/{name}/{id}",
+                defaults: new { controller = "Color", action = "ColorChooser", id = UrlParameter.Optional });
         }
     }
 }
