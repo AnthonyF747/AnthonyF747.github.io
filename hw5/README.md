@@ -1,0 +1,3 @@
+# Project 5
+
+For this project, we are to build a maintenance application for an apartment/rental unit where a tenant is able to request maintenance by submitting a form to management or the maintenance personnel. There will be a database that will hold the tenant's name, apartment number, and type of maintenance needed. There will be a timestamp that is entered when the form is submitted which will act as how the list order is returned when the requests are printed out.  
