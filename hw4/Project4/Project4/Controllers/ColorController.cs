@@ -46,7 +46,13 @@ namespace Project4.Controllers
                 byte g2 = colorTwo.G;
                 byte b2 = colorTwo.B;
 
-                //Color newColor = (r1 + r2)(g1 + g2)(b1 + b2);
+                int r = r1 + r2;
+                int g = g1 + g2;
+                int b = b1 + b2;
+
+                //string temp = (r, g, b).ToString();
+
+                //Color newColor = ColorTranslator.ToHtml(r, g, b);
 
                 ViewBag.NewColor = "it matches";
             }
