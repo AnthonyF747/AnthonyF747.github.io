@@ -149,3 +149,48 @@ Wait, I went back to double check the converter and...
 
 ![alt-text](img/queryString.JPG)
 
+The mile converter still has an error with mixed input, such as #e45 and #4ef.
+
+I've changed the ColorController code:
+
+    [HttpPost]
+        public ActionResult ColorChooser(FormCollection frm)
+        {
+            string firstColor = frm["firstColor"].ToString();
+            string secondColor = frm["secondColor"].ToString();
+            Regex regex = new Regex("^#[A-Fa-f0-9]{6, 8} | [A-Fa-f0-9]{3}");
+
+            Debug.WriteLine(firstColor);
+            Debug.WriteLine(secondColor);
+
+            if(regex.IsMatch(firstColor) && regex.IsMatch(secondColor))
+            {
+                Color colorOne = ColorTranslator.FromHtml(firstColor);
+                Color colorTwo = ColorTranslator.FromHtml(secondColor);
+
+                byte r1 = colorOne.R;
+                byte g1 = colorOne.G;
+                byte b1 = colorOne.B;
+
+                byte r2 = colorTwo.R;
+                byte g2 = colorTwo.G;
+                byte b2 = colorTwo.B;
+
+                int r = r1 + r2;
+                int g = g1 + g2;
+                int b = b1 + b2;
+
+                Color newColor = Color.FromArgb(r, g, b);
+
+                ViewBag.NewColor = "it matches";
+            }
+            else
+            {
+                ViewBag.RegexFail = "The value entered was not is proper form. Try #AABBCC pattern";
+            }
+            return View();
+            
+This has not changed the issue of the view button not sending to this post method. I have made sure that the proper controller/view are matched, but I still can't get them to find each other. I moved the button inside the `form` element and outside that same element and it still doesn't know the post method exists and only hits the get method.
+
+![alt-text](img/colorGet.JPG)
+
