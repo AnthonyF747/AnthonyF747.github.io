@@ -109,3 +109,33 @@ I put required on everything except for the `Description` portion. I'll probably
 input a short description of the maintenance issue. The management/maintenance personnel should know what kind of repair is needed.
 
 Oh no, when I woke up this morning, I logged on to create the form on the "Request" page. As always, I do a `git status` command to make sure that everything is still good to go and to my surprise, there was something that needed to be added and committed. I don't know where or why this showed up because I made sure to do all this before powering down my machine for the night. I worked on the form and went to go test the page to see how the layout was coming along and... 404 popped up and wouldn't load at all. I don't know if the commit I made first thing this morning has anything to do with it since it was a `.csproj` extension. At least I wasn't too far into the project and I can have it back to where I was shortly. This is such an inconvenience!
+
+
+Since we are supposed to use different branches to show how we can figure that out, I used a branch called "design" for building the landing page and getting the view set up. I switched branches to "model" and created the "Project5.Models" page that holds the getters and setters for the database.
+
+    namespace Project5.Models
+    {
+        public class Tenants
+        {
+            public int ID { get; set; }
+
+            [Required, StringLength (20)]
+            public string FirstName { get; set; }
+
+            [Required, StringLength (25)]
+            public string LastName { get; set; }
+
+            [Required, StringLength (10)]
+            public string PhoneNumber { get; set; }
+
+            [Required, StringLength (30)]
+            public string ApartmentName { get; set; }
+
+            [Required]
+            public int ApartmentNumber { get; set; }
+
+            [Required, StringLength (500)]
+            public string Description { get; set; }
+        }
+    }
+    
