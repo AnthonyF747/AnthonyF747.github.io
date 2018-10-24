@@ -23,6 +23,7 @@ namespace Project5.Models
         [Required]
         [StringLength (4)]
         public string UnitNumber { get; set; }
+        [Required]
         [StringLength (500)]
         public string Description { get; set; }
     }
