@@ -78,4 +78,32 @@ Style for the button `div`:
         text-align: center center;
         opacity: 0.9;
     }
+
+Now to tackle the model portion of the project. This didn't take too long:
+
+    namespace Project5.Models
+    {
+        public class Tenant
+        {
+            [Required]
+            [StringLength (20)]
+            public string FirstName { get; set; }
+            [Required]
+            [StringLength (25)]
+            public string LastName { get; set; }
+            [Required]
+            [StringLength (10)]
+            public string PhoneNumber { get; set; }
+            [Required]
+            [StringLength (30)]
+            public string ApartmentName { get; set; }
+            [Required]
+            [StringLength (4)]
+            public string UnitNumber { get; set; }
+            [StringLength (500)]
+            public string Description { get; set; }
+        }
+    }
     
+I put required on everything except for the `Description` portion. I'll probably add a `Required` validation to force the user to
+input a short description of the maintenance issue. The management/maintenance personnel should know what kind of repair is needed.
