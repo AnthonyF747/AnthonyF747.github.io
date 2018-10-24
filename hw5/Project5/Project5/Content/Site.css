@@ -1,4 +1,7 @@
 ﻿body {
+    background-image: url(../Content/images/apartmentpic.jpg);
+    width: 100%;
+    height: auto;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -21,4 +24,23 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+
+.jumbotron {
+    background-color: tan;
+}
+
+.request-btn {
+    width: 300px !important;
+    height: 289px !important;
+    color: black;
+    background-color: slategray;
+    padding: 10px;
+    margin: 10px;
+    text-align: center center;
+    opacity: 0.9;
+}
+
+.ftname{
+    color: black;
 }

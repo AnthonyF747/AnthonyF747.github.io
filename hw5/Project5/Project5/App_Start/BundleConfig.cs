@@ -25,6 +25,10 @@ namespace Project5
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/css").Include(
+                      "~/Content/css/Site.css",
+                      new CssRewriteUrlTransform()
+                  ));
         }
     }
 }
