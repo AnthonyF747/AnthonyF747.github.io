@@ -19,3 +19,63 @@ I worked on the `Index.cshtml` landing page. It took a while to figure out how t
 Landing page:
 
 ![alt-text](img/landpage.JPG)
+
+The code was simple:
+
+    <div class="container">
+            <div class="jumbotron">
+            <h1>Welcome to Fix It</h1>
+            <p>
+                Fix It is a new way to get your maintenance needs known without having to
+                pick up the phone and call your property manager. Just fill out a simple 
+                form and get your repairs requests in quickly at your convenience.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="request-btn">
+                    <p><bold>
+                        Any repairs that need to be addressed will be serviced
+                        in an orderly manner. In case of a major repair, we will
+                        contact you so we can assess the damage before any work
+                        begins. To start your maintenance request, please click on
+                        the link.
+                    </bold></p>
+                    @Html.ActionLink("Fix It", "Request", "Request", new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+    
+Adding the background picture to the body:
+
+    body {
+        background-image: url(../Content/images/apartmentpic.jpg);
+        width: 100%;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    
+In order to get the background image, I had to create an image folder in the `Content` folder and add the image to it. Then,
+I added a new bundle so the image would be found in that folder:
+
+        bundles.Add(new ScriptBundle("~/bundles/css").Include(
+                      "~/Content/css/Site.css",
+                      new CssRewriteUrlTransform()
+                  ));
+                  
+The source stated that this code will link to locale paths. I guess it worked because the picture finally showed up on the page.
+    
+Style for the button `div`:
+
+    .request-btn {
+        width: 300px !important;
+        height: 289px !important;
+        color: black;
+        background-color: slategray;
+        padding: 10px;
+        margin: 10px;
+        text-align: center center;
+        opacity: 0.9;
+    }
+    
