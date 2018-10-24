@@ -7,3 +7,9 @@ Since my failure with getting the button, on week 4's ColorChooser view, to find
 Well, here we go with the project. 
 
 This project has us creating a maintenance form for an apartment/rental environment. When a tenant has a maintenance issue, the tenant fills out the online form and submits it for management or the maintenance person to handle the request. The application will have a database that stores the information entered on the form which includes the tenant's name, apartment number, and maintenance required.
+
+After loading and committing project 5, I changed the shared nav-bar to new links. I decided to go with "Fix It" as my apps name. The two other links will be a "request" link to the maintenance form for tenants to fill out when they have a maintenance issue, and the last page will be for the maintenance/management personnel to get information from the database.
+
+The current nav-bar looks like: 
+
+![alt-text](img/navbar.JPG)
