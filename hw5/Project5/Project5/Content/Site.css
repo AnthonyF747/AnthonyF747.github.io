@@ -28,11 +28,12 @@ textarea {
 
 .jumbotron {
     background-color: tan;
+    opacity: 0.9;
 }
 
 .reqarea {
     width: 300px;
-    height: 289px;
+    height: 261px;
     color: black;
     background-color: slategray;
     padding: 10px;
@@ -43,6 +44,10 @@ textarea {
 
 .ftname {
     color: black;
+}
+
+.mainbtn {
+    margin-left: 100px;
 }
 
 
