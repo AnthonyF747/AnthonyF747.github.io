@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Project5.Controllers
 {
-    public class HomeController : Controller
+    public class View : Controller
     {
         public ActionResult Index()
         {
@@ -26,5 +26,10 @@ namespace Project5.Controllers
 
             return View();
         }
+
+        public ActionResult TenantRequest()
+        {
+            return View();
+        }     
     }
 }
