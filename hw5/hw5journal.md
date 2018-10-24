@@ -13,3 +13,9 @@ After loading and committing project 5, I changed the shared nav-bar to new link
 The current nav-bar looks like: 
 
 ![alt-text](img/navbar.JPG)
+
+I worked on the `Index.cshtml` landing page. It took a while to figure out how to get a background picture for the page, but I did it YAY!! I'm not thrilled with the `div` that has the button to the `Request` page, but it will do for this project.
+
+Landing page:
+
+![alt-text](img/landpage.JPG)
