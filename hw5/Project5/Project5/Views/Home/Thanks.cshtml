@@ -1,0 +1,16 @@
+﻿@model Project5.Models.Tenants
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h1>Thank you, @Model.FirstName!</h1>
+@if(Model.IsHome == true)
+{
+    @:We will call to let you know when our maintenance crew will be arriving for repairs.
+}
+else
+{
+    @:We will call to schedule a day for your repairs.
+}
+

@@ -40,9 +40,15 @@ namespace Project5.Controllers
         {
             if(ModelState.IsValid)
             {
-
+                return View("Thanks", tenant);
             }
-            return View();
+            else
+            {
+                // validation issue
+                return View();
+            }
         }
+
+
     }
 }
