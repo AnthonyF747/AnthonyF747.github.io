@@ -1,0 +1,71 @@
+﻿@model Project5.Models.Tenants
+
+@{
+    ViewBag.Title = "TenantView";
+}
+
+
+<div class="container" id="tendiv">
+    <div class="row" id="hdpart">
+        <h1 id="tenhead">Apartment Maintenance Services</h1>
+
+        <h2 id="tensub">Tenant Request Form</h2>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="row" id="frtinlineblk">
+            <div class="form-group">
+                <div class="col-md-4">
+                    @Html.Label("First Name:")
+                    @Html.TextBoxFor(x => x.FirstName)
+                </div>
+                <div class="col-md-4">
+                    @Html.Label("Last Name:")
+                    @Html.TextBoxFor(x => x.LastName)
+                </div>
+                <div class="col-md-4">
+                    @Html.Label("Phone Number:")
+                    @Html.TextBoxFor(x => x.PhoneNumber)
+                </div>
+            </div>
+        </div>
+        <div class="row" id="secinlineblk">
+            <div class="form-group">
+                <div class="col-md-8">
+                    @Html.Label("Apartment Name:")
+                    @Html.TextBoxFor(x => x.ApartmentName, new { col = 30 })
+                </div>
+                <div class="col-md-4">
+                    @Html.Label("Apartment Number:")
+                    @Html.TextBoxFor(x => x.ApartmentNumber)
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                @Html.Label("Description:", new { style = "color: black" })
+                <div class="form-group" id="txtblk">
+                    @Html.TextAreaFor(x => x.Description, htmlAttributes: new { style="width: 500px; height: 300px;", placeholder="Explanation" +
+                    " of request, maintenance required, or complaint. Please be specific."})
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="submit" class="btn btn-primary btn-lg" value="Submit Request" />
+            </div>
+            <div class="col-md-4" id="ckbx">
+                @Html.CheckBoxFor(x => x.IsHome, new { style = "width: 20px; height: 20px;" })
+            </div>
+            <div class="col-md-4">
+                <p id="tenp">
+                    Check the box to give permission for the landlord or representative to enter your unit to perform the
+                    requested maintenance. We will call first.
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
+
+

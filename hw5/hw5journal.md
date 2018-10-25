@@ -110,4 +110,84 @@ input a short description of the maintenance issue. The management/maintenance p
 
 Oh no, when I woke up this morning, I logged on to create the form on the "Request" page. As always, I do a `git status` command to make sure that everything is still good to go and to my surprise, there was something that needed to be added and committed. I don't know where or why this showed up because I made sure to do all this before powering down my machine for the night. I worked on the form and went to go test the page to see how the layout was coming along and... 404 popped up and wouldn't load at all. I don't know if the commit I made first thing this morning has anything to do with it since it was a `.csproj` extension. At least I wasn't too far into the project and I can have it back to where I was shortly. This is such an inconvenience!
 
+
 You think you've seen it all and then something changes your mind. During the rebuild of project 5, I set the `background-image` to the picture and it worked first time out. I didn't have to add a new bundle as in the previous build. Can anyone explain this to me? I couldn't get that dumb picture to show until I added that bundle and this time it displayed the picture. I'm stumped!!!
+
+
+Since we are supposed to use different branches to show how we can figure that out, I used a branch called "design" for building the landing page and getting the view set up. I switched branches to "model" and created the "Project5.Models" page that holds the getters and setters for the database.
+
+    namespace Project5.Models
+    {
+        public class Tenants
+        {
+            public int ID { get; set; }
+
+            [Required, StringLength (20)]
+            public string FirstName { get; set; }
+
+            [Required, StringLength (25)]
+            public string LastName { get; set; }
+
+            [Required, StringLength (10)]
+            public string PhoneNumber { get; set; }
+
+            [Required, StringLength (30)]
+            public string ApartmentName { get; set; }
+
+            [Required]
+            public int ApartmentNumber { get; set; }
+
+            [Required, StringLength (500)]
+            public string Description { get; set; }
+        }
+    }
+    
+The view for `TenantView` is complete but needs some work. I'm running into `.css` issues which are mainly my fault. I don't know why my `textarea` won't scale the way I want it to, but it's really annoying. I have to move on...
+
+Here is the view:
+
+![alt-text](img/topHalften.JPG)
+
+The code to build the view:
+
+    @model Project5.Models.Tenants
+
+    @{
+        ViewBag.Title = "TenantView";
+    }
+
+
+    <div class="container" id="tendiv">
+        <div class="row" id="hdpart">
+            <h1 id="tenhead">Apartment Maintenance Services</h1>
+
+        <h2 id="tensub">Tenant Request Form</h2>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="row" id="frtinlineblk">
+            <div class="form-group">
+                @Html.Label("First Name:")
+                @Html.TextBoxFor(x => x.FirstName)
+                @Html.Label("Last Name:")
+                @Html.TextBoxFor(x => x.LastName)
+                @Html.Label("Phone Number:")
+                @Html.TextBoxFor(x => x.PhoneNumber)
+            </div>
+        </div>
+        <div class="row" id="secinlineblk">
+            <div class="form-group">
+                @Html.Label("Apartment Name:")
+                @Html.TextBoxFor(x => x.ApartmentName)
+                @Html.Label("Apartment Number:")
+                @Html.TextBoxFor(x => x.ApartmentNumber)
+            </div>
+        </div>
+        @Html.Label("Description:", new { style = "color: black" })
+        <div class="form-group" id="txtblk">
+            @Html.TextAreaFor(x => x.Description, new { style="width: 500px; height: 400px;", placeholder="Explanation" +
+            " of request, maintenance required, or complaint. Please be specific."})
+        </div>
+        @Html.ActionLink("Submit", "TenantView", "Home", new { @class = "btn btn-primary btn-lg" })
+    }
+    </div>
