@@ -79,29 +79,40 @@ Style for the button `div`:
         opacity: 0.9;
     }
 
+Since we are supposed to use different branches to show how we can figure that out, I used a branch called "design" for building the landing page and getting the view set up. I switched branches to "model" and created the "Project5.Models" page that holds the getters and setters for the database.
+
 Now to tackle the model portion of the project. This didn't take too long:
 
-    namespace Project5.Models
-    {
-        public class Tenant
+     namespace Project5.Models
+      {
+        public class Tenants
         {
-            [Required]
+            public int ID { get; set; }
+
+            [Required(ErrorMessage = "Please enter your first name")]
             [StringLength (20)]
             public string FirstName { get; set; }
-            [Required]
+
+            [Required(ErrorMessage = "Please enter your last name")]
             [StringLength (25)]
             public string LastName { get; set; }
-            [Required]
+
+            [Required(ErrorMessage = "Please enter your phone number")]
             [StringLength (10)]
             public string PhoneNumber { get; set; }
-            [Required]
+
+            [Required(ErrorMessage = "Please enter your apartment name")]
             [StringLength (30)]
             public string ApartmentName { get; set; }
-            [Required]
-            [StringLength (4)]
-            public string UnitNumber { get; set; }
+
+            [Required(ErrorMessage = "Please enter your unit number")]
+            public int ApartmentNumber { get; set; }
+
+            [Required(ErrorMessage = "Please enter a short description of the issue")]
             [StringLength (500)]
             public string Description { get; set; }
+            
+            public bool IsHome { get; set; }
         }
     }
     
@@ -113,34 +124,6 @@ Oh no, when I woke up this morning, I logged on to create the form on the "Reque
 
 You think you've seen it all and then something changes your mind. During the rebuild of project 5, I set the `background-image` to the picture and it worked first time out. I didn't have to add a new bundle as in the previous build. Can anyone explain this to me? I couldn't get that dumb picture to show until I added that bundle and this time it displayed the picture. I'm stumped!!!
 
-
-Since we are supposed to use different branches to show how we can figure that out, I used a branch called "design" for building the landing page and getting the view set up. I switched branches to "model" and created the "Project5.Models" page that holds the getters and setters for the database.
-
-    namespace Project5.Models
-    {
-        public class Tenants
-        {
-            public int ID { get; set; }
-
-            [Required, StringLength (20)]
-            public string FirstName { get; set; }
-
-            [Required, StringLength (25)]
-            public string LastName { get; set; }
-
-            [Required, StringLength (10)]
-            public string PhoneNumber { get; set; }
-
-            [Required, StringLength (30)]
-            public string ApartmentName { get; set; }
-
-            [Required]
-            public int ApartmentNumber { get; set; }
-
-            [Required, StringLength (500)]
-            public string Description { get; set; }
-        }
-    }
     
 The view for `TenantView` is complete but needs some work. I'm running into `.css` issues which are mainly my fault. I don't know why my `textarea` won't scale the way I want it to, but it's really annoying. I have to move on...
 
@@ -165,6 +148,7 @@ The code to build the view:
     </div>
     @using (Html.BeginForm())
     {
+        @Html.ValidationSummary()
         <div class="row" id="frtinlineblk">
             <div class="form-group">
                 @Html.Label("First Name:")
