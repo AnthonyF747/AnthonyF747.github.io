@@ -27,5 +27,10 @@ namespace Project5.Controllers
 
             return View();
         }
+
+        public ViewResult TenantView()
+        {
+            return View();
+        }
     }
 }

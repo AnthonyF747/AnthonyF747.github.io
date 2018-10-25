@@ -139,3 +139,52 @@ Since we are supposed to use different branches to show how we can figure that o
         }
     }
     
+The view for `TenantView` is complete but needs some work. I'm running into `.css` issues which are mainly my fault. I don't know why my `textarea` won't scale the way I want it to, but it's really annoying. I have to move on...
+
+Here is the view:
+
+![alt-text](img/topHalften.JPG)
+
+The code to build the view:
+
+    @model Project5.Models.Tenants
+
+    @{
+        ViewBag.Title = "TenantView";
+    }
+
+
+    <div class="container" id="tendiv">
+        <div class="row" id="hdpart">
+            <h1 id="tenhead">Apartment Maintenance Services</h1>
+
+        <h2 id="tensub">Tenant Request Form</h2>
+    </div>
+    @using (Html.BeginForm())
+    {
+        <div class="row" id="frtinlineblk">
+            <div class="form-group">
+                @Html.Label("First Name:")
+                @Html.TextBoxFor(x => x.FirstName)
+                @Html.Label("Last Name:")
+                @Html.TextBoxFor(x => x.LastName)
+                @Html.Label("Phone Number:")
+                @Html.TextBoxFor(x => x.PhoneNumber)
+            </div>
+        </div>
+        <div class="row" id="secinlineblk">
+            <div class="form-group">
+                @Html.Label("Apartment Name:")
+                @Html.TextBoxFor(x => x.ApartmentName)
+                @Html.Label("Apartment Number:")
+                @Html.TextBoxFor(x => x.ApartmentNumber)
+            </div>
+        </div>
+        @Html.Label("Description:", new { style = "color: black" })
+        <div class="form-group" id="txtblk">
+            @Html.TextAreaFor(x => x.Description, new { style="width: 500px; height: 400px;", placeholder="Explanation" +
+            " of request, maintenance required, or complaint. Please be specific."})
+        </div>
+        @Html.ActionLink("Submit", "TenantView", "Home", new { @class = "btn btn-primary btn-lg" })
+    }
+</div>
