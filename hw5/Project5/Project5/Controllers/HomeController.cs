@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project5.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,9 +29,18 @@ namespace Project5.Controllers
             return View();
         }
 
+        [HttpGet]
         public ViewResult TenantView()
         {
-            return View();
+            Tenants model = new Tenants();
+            return View(model);
+        }
+
+        [HttpPost]
+        public ViewResult TenantView(Tenants tenant)
+        {
+            Tenants model = new Tenants();
+            return View(model);
         }
     }
 }

@@ -10,22 +10,25 @@ namespace Project5.Models
     {
         public int ID { get; set; }
 
-        [Required, StringLength (20)]
+        [Required, StringLength(20)]
         public string FirstName { get; set; }
 
-        [Required, StringLength (25)]
+        [Required, StringLength(25)]
         public string LastName { get; set; }
 
-        [Required, StringLength (10)]
+        [Required, StringLength(10)]
         public string PhoneNumber { get; set; }
 
-        [Required, StringLength (30)]
+        [Required, StringLength(30)]
         public string ApartmentName { get; set; }
 
         [Required]
         public int ApartmentNumber { get; set; }
 
-        [Required, StringLength (500)]
+        [Required, StringLength(500)]
+        [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+
+        public bool IsHome { get; set; }
     }
 }
