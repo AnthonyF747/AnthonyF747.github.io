@@ -11,8 +11,7 @@
 
         <h2 id="tensub">Tenant Request Form</h2>
     </div>
-    public ViewResult TenantView(Tenants tenant)
-    @using (Html.BeginForm("Home", "TenantView", FormMethod.Post))
+    @using (Html.BeginForm())
     {
         <div class="row" id="frtinlineblk">
             <div class="form-group">
@@ -53,7 +52,7 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                @Html.ActionLink("Submit Request", "TenantView", "Home", htmlAttributes: new { @class = "btn btn-primary btn-lg" })
+                <input type="submit" class="btn btn-primary btn-lg" value="Submit Request" />
             </div>
             <div class="col-md-4" id="ckbx">
                 @Html.CheckBoxFor(x => x.IsHome, new { style = "width: 20px; height: 20px;" })

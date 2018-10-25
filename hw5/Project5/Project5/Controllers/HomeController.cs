@@ -32,15 +32,17 @@ namespace Project5.Controllers
         [HttpGet]
         public ViewResult TenantView()
         {
-            Tenants model = new Tenants();
-            return View(model);
+            return View();
         }
 
         [HttpPost]
         public ViewResult TenantView(Tenants tenant)
         {
-            Tenants model = new Tenants();
-            return View(model);
+            if(ModelState.IsValid)
+            {
+
+            }
+            return View();
         }
     }
 }
