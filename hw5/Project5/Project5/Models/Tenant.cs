@@ -43,4 +43,9 @@ namespace Project5.Models
 
         public bool IsHome { get; set; }
     }
+
+    /*public override string ToString()
+    {
+        return $"{base.ToString()} : {FirstName} {LastName} {PhoneNumber} {ApartmentName} {ApartmentNumber} {Description} {IsHome}";
+    }*/
 }
