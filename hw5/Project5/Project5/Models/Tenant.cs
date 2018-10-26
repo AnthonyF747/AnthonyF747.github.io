@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Project5.Models
 {
-    public class Tenants
+    public class Tenant
     {
         [Key]
         public int ID { get; set; }

@@ -36,7 +36,7 @@ namespace Project5.Controllers
         }
 
         [HttpPost]
-        public ViewResult TenantView(Tenants tenant)
+        public ViewResult TenantView(Tenant tenant)
         {
             if(ModelState.IsValid)
             {
