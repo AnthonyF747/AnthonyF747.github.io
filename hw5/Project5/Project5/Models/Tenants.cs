@@ -19,7 +19,7 @@ namespace Project5.Models
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Please enter your phone number")]
-        [StringLength(10)]
+        [StringLength(10), Phone]
         public string PhoneNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter your apartment name")]
