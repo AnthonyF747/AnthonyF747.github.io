@@ -176,11 +176,8 @@ The code to build the view:
     }
     </div>
 
-I loaded my Surface tablet with Visual Studio so I could talk to Scot about some things that were bothering me and found that I couldn't open the app online after I pulled all the files from my GitHub repository, so I asked Scot about that and he didn't know what was happening, so I asked Shayna who took my Surface did a bunch of stuff and she got the web app to render. This is the trick, in the ApplicationInsights file, look for:
+I loaded my Surface tablet with Visual Studio so I could talk to Scot about some things that were bothering me and found that I couldn't open the app online after I pulled all the files from my GitHub repository, so I asked Scot about that and he didn't know what was happening, so I asked Shayna who took my Surface did a bunch of stuff and she got the web app to render. This is the trick, delete the ApplicationInsights file.
 
-            <IncludeDiagnosticSourceActivities>
-				<Add>Microsoft.Azure.EventHubs</Add>
-				<Add>Microsoft.Azure.ServiceBus</Add>
-			</IncludeDiagnosticSourceActivities>
+![alt-text](img/NoAppInsights.JPG)
             
 Delete this and the page renders. Thank you Shayna!!!

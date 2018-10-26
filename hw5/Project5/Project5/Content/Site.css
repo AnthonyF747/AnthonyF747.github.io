@@ -26,6 +26,7 @@ select,
 #txtblk {
     align-content: center;
     margin-left: 200px;
+    overflow-y: scroll;
 }
 
 .jumbotron {
@@ -94,6 +95,7 @@ select,
     color: black;
     width: 100%;
     height: auto;
+    overflow-y: scroll;
 }
 
 #ckbx {
@@ -102,6 +104,10 @@ select,
 
 #tenp {
     color: black;
+}
+
+#btnten {
+    overflow: hidden; 
 }
 
 .field-validation-error { color: #f00; }

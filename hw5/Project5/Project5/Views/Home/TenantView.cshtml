@@ -17,15 +17,15 @@
             <div class="row" id="frtinlineblk">
                 <div class="form-group">
                     <div class="col-md-4">
-                        @Html.Label("First Name:")
+                        @Html.LabelFor(x => x.FirstName)
                         @Html.TextBoxFor(x => x.FirstName)
                     </div>
                     <div class="col-md-4">
-                        @Html.Label("Last Name:")
+                        @Html.LabelFor(x => x.LastName)
                         @Html.TextBoxFor(x => x.LastName)
                     </div>
                     <div class="col-md-4">
-                        @Html.Label("Phone Number:")
+                        @Html.LabelFor(x => x.PhoneNumber)
                         @Html.TextBoxFor(x => x.PhoneNumber)
                     </div>
                 </div>
@@ -33,18 +33,18 @@
             <div class="row" id="secinlineblk">
                 <div class="form-group">
                     <div class="col-md-8">
-                        @Html.Label("Apartment Name:")
-                        @Html.TextBoxFor(x => x.ApartmentName, htmlAttributes: new { style = "width: 400px" })
+                        @Html.LabelFor(x => x.ApartmentName)
+                        @Html.TextBoxFor(x => x.ApartmentName, new { @class = "form-control", style="width: 500px" })
                     </div>
                     <div class="col-md-4">
-                        @Html.Label("Apartment Number:")
+                        @Html.LabelFor(x => x.ApartmentNumber)
                         @Html.TextBoxFor(x => x.ApartmentNumber)
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    @Html.Label("Description:", new { style = "color: black" })
+                    @Html.LabelFor(x => x.Description, new { style = "color: black" })
                     <div class="form-group" id="txtblk">
                         @Html.TextAreaFor(x => x.Description, htmlAttributes: new { style="width: 600px; height: 300px;", placeholder="Explanation" +
                         " of request, maintenance required, or complaint. Please be specific."})
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" id="btnten">
                     <input type="submit" class="btn btn-primary btn-lg" value="Submit Request" />
                 </div>
                 <div class="col-md-4" id="ckbx">
