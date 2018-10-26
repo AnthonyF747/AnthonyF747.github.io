@@ -181,3 +181,8 @@ I loaded my Surface tablet with Visual Studio so I could talk to Scot about some
 ![alt-text](img/NoAppInsights.JPG)
             
 Delete this and the page renders. Thank you Shayna!!!
+
+This is the bottom-half of the TenantView view:
+
+![alt-text](img/botHalften.JPG)
+

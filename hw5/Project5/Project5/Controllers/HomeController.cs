@@ -49,6 +49,11 @@ namespace Project5.Controllers
             }
         }
 
+        public ViewResult LookupView()
+        {
+            return View();
+        }
+
 
     }
 }
