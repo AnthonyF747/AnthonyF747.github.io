@@ -6,11 +6,14 @@ using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
 using Project5.DAL;
+using System.Diagnostics;
 
 namespace Project5.Controllers
 {
     public class HomeController : Controller
-    { 
+    {
+        public TenantCollection tc = new TenantCollection();
+
         // GET
         public ActionResult Index()
         {
@@ -42,6 +45,7 @@ namespace Project5.Controllers
         {
             if(ModelState.IsValid)
             {
+                tc.Tenants.Add(tenant);
                 return View("Thanks", tenant);
             }
             else
@@ -51,11 +55,18 @@ namespace Project5.Controllers
             }
         }
 
-        public ViewResult LookupView()
+        public ViewResult AllTenants()
         {
             return View();
         }
 
-
+        public ViewResult LookupView()
+        {
+            foreach(var t in tc.Tenants )
+            {
+                Debug.WriteLine(t);
+            }
+            return View(tc.Tenants);
+        }
     }
 }

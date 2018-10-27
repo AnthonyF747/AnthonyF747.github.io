@@ -46,6 +46,6 @@ namespace Project5.Models
 
     /*public override string ToString()
     {
-        return $"{base.ToString()} : {FirstName} {LastName} {PhoneNumber} {ApartmentName} {ApartmentNumber} {Description} {IsHome}";
+        return $"{base.ToString()}: {FirstName} {LastName} {PhoneNumber} {ApartmentName} {ApartmentNumber} {Description} {IsHome}";
     }*/
 }
