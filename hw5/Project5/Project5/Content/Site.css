@@ -119,6 +119,15 @@ select,
     color: black;
 }
 
+#thkssec {
+    background-color: slategray;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    opacity: 0.9;
+    color: black;
+}
+
 .field-validation-error { color: #f00; }
 .field-validation-valid { display: none; }
 .input-validation-error { border: 1px solid #f00; background-color: #fee; }
