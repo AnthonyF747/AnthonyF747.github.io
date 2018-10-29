@@ -9,7 +9,7 @@ namespace Project5.DAL
 {
     public class TenantContext : DbContext
     {
-        public TenantContext() : base("name=DbFixIt")
+        public TenantContext() : base("name=FitItDb")
         {
 
         }

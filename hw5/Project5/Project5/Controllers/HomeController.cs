@@ -7,12 +7,13 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using Project5.DAL;
 using System.Diagnostics;
+using Project5.Models;
 
 namespace Project5.Controllers
 {
     public class HomeController : Controller
     {
-        public TenantCollection tc = new TenantCollection();
+        public TenantContext tc = new TenantContext();
 
         // GET
         public ActionResult Index()
@@ -62,6 +63,24 @@ namespace Project5.Controllers
                 Debug.WriteLine(t);
             }
             return View();
+        }
+
+        // Get: Tenants/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // Post: Tenants/Create
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,ApartmentNumber,FixDescription")]Tenant tenant)
+        {
+            if(ModelState.IsValid)
+            {
+                tc.Tenants.Add(tenant);
+                tc.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(tenant);
         }
     }
 }

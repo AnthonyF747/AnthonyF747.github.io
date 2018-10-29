@@ -39,7 +39,7 @@ namespace Project5.Models
         [StringLength(500)]
         [DataType(DataType.MultilineText)]
         [Display(Name ="Description:")]
-        public string Description { get; set; }
+        public string FixDescription { get; set; }
 
         public bool IsHome { get; set; }
     }

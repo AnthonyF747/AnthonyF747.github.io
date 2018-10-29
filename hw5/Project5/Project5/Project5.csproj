@@ -165,9 +165,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DbFixIt.mdf" />
-    <Content Include="App_Data\DbFixIt_log.ldf">
-      <DependentUpon>DbFixIt.mdf</DependentUpon>
+    <Content Include="App_Data\FitItDb.mdf" />
+    <Content Include="App_Data\FitItDb_log.ldf">
+      <DependentUpon>FitItDb.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
