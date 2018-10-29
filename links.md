@@ -30,5 +30,5 @@ This page will provide the links to journals, homework, demos, and code.
 ### Homework 4
 [code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw4/Project4/Project4)
 
-###. Homework 5
+### Homework 5
 [code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw5/Project5/Project5)
