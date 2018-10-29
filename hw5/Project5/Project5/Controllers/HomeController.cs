@@ -55,18 +55,13 @@ namespace Project5.Controllers
             }
         }
 
-        public ViewResult AllTenants()
-        {
-            return View();
-        }
-
         public ViewResult LookupView()
         {
             foreach(var t in tc.Tenants )
             {
                 Debug.WriteLine(t);
             }
-            return View(tc.Tenants);
+            return View();
         }
     }
 }

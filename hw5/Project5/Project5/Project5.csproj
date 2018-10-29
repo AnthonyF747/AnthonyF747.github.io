@@ -209,6 +209,7 @@
     <Content Include="Views\Home\TenantView.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Views\Home\LookupView.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
