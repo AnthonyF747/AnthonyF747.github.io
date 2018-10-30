@@ -186,3 +186,8 @@ This is the bottom-half of the TenantView view:
 
 ![alt-text](img/botHalften.JPG)
 
+I've added the database
+
+![alt-text](img/db.JPG)
+
+I have yet to get the database to print out. I will continue to try to get my LookupView to work.
