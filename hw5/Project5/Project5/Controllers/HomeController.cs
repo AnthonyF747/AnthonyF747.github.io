@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Data.Entity;
 using Project5.DAL;
 using System.Diagnostics;
-using Project5.Models;
+using System.Net;
 
 namespace Project5.Controllers
 {
@@ -62,7 +62,7 @@ namespace Project5.Controllers
             {
                 Debug.WriteLine(t);
             }
-            return View();
+            return View(tc.Tenants.ToList());
         }
 
         // Get: Tenants/Create
@@ -72,6 +72,8 @@ namespace Project5.Controllers
         }
 
         // Post: Tenants/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,ApartmentNumber,FixDescription")]Tenant tenant)
         {
             if(ModelState.IsValid)
@@ -81,6 +83,42 @@ namespace Project5.Controllers
                 return RedirectToAction("Index");
             }
             return View(tenant);
+        }
+
+        // Get: Tenants/Delete
+        public ActionResult Delete(int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+           
+            Tenant tenant = tc.Tenants.Find(id);
+            if(tenant == null)
+            {
+                return HttpNotFound();
+            }
+            return View(tenant);
+        }
+
+        // Post: Tenant/Delete
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            Tenant tenant = tc.Tenants.Find(id);
+            tc.Tenants.Remove(tenant);
+            tc.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if(disposing)
+            {
+                tc.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
