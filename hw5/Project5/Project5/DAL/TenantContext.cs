@@ -11,7 +11,7 @@ namespace Project5.DAL
     {
         public TenantContext() : base("name=FitItDb")
         {
-
+           
         }
         public virtual DbSet<Tenant> Tenants { get; set; }
     }

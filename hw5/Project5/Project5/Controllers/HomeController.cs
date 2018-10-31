@@ -41,18 +41,20 @@ namespace Project5.Controllers
             return View();
         }
 
+        // Post: Tenants/Create
         [HttpPost]
-        public ViewResult TenantView(Tenant tenant)
+        public ViewResult TenantView([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,ApartmentNumber,FixDescription")]Tenant tenant)
         {
             if(ModelState.IsValid)
             {
                 tc.Tenants.Add(tenant);
+                tc.SaveChanges();
                 return View("Thanks", tenant);
             }
             else
             {
                 // validation issue
-                return View();
+                return View(tenant);
             }
         }
 
@@ -63,26 +65,6 @@ namespace Project5.Controllers
                 Debug.WriteLine(t);
             }
             return View(tc.Tenants.ToList());
-        }
-
-        // Get: Tenants/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // Post: Tenants/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,ApartmentNumber,FixDescription")]Tenant tenant)
-        {
-            if(ModelState.IsValid)
-            {
-                tc.Tenants.Add(tenant);
-                tc.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(tenant);
         }
 
         // Get: Tenants/Delete

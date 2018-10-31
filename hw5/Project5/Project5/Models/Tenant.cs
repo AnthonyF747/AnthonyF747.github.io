@@ -42,10 +42,10 @@ namespace Project5.Models
         public string FixDescription { get; set; }
 
         public bool IsHome { get; set; }
-    }
 
-    /*public override string ToString()
-    {
-        return $"{base.ToString()}: {FirstName} {LastName} {PhoneNumber} {ApartmentName} {ApartmentNumber} {Description} {IsHome}";
-    }*/
+        public override string ToString()
+        {
+        return $"{base.ToString()}: {FirstName} {LastName} {PhoneNumber} {ApartmentName} {ApartmentNumber} {FixDescription} {IsHome}";
+        }
+    }
 }
