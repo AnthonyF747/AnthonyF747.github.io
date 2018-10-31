@@ -191,3 +191,96 @@ I've added the database
 ![alt-text](img/db.JPG)
 
 I have yet to get the database to print out. I will continue to try to get my LookupView to work.
+
+Ok I got the database working and the Lookup View is working too!!! YAY!!!
+
+The code:
+
+    @model IEnumerable<Project5.Models.Tenant>
+    @{
+        ViewBag.Title = "LookupView";
+        }
+
+    <div class="container-fluid">
+    <div class="body-content" id="lkupbody">
+        <h2>LookupView</h2>
+
+        <table class="table">
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Phone Number
+                </th>
+                <th>
+                    Apartment Name
+                </th>
+                <th>
+                    Apartment Number
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    Is Home
+                </th>
+            </tr>
+            @foreach(var t in Model)
+            {
+                <tr>
+                    <td>@t.ID</td>
+                    <td>@t.FirstName</td>
+                    <td>@t.LastName</td>
+                    <td>@t.PhoneNumber</td>
+                    <td>@t.ApartmentName</td>
+                    <td>@t.ApartmentNumber</td>
+                    <td>@t.FixDescription</td>
+                    <td>@t.IsHome</td>
+                    <td>@Html.ActionLink("Add", "TenantView", "Home", new { style = "color: black" })</td>
+                    <td>@Html.ActionLink("Delete", "Delete", "Home", new { style="color: black"})</td>
+                </tr> 
+            }
+        </table>
+
+    </div>
+    
+This is the lookup view code to return the data from the database. Here is the controller code:
+
+    [HttpGet]
+        public ViewResult TenantView()
+        {
+            return View();
+        }
+
+        // Post: Tenants/Create
+        [HttpPost]
+        public ViewResult TenantView([Bind(Include = "ID,FirstName,LastName,PhoneNumber,ApartmentName,ApartmentNumber,FixDescription")]Tenant tenant)
+        {
+            if(ModelState.IsValid)
+            {
+                tc.Tenants.Add(tenant);
+                tc.SaveChanges();
+                return View("Thanks", tenant);
+            }
+            else
+            {
+                // validation issue
+                return View(tenant);
+            }
+        }
+Once the form is submitted, they are redirected to a thank you page:
+
+![alt-text](img/tyunchecked.JPG)
+
+For some reason, my thank you page has failed because I removed the original if statement, and I can't remember what it was before I changed it. The next assignment should be what my focus is at this point, but I can't leave the data base not working. I'll deal with the delete button not working, but I have the database working and returning data. Here is the database list:
+
+![alt-text](img/dblookup.JPG)
+
+I was not able to add the timestamp to the project because I ran out of time. Keeping up with the class is more important than the little things I am missing at this point. The database and making it work took longer than I expected.

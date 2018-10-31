@@ -85,7 +85,6 @@ namespace Project5.Controllers
 
         // Post: Tenant/Delete
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
             Tenant tenant = tc.Tenants.Find(id);
