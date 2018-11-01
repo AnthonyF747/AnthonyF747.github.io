@@ -14,3 +14,30 @@ Next, I loaded the Microsoft.SqlServer.Types package:
 
 ![alt-text](img/installSqlServerTypes.JPG)
 
+The next step adds a couple lines of code to the global.asax.cs file to connect with SqlServerTypes:
+
+    protected void Application_Start()
+        {
+            // For Spatial types, i.e. DbGeography
+            SqlServerTypes.Utilities.LoadNativeAssemblies(Server.MapPath("~/bin"));
+
+            // Fix from https://stackoverflow.com/questions/13174197/microsoft-sqlserver-types-version-10-or-higher-could-not-be-found-on-azure/40166192#40166192
+            SqlProviderServices.SqlServerTypesAssemblyName = typeof(SqlGeography).Assembly.FullName;
+
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+      }
+    }
+    
+The ADO gets added next:
+
+![alt-text](img/addADO.JPG)
+
+![alt-text](img/ADOonnection.JPG)
+
+![alt-text](img/codeFirst.JPG)
+
+![alt-text](img/postModelADO.JPG)
