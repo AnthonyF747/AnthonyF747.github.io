@@ -20,11 +20,12 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+
 }
 
 #mainrow {
     background-color: lightslategray !important;
+    margin-bottom: 200px;
 }
 .navbar-brand > img {
     height: 75px;
@@ -33,4 +34,8 @@ textarea {
     padding-left: -30px;
     margin-top: -20px;
     margin-left: -15px;
+}
+
+#formrow {
+    margin-bottom: 200px;
 }

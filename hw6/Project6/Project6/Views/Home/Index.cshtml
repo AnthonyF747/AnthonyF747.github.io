@@ -10,10 +10,18 @@
         <h1>World Wide Importers</h1>
     </div>
 </nav>
-<div class="row">
+<div class="row" id="formrow">
     <div class="container-fluid">
-        @Html.TextBoxFor(p => p.FullName, new { @class = "form-control" })
+        <form action="/Home/" method="post">
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <input type="text" class="form-control" style="width: 1000px; height: 46px"/>
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary btn-lg" type="submit"> Search</button>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
-
 </div>
 
