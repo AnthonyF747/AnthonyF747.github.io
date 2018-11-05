@@ -3,14 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Project6.DAL;
+using Project6.Models;
 
 namespace Project6.Controllers
 {
-    public class HomeController : Controller
+    public class NameController : Controller
     {
-        public ActionResult Index()
+        private IPersonRepository repository;
+
+        
+        public NameController(IPersonRepository personRepository)
         {
-            return View();
+            this.repository = personRepository;
+        }
+
+        public ViewResult List()
+        {
+            return View(repository.People);
+        }
+
+        public void SetPersonEnum(Person person)
+        {
+            IEnumerable<Person> people =
+                Enum.GetValues(typeof(Person))
+                .Cast<Person>();
+
+            IEnumerable<SelectListItem> items =
+                from p in people
+                select new SelectListItem
+                {
+                    Selected = p == person,
+                };
+            ViewBag.NameOfPerson = items;
         }
     }
 }
