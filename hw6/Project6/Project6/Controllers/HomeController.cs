@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace Project6.Controllers
 {
-    private IPersonRepository repository;
-
+    public class NameController : Controller
+    {
+        private IPersonRepository repository;
         
         public NameController(IPersonRepository personRepository)
         {
