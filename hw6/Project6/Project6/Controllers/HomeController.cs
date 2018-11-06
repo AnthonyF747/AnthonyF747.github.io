@@ -6,11 +6,32 @@ using System.Web.Mvc;
 
 namespace Project6.Controllers
 {
-    public class HomeController : Controller
-    {
-        public ActionResult Index()
+    private IPersonRepository repository;
+
+        
+        public NameController(IPersonRepository personRepository)
         {
-            return View();
+            this.repository = personRepository;
+        }
+
+        public ViewResult List()
+        {
+            return View(repository.People);
+        }
+
+        public void SetPersonEnum(Person person)
+        {
+            IEnumerable<Person> people =
+                Enum.GetValues(typeof(Person))
+                .Cast<Person>();
+
+            IEnumerable<SelectListItem> items =
+                from p in people
+                select new SelectListItem
+                {
+                    Selected = p == person,
+                };
+            ViewBag.NameOfPerson = items;
         }
     }
 }
