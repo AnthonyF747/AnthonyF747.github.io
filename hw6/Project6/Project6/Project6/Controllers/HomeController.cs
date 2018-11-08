@@ -10,13 +10,13 @@ namespace Project6.Controllers
 {
     public class HomeController : Controller
     {
-        private WWINameRepository repository = new WWINameRepository();
+        private WWIDbContext wwiDb = new WWIDbContext();
 
         [HttpGet]
         public ActionResult Index()
         {
-
-            return View(repository.People);
+            IEnumerable<Person> people = wwiDb.People.FirstOrDefault().GetType()
+            return View();
         }
 
         
