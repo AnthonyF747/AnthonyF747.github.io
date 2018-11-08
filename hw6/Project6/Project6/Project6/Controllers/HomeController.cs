@@ -10,12 +10,11 @@ namespace Project6.Controllers
 {
     public class HomeController : Controller
     {
-        private WWIDbContext wwiDb = new WWIDbContext();
+        private readonly WWIDbContext _wwiDb = new WWIDbContext();
 
         [HttpGet]
         public ActionResult Index()
         {
-            IEnumerable<Person> people = wwiDb.People.FirstOrDefault().GetType()
             return View();
         }
 
