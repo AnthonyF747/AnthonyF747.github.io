@@ -1,17 +1,27 @@
-﻿@{
+﻿@using Project6.Models
+
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="container-fluid" id="indexdiv">
     <div class="row">
-        <div class="col-lg-10">
-            <div class="input-group">
-                <label for="namelookup">Please enter a name:</label>
-                <input type="text" name="namelookup" class="form-control input-lg" placeholder="Enter name" />
-                <span class="input-group-btn">
-                    <button type="button" class="btn btn-primary btn-lg" id="inputbtn"></button>
-                </span>
+        @using(Html.BeginForm("Index", "Home", FormMethod.Get))
+        {
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <label for="namelookup">Please enter a name:</label>
+                    <input type="text" name="namelookup" class="form-control input-lg" placeholder="Enter name" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary btn-lg" id="inputbtn" value="Search"></button>
+                    </span>
+                </div>
             </div>
-        </div>
+        }
+    </div>
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item"></li>
+        </ul>
     </div>
 </div>

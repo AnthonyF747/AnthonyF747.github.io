@@ -1,9 +1,10 @@
-namespace Project6.Models
+namespace Project6.DAL
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using Project6.Models;
 
     public partial class WWIDbContext : DbContext
     {
