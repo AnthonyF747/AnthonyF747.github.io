@@ -41,3 +41,29 @@ The ADO gets added next:
 ![alt-text](img/codeFirst.JPG)
 
 ![alt-text](img/postModelADO.JPG)
+
+With Manuel's help, I got Linqpad downloaded and linked to the database. The problem was that I was looking for the database name for the link and not the project name. Also, the dropdown on the top toolbar has to have the database selected in order for the link to work.
+
+![alt-text](img/linqtoolbar.JPG)
+
+I created a view for returning information for the person being searched for:
+
+    public class DisplayPerson
+    {
+        public string FullName { get; set; }
+        public string PreferredName { get; set; }
+        public string PhoneNumber { get; set; }
+        public string FaxNumber { get; set; }
+        public string EmailAddress { get; set; }
+        public DateTime ValidFrom { get; set; }
+        public byte Photo { get; set; }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}: {FullName} {PreferredName} {PhoneNumber} {FaxNumber} {EmailAddress} {ValidFrom} {Photo}";
+        }
+    }
+    }
+  
+
+
