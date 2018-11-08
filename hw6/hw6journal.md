@@ -64,6 +64,42 @@ I created a view for returning information for the person being searched for:
         }
     }
     }
+    
+I don't know what this is?
+
+    λ git add .
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Content/bootstrap-theme.css.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Content/bootstrap-theme.min.css.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Content/bootstrap.css.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Content/bootstrap.min.css.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/bootstrap.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/bootstrap.min.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery-3.3.1.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery-3.3.1.min.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery-3.3.1.slim.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery-3.3.1.slim.min.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery.validate.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery.validate.min.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/jquery.validate.unobtrusive.min.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/Scripts/modernizr-2.8.3.js.
+    The file will have its original line endings in your working directory
+    warning: LF will be replaced by CRLF in hw6/Project6/Project6/Project6/fonts/glyphicons-halflings-regular.svg.
+    The file will have its original line endings in your working directory
+
+    C:\Users\anthony\gitStuff\Gitpage (master -> origin)
   
 
 

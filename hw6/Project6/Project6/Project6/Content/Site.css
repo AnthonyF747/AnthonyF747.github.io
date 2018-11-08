@@ -20,5 +20,19 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    
+}
+
+#navtitle {
+    color: white;
+}
+
+#indexdiv {
+    margin-top: 300px;
+}
+
+#inputbtn {
+    padding: 23px 35px;
+    margin-top: 25px;
+    font-size: 22px;
 }
