@@ -1,4 +1,4 @@
-﻿@using Project6.Models
+﻿@model Project6.Models.ViewModels.PersonName
 
 @{
     ViewBag.Title = "Home Page";
@@ -20,8 +20,18 @@
         }
     </div>
     <div class="row">
-        <ul class="list-group">
-            <li class="list-group-item"></li>
-        </ul>
+        <div>
+            @if (Model?.PersonSearch != null)
+            {
+                <table class="table">
+                    @foreach (var p in Model.PersonSearch)
+                    {
+                        <tr>
+                            <td>@Html.ActionLink(@p.InfoOfPerson, "PersonInfo", "Index", new { id = p.IdOfPerson }, null)</td>
+                        </tr>
+                    }
+                </table>
+            }
+        </div>
     </div>
 </div>

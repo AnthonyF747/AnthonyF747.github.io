@@ -9,6 +9,6 @@ namespace Project6.Models.ViewModels
     {
         public int IdOfPerson { get; set; }
 
-        public string InfoOfPerson { get; set }
+        public string InfoOfPerson { get; set; }
     }
 }
