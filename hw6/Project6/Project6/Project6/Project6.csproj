@@ -194,6 +194,7 @@
     <Compile Include="Models\TransactionType.cs" />
     <Compile Include="Models\VehicleTemperature.cs" />
     <Compile Include="DAL\WWIDbContext.cs" />
+    <Compile Include="Models\ViewModels\PersonIdentification.cs" />
     <Compile Include="Models\ViewModels\PersonInfo.cs" />
     <Compile Include="Models\ViewModels\PersonName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
