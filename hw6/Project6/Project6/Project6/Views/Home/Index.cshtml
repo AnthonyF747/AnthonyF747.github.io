@@ -6,16 +6,16 @@
 
 <div class="container-fluid" id="indexdiv">
     <div class="row">
-        @using(Html.BeginForm("Index", "Home", FormMethod.Get))
+        @using(Html.BeginForm("LookupPerson", "Home", FormMethod.Post))
         {
             <div class="col-lg-10">
-                <div class="input-group">
-                    <label for="namelookup">Please enter a name:</label>
-                    <input type="text" name="namelookup" class="form-control input-lg" placeholder="Enter name" />
-                    <span class="input-group-btn">
-                        <button type="submit" class="btn btn-primary btn-lg" id="inputbtn" value="Search"></button>
+                <span class="input-group-btn">
+                    @Html.LabelFor(p => p.NameOfPerson)                   
+                    @Html.TextBoxFor(p => p.NameOfPerson, new { @class="form-control" })
+                    <span>
+                    <button type="submit" class="btn btn-primary btn-lg" id="inputbtn" value="Search"></button>
                     </span>
-                </div>
+                </span>
             </div>
         }
     </div>
@@ -23,14 +23,12 @@
         <div>
             @if (Model?.PersonSearch != null)
             {
-                <table class="table">
+                <ul class="list-group">
                     @foreach (var p in Model.PersonSearch)
                     {
-                        <tr>
-                            <td>@Html.ActionLink(@p.InfoOfPerson, "PersonInfo", "Index", new { id = p.IdOfPerson }, null)</td>
-                        </tr>
+                        <li class="list-group-item">@Html.ActionLink(p.FullName, "View", "Home", new { id = p.PersonID }, null)</li>
                     }
-                </table>
+                </ul>
             }
         </div>
     </div>

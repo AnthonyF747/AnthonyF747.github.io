@@ -5,10 +5,10 @@ using System.Web;
 
 namespace Project6.Models.ViewModels
 {
-    public class PersonID
+    public class PersonIdentification
     {
         public int IdOfPerson { get; set; }
 
-        public string InfoOfPerson { get; set; }
+        public string FullNameOfPerson { get; set; }
     }
 }
