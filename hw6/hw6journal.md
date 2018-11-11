@@ -101,5 +101,5 @@ I don't know what this is?
 
     C:\Users\anthony\gitStuff\Gitpage (master -> origin)
   
-
+Ok, I have officially given up on this project. The next project is due in a couple days and I have yet to start it, so I will let Project 6 go for now and maybe I'll understand what is actually going on one day. Total epic failure. 
 
