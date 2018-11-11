@@ -7,9 +7,10 @@
 
 <div class="row" id="textrow">
     <div class="container-fluid">
-       @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+       @using (Html.BeginForm("Index", "Home", FormMethod.Get))
         {
             <div class="input-group">
+                @Html.Label("Enter a name:")
                 <span class="input-group-btn">
                     @Html.TextBoxFor(p => p.NameOfPerson, new { @class="form-control"})
                     <button class="btn btn-primary btn-sm" type="submit" id="formbtn">Submit</button>
@@ -20,18 +21,6 @@
 </div>
 <div class="row">
     <div class="container-fluid">
-        @if(Model.NameOfPerson != null)
-        {
-            <div class="wrapper">
-                <ul class="list-group">
-                    @foreach (var p in Model.PersonIDModelViews)
-                    {
-                        <li class="list-group-item">
-                            @Html.ActionLink(p.InfoOfPerson, "", "Home", new { id = p.IdOfPerson }, null)
-                        </li>
-                    }
-                </ul>
-            </div>
-        }
+        
     </div>
 </div>

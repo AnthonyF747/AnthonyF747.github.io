@@ -13,7 +13,6 @@ namespace Project6.Models.ModelView1
             {
                 this.PersonIDModelViews = new List<PersonIDModelView>();
             }
-        [Display(Name="Enter a name: ")]
         public string NameOfPerson { get; set; }
         public List<PersonIDModelView> PersonIDModelViews { get; set; }
     }
