@@ -20,6 +20,18 @@
 </div>
 <div class="row">
     <div class="container-fluid">
-        
+        @if(Model.NameOfPerson != null)
+        {
+            <div class="wrapper">
+                <ul class="list-group">
+                    @foreach (var p in Model.PersonIDModelViews)
+                    {
+                        <li class="list-group-item">
+                            @Html.ActionLink(p.InfoOfPerson, "", "Home", new { id = p.IdOfPerson }, null)
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
     </div>
 </div>
