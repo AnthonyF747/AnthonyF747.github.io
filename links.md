@@ -13,6 +13,10 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw5 journal](hw5/hw5journal.md)
 
+[hw6 journal](hw6/hw6journal.md)
+
+[hw7 journal](hw7/hw7journal.md)
+
 
 ## Homework and Demos
 
@@ -32,3 +36,6 @@ This page will provide the links to journals, homework, demos, and code.
 
 ### Homework 5
 [code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw5/Project5/Project5)
+
+### Homework 6
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw6/Project6/Project6/Project6)
