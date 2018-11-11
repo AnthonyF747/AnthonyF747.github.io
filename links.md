@@ -15,6 +15,8 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw6 journal](hw6/hw6journal.md)
 
+[hw7 journal](hw7/hw7journal.md)
+
 
 ## Homework and Demos
 
