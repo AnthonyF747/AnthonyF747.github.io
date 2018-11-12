@@ -7,10 +7,9 @@
 
 <div class="row" id="textrow">
     <div class="container-fluid">
-       @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+       @using (Html.BeginForm("Index", "Home", FormMethod.Post))
         {
             <div class="input-group">
-                @Html.Label("Enter a name:")
                 <span class="input-group-btn">
                     @Html.TextBoxFor(p => p.NameOfPerson, new { @class="form-control"})
                     <button class="btn btn-primary btn-sm" type="submit" id="formbtn">Submit</button>
