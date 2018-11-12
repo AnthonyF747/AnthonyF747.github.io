@@ -4,6 +4,15 @@
 }
 
 <div class="input-group" id="entertext">
-    @Html.TextBox("thisBox", null, new { @class="form-control"})
+    @Html.TextBox("thisBox", null, new { id = "inputtxt" })
 </div>
+<div>
+    <input id="output">
+</div>
+
+@section Javascript
+{
+    <script type="text/javascript" src="~/Scripts/MyScripts.js"></script>
+}
+
 

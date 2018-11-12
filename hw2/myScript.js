@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     btn1();                 // Stage all three functions when document is finished loading
     convert(); 
     mvimg();
