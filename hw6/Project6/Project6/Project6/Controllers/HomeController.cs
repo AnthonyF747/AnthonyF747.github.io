@@ -9,9 +9,18 @@ namespace Project6.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        private WWIDbContext _wwiDb = new WWIDbContext();
+
+        public ActionResult Index(string query)
         {
+            if(query != null)
+            {
+                return View(_wwiDb.People.FirstOrDefault().FullName);
+            }
             return View();
         }
+
+       
+
     }
 }
