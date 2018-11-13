@@ -15,7 +15,12 @@ namespace Project6.Controllers
         {
             if(query != null)
             {
-                return View(_wwiDb.People.FirstOrDefault().FullName);
+                ViewBag.show = true;
+                return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
+            }
+            else
+            {
+                ViewBag.hide = false;
             }
             return View();
         }

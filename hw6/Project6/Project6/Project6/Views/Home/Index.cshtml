@@ -21,6 +21,14 @@
 </div>
 <div class="row">
     <div class="container-fluid">
-        
+        @if(ViewBag.Show = true)
+        {
+            <ul class="list-group">
+                @foreach(var p in Model)
+                {
+                    <li class="list-group-item">@Html.ActionLink("Index", "Home")</li>
+                }
+            </ul>
+        }
     </div>
 </div>
