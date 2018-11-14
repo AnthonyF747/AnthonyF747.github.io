@@ -35,3 +35,7 @@ textarea {
     color: white;
     padding-bottom: 8px;
 }
+
+#frm1warning {
+    color: maroon;
+}
