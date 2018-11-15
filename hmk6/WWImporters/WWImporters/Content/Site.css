@@ -20,9 +20,17 @@
 input,
 select,
 textarea {
-    max-width: 750px;
+    max-width: 950px;
 }
 
 #hdtext {
     color: white;
+}
+
+#txtrow {
+    margin-top: 300px;
+}
+
+#frmbtn {
+    padding-bottom: 8px;
 }
