@@ -123,13 +123,13 @@ With help from Scot and my classmates, I finally got the textbox list to work an
             return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
         }
         
-@model IEnumerable<WWImporters.Models.Person>
+    @model IEnumerable<WWImporters.Models.Person>
 
-@{
+    @{
     ViewBag.Title = "Home Page";
-}
+    }
 
-<div class="row" id="txtrow">
+    <div class="row" id="txtrow">
     <div class="container-fluid">
         @using (Html.BeginForm("Index", "Home", FormMethod.Get))
         {
@@ -141,8 +141,8 @@ With help from Scot and my classmates, I finally got the textbox list to work an
             </div>
         }
     </div>
-</div>
-<div class="row">
+    </div>
+    <div class="row">
     <div class="container-fluid">
         @if(ViewBag.show)
         {
