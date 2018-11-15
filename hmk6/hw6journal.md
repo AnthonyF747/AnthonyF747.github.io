@@ -103,3 +103,67 @@ I don't know what this is?
   
 Ok, I have officially given up on this project. The next project is due in a couple days and I have yet to start it, so I will let Project 6 go for now and maybe I'll understand what is actually going on one day. Total epic failure. 
 
+With help from Scot and my classmates, I finally got the textbox list to work and it is receiving input through the GET form method.
+
+    public class HomeController : Controller
+        {
+        private WWIDbContext _wwiDb = new WWIDbContext();
+
+        public ActionResult Index(string query)
+        {
+            if (query == null || query == "")
+            {
+                ViewBag.show = false;
+                return View();
+            }
+            else
+            {
+                ViewBag.show = true;
+            }
+            return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
+        }
+        
+@model IEnumerable<WWImporters.Models.Person>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row" id="txtrow">
+    <div class="container-fluid">
+        @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+        {
+            <div class="input-group">
+                <span class="input-group-btn">
+                    @Html.TextBox("query", null, new { @class="form-control" })
+                    <button class="btn btn-primary btn-sm" type="submit" id="frmbtn">Submit</button>
+                </span>
+            </div>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="container-fluid">
+        @if(ViewBag.show)
+        {
+            if(Model.Count() == 0)
+            {
+                <h4 id="hdindex">Name not found. Please try again.</h4>
+            }
+            else
+            {
+                <h3>Client Search</h3>
+                <div class="list-group">
+                    <ul>
+                        @foreach (var p in Model)
+                        {
+                            <li>
+                                <a class="text-info" href="Home/PersonInfo/@p.PersonID" role="button">@p.FullName (@p.PreferredName)</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+        }
+    </div>
+
