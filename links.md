@@ -13,7 +13,7 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw5 journal](hw5/hw5journal.md)
 
-[hw6 journal](hw6/hw6journal.md)
+[hw6 journal](https://github.com/AnthonyF747/AnthonyF747.github.io/blob/master/hmk6/hw6journal.md)
 
 [hw7 journal](hw7/hw7journal.md)
 
