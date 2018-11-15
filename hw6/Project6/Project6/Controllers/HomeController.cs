@@ -13,16 +13,16 @@ namespace Project6.Controllers
 
         public ActionResult Index(string query)
         {
-            if(query == null || query == "")
+            if(query != null || query != "")
             {
-                ViewBag.hide = false;
-                return View();
+                ViewBag.show = true;
+                return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
             }
             else
             {
-                ViewBag.show = true;
+                ViewBag.show = false;
             }
-            return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
+            return View();
         }
     }
 }

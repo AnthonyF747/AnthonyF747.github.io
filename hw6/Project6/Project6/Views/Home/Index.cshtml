@@ -19,7 +19,7 @@
 </div>
 <div class="row">
     <div class="container-fluid">
-        if(Viewbag.show)
+        @if(ViewBag.show == true)
         {
             if(Model.Count() == 0)
             {
@@ -29,7 +29,12 @@
             {
                 <h3>Client Info</h3>
                 <ul class="list-group">
-                    foreach(var p in Model)
+                    @foreach(var p in Model)
+                    {
+                        <li class="list-group-item">
+                            <a>@p.FullName && (@p.PreferredName)</a>
+                        </li>
+                    }
                 </ul>
             }
         }
