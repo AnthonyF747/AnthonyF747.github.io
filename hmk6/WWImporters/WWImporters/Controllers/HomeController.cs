@@ -13,11 +13,16 @@ namespace WWImporters.Controllers
 
         public ActionResult Index(string query)
         {
-            if (query != null || query != "")
+            if (query == null || query == "")
             {
-                return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
+                ViewBag.show = false;
+                return View();
             }
-            return View();
+            else
+            {
+                ViewBag.show = true;
+            }
+            return View(_wwiDb.People.Where(p => p.FullName.ToLower().Contains(query.ToLower())).ToList());
         }
     }
 }
