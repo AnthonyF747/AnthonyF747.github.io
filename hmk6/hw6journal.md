@@ -166,4 +166,33 @@ With help from Scot and my classmates, I finally got the textbox list to work an
             }
         }
     </div>
+    
+This is the search list in action:
+
+![alt-text](img/searchlist.JPG)
+
+Code to retrieve the person search selection:
+
+    public ActionResult PersonInfo(int? id)
+        {
+            GroupInfoView infoView = new GroupInfoView
+            {
+                ThisPerson = _wwiDb.People.Find(id)
+            };
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Person thisPerson = _wwiDb.People.Find(id);
+            if(thisPerson == null)
+            {
+                return HttpNotFound();
+            }
+            return View("PersonInfo", infoView);
+        }
+    }
+    
+This is what it looks like:
+
+![alt-text](img/personinforesult.JPG)
 
