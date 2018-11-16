@@ -1,4 +1,4 @@
-﻿@model WWImporters.Models.ViewModels.PersonInfoView
+﻿@model WWImporters.Models.ViewModels.GroupInfoView
 
 @{
     ViewBag.Title = "PersonInfo";
@@ -8,8 +8,8 @@
 <div class="container-fluid">
     <div class="col-md-5">
         <ul class="list-group">
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.PersonID)</li>
-            <li class="list-group-item">@Html.DisplayFor(p => p.PersonID)</li>
+            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.PersonID)</li>
+            <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.PersonID)</li>
             <li class="list-group-item">@Html.DisplayNameFor(p => p.FullName)</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.FullName)</li>
             <li class="list-group-item">@Html.DisplayNameFor(p => p.PreferredName)</li>
