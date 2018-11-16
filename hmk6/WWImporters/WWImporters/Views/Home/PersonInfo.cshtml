@@ -5,24 +5,29 @@
 }
 
 <h2>Client/Employee Info</h2>
-<div class="container-fluid">
+<div class="container-fluid" id="personlist">
     <div class="col-md-5">
         <ul class="list-group">
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.PersonID)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Person ID:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.PersonID)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.FullName)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Full Name:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.FullName)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.PreferredName)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Preferred Name:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.PreferredName)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.PhoneNumber)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Phone Number:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.PhoneNumber)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.FaxNumber)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Fax Number:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.FaxNumber)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.EmailAddress)</li>
-            <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.EmailAddress)</li>
-            <li class="list-group-item">@Html.DisplayNameFor(p => p.ThisPerson.ValidFrom)</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Email Address:")</li>
+            <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.EmailAddress, new { Type = "button" })</li>
+            <li class="list-group-item-heading">@Html.DisplayName("Valid From:")</li>
             <li class="list-group-item">@Html.DisplayFor(p => p.ThisPerson.ValidFrom)</li>
         </ul>
+    </div>
+    <div class="container-fluid">
+        <div class="col-md-5">
+            <img src=Url(https://via.placeholder.com/150x200.png?text=Photo+Not+Available>
+        </div>
     </div>
 </div>
 
