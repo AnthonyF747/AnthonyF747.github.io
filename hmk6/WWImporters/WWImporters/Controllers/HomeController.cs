@@ -29,7 +29,7 @@ namespace WWImporters.Controllers
 
         public ActionResult PersonInfo(int? id)
         {
-            PersonInfoView infoView = new PersonInfoView
+            GroupInfoView infoView = new GroupInfoView
             {
                 ThisPerson = _wwiDb.People.Find(id)
             };
