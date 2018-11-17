@@ -49,5 +49,21 @@
             </ul>
         </div>
     </div>
+
+    <h2>Purchases</h2>
+    <div class="container-fluid">
+        <div class="col-md-5">
+            <dl>
+                <dt>@Html.DisplayName("Orders:")</dt>
+                <dd>@Html.DisplayFor(m => m.ThisCustomer.Orders.Count)</dd>
+                <dt>@Html.DisplayName("Gross Sales:")</dt>
+                <dd>@string.Format("{0:c}", ViewBag.Sales)</dd>
+                <dt>@Html.DisplayName("Gross Profit:")</dt>
+                <dd>@string.Format("{0:c}", ViewBag.Profit)</dd>
+            </dl>
+        </div>
+    </div>
 }
+
+
 

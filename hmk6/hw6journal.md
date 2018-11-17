@@ -213,3 +213,5 @@ Code to retrieve the company information of a primary contact person:
 This is the view after adding customer code:
 
 ![alt-text](img/companyInfo.JPG)
+
+

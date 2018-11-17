@@ -77,15 +77,31 @@ namespace WWImporters.Controllers
             if (infoView.ThisPerson.Customers2.Count() > 0)  // check if the customer2 column is greater than 0, which means they 
             {
                 ViewBag.SetFlag = true;                      // if greater than 0, set flag to true
+
                                                              // check the person's customer2 column and get the first customer id
                                                              // and put it in an int variable 
                 int custID = infoView.ThisPerson.Customers2.FirstOrDefault().CustomerID;
+
                                                              // set a customer view with the results of the query
                                                              // this will be sent to the PersonInfo view
                 infoView.ThisCustomer = _wwiDb.Customers.Find(custID);
 
+                                                             // set a viewbag to hold gross sales value
+                ViewBag.Sales = infoView.ThisCustomer.Orders.SelectMany(s => s.Invoices)
+                                                            .SelectMany(c => c.InvoiceLines)
+                                                            .Sum(t => t.ExtendedPrice);
 
+                                                            // set a viewbag to hold gross profit value
+                ViewBag.Profit = infoView.ThisPerson.Orders.SelectMany(s => s.Invoices)
+                                                           .SelectMany(c => c.InvoiceLines)
+                                                           .Sum(t => t.LineProfit);
 
+                                                            // create a view to sent to PersonInfo
+                infoView.ThisInvoice = infoView.ThisCustomer.Orders.SelectMany(i => i.Invoices)
+                                                                   .SelectMany(l => l.InvoiceLines)
+                                                                   .OrderByDescending(p => p.LineProfit)
+                                                                   .Take(10)
+                                                                   .ToList();
             }
 
             return View("PersonInfo", infoView);             // return PersonInfo view 
