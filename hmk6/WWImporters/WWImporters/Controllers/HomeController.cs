@@ -58,7 +58,8 @@ namespace WWImporters.Controllers
             {
                 ThisPerson = _wwiDb.People.Find(id)          // ThisPerson will equal the person in the database with the matching id
             };
-            if(id == null)                                   // if the id is null,
+
+            if (id == null)                                   // if the id is null,
             {
                                                              // return badrequest error
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -71,6 +72,21 @@ namespace WWImporters.Controllers
                 return HttpNotFound();                       // throw not found error
             }
 
+            ViewBag.SetFlag = false;                         // flag for primary contact person
+
+            if (infoView.ThisPerson.Customers2.Count() > 0)  // check if the customer2 column is greater than 0, which means they 
+            {
+                ViewBag.SetFlag = true;                      // if greater than 0, set flag to true
+                                                             // check the person's customer2 column and get the first customer id
+                                                             // and put it in an int variable 
+                int custID = infoView.ThisPerson.Customers2.FirstOrDefault().CustomerID;
+                                                             // set a customer view with the results of the query
+                                                             // this will be sent to the PersonInfo view
+                infoView.ThisCustomer = _wwiDb.Customers.Find(custID);
+
+
+
+            }
 
             return View("PersonInfo", infoView);             // return PersonInfo view 
         }

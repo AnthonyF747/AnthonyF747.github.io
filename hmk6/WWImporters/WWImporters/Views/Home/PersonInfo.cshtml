@@ -30,4 +30,24 @@
         </div>
     </div>
 </div>
+@if (ViewBag.SetFlag == true)
+{
+    <h2>Company</h2>
+    <div class="container-fluid">
+        <div class="col-md-5">
+            <ul class="list-group">
+                <li class="list-group-item-heading">@Html.DisplayName("Company Name:")</li>
+                <li class="list-group-item">@Html.DisplayFor(c => c.ThisCustomer.CustomerName)</li>
+                <li class="list-group-item-heading">@Html.DisplayName("Phone Number:")</li>
+                <li class="list-group-item">@Html.DisplayFor(c => c.ThisCustomer.PhoneNumber)</li>
+                <li class="list-group-item-heading">@Html.DisplayName("Fax Number:")</li>
+                <li class="list-group-item">@Html.DisplayFor(c => c.ThisCustomer.FaxNumber)</li>
+                <li class="list-group-item-heading">@Html.DisplayName("Website:")</li>
+                <li class="list-group-item">@Html.DisplayFor(c => c.ThisCustomer.WebsiteURL)</li>
+                <li class="list-group-item-heading">@Html.DisplayName("Customer as of:")</li>
+                <li class="list-group-item">@Html.DisplayFor(c => c.ThisCustomer.ValidFrom)</li>
+            </ul>
+        </div>
+    </div>
+}
 
