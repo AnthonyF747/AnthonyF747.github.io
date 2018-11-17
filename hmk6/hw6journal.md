@@ -236,3 +236,38 @@ Code for the sales, profit, and inventory items:
 View of purchaes:
 
 ![alt-text](img/purchases.JPG)
+
+Code for the table with items:
+
+    <h2>Purchased Items</h2>
+        <div class="container-fluid">
+            <div class="col-md-7">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayName("Stock Item \t")</th>
+                            <th>@Html.DisplayName("Description \t")</th>
+                            <th>@Html.DisplayName("Profit \t")</th>
+                            <th>@Html.DisplayName("Sales Person \t")</th>
+                        </tr>
+                    </thead>
+                    @foreach(var p in Model.ThisInvoice)
+                    {
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayFor(item => p.StockItemID)</td>
+                                <td>@Html.DisplayFor(item => p.Description)</td>
+                                <td>@Html.DisplayFor(item => p.LineProfit)</td>
+                                <td>@Html.DisplayFor(item => p.Invoice.Person4.FullName)</td>
+                            </tr>
+                        </tbody>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+    }
+    
+Here is what the table looks like:
+
+![slt-text](img/table.JPG)
