@@ -271,3 +271,6 @@ Code for the table with items:
 Here is what the table looks like:
 
 ![slt-text](img/table.JPG)
+
+
+Since I was already graded on this project, I am calling it quits and moving on.
