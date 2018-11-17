@@ -3,11 +3,9 @@
     ViewBag.Title = "Index";
 }
 
-<div class="input-group" id="entertext">
-    @Html.TextBox("thisBox", null, new { id = "inputtxt" })
-</div>
-<div>
-    <input id="output">
+<div class="form-group" id="entertext">
+    <label for="textbox"></label>
+    <input class="form-control" type="text" id="textbox"/>
 </div>
 
 @section Javascript
