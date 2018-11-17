@@ -214,4 +214,25 @@ This is the view after adding customer code:
 
 ![alt-text](img/companyInfo.JPG)
 
+Code for the sales, profit, and inventory items:
 
+    ViewBag.Sales = infoView.ThisCustomer.Orders.SelectMany(s => s.Invoices)
+                                                            .SelectMany(c => c.InvoiceLines)
+                                                            .Sum(t => t.ExtendedPrice);
+
+                                                            // set a viewbag to hold gross profit value
+                ViewBag.Profit = infoView.ThisPerson.Orders.SelectMany(s => s.Invoices)
+                                                           .SelectMany(c => c.InvoiceLines)
+                                                           .Sum(t => t.LineProfit);
+
+                                                            // create a view to sent to PersonInfo
+                infoView.ThisInvoice = infoView.ThisCustomer.Orders.SelectMany(i => i.Invoices)
+                                                                   .SelectMany(l => l.InvoiceLines)
+                                                                   .OrderByDescending(p => p.LineProfit)
+                                                                   .Take(10)
+                                                                   .ToList();
+            }
+            
+View of purchaes:
+
+![alt-text](img/purchases.JPG)
