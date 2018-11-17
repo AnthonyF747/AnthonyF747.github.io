@@ -196,3 +196,20 @@ This is what it looks like:
 
 ![alt-text](img/personinforesult.JPG)
 
+Code to retrieve the company information of a primary contact person:
+
+    ViewBag.SetFlag = false;                         // flag for primary contact person
+
+            if (infoView.ThisPerson.Customers2.Count() > 0)  // check if the customer2 column is greater than 0, which means they 
+            {
+                ViewBag.SetFlag = true;                      // if greater than 0, set flag to true
+                                                             // check the person's customer2 column and get the first customer id
+                                                             // and put it in an int variable 
+                int custID = infoView.ThisPerson.Customers2.FirstOrDefault().CustomerID;
+                                                             // set a customer view with the results of the query
+                                                             // this will be sent to the PersonInfo view
+                infoView.ThisCustomer = _wwiDb.Customers.Find(custID);
+                
+This is the view after adding customer code:
+
+![alt-text](img/companyInfo.JPG)
