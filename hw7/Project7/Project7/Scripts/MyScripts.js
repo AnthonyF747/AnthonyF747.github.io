@@ -4,5 +4,13 @@
             var value = $(this).val();
             $("#ptxt").text(value);
         })
-    .keyup();
+        .keyup();
+    cleardiv();
 });
+
+function cleardiv() {
+    $("button").click(function () {
+        $("#resultrow").empty();
+        $("#textbox").val('');
+    });
+}
