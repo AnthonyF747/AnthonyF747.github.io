@@ -16,16 +16,21 @@ textarea {
 }
 
 #indexheader {
-    text-align: center center;
+    text-align: center;
+    padding-top: 50px;
 }
 
 #entertext {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
 .banner {
     text-align: center;
     background-color: dimgray;
+}
+
+#resultrow {
+    padding-top: 30px;
 }
 

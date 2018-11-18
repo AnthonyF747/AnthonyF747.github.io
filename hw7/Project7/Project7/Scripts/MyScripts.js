@@ -1,11 +1,8 @@
 ﻿$(document).ready(function () {
-    $('#inputtxt').keyup(function (e) {
-        var txtVal = (this).val();
-        $('#output').val(txtVal);
-    });
-
-    $('#output').keyup(function (e) {
-        var txtVal = (this).val();
-        $('#inputtxt').val(txtVal);
-    });
+    $("input")
+        .keyup(function () {
+            var value = $(this).val();
+            $("#ptxt").text(value);
+        })
+    .keyup();
 });
