@@ -14,3 +14,5 @@ function cleardiv() {
         $("#textbox").val('');
     });
 }
+
+
