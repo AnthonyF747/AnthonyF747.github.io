@@ -1,8 +1,23 @@
-﻿$(document).ready(function () {             // load functions when the document is loaded
+﻿/// MyScripts.js is where my jQuery scripts reside for use
+/// in Project 7. Most functions deal with the textbox and 
+/// the input provided by the user.
+/// Author: Anthony Franco
+/// Date: November 20, 2018
+/// Class: CS460 Software Engineering I
+/// Assignment: Homework 7
+/// Description: Sending data to a Url and receiving gifs from Giphy API
+
+$(document).ready(function () {             // load functions when the document is loaded
     inputText();
     cleardiv();
 });
 
+/// inputText() works on a keypress function
+/// which checks every key stroke. The text
+/// will be sent to a div to display the textbox
+/// input, and it will be checked for a space.
+/// When a space is encountered, the getWord() 
+/// function is called.
 function inputText() {                      // function for the textbox and displaying input
     $("input").keypress(function (e) {      // a keypress function for the 'input' div (textbox)
         var value = $(this).val();          // store the input value to variable 'value'
