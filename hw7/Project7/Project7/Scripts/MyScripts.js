@@ -10,31 +10,30 @@ function inputText() {                      // function for the textbox and disp
                                             // check if the input value is a space or spacebar element
         if (e.key == " " || e.key == "spacebar") {
             getWord();                      // call the getWord function to get a word
-            $("#testtxt").text("True");
         }
-    })
-    .keyup();                               // call the function for every keyup
+    });
 }
 
 function cleardiv() {                       // function to clear the textbox and the 'resultrow' div
     $("button").click(function () {         // trigger an event when the button is clicked
         $("#resultrow").empty();            // set 'resultrow' to empty to clear div
         $("#textbox").val('');              // set 'textbox' value to '' which clears the div
+        location.reload();
     });
 }
 
-function getWord() {
-    var value = $(this).val();
-    var word = value.split(" ");
-    var preWord = word[word.length - 1];
+function getWord() {                        // function to get the previous word and get ajax set up
+    var value = $("input").val();           // putting the input from the textbox into 'value' variable
+    var word = value.split(" ");            // split the values entered and put them in the word variable
+    var preWord = word[word.length - 1];    // store the word entered before the spacebar was hit into preWord variable
         
-    $("#texttxt").text(preWord);
+    $("#testtxt").text(preWord);
     $.ajax({
-        type: "Post",
-        dataType: "Json",
-        url: "../Translate/" + preWord,
-        success: functionName,
-        error: errorOnAjax
+        type: "Post",                       // set the send method of post
+        dataType: "Json",                   // the type of data being sent is Json
+        url: "../Translate/" + preWord,     // use translate/preWord<value> in the url
+        success: functionName,              // use the function
+        error: errorOnAjax                  // or, send error
     });
 }
 
