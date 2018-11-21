@@ -52,6 +52,11 @@ function getWord() {                        // function to get the previous word
     });
 }
 
+/// Error for ajax code
+function ajaxError() {                       // function that will throw error if gif doesn't load
+    console.log("Error in Ajax code");       // send message to console
+}
+
 /// This function takes the word input and evaluates it
 /// to see if it is a string that will be used to retrieve
 /// a gif or not.
@@ -70,9 +75,4 @@ function displayGif(source) {                // function to display the gif
                                              // get the gif, set the size, store it in 'gif' variable
     var gif = '<iframe src=" ' + source + '" width="150" height="200" class="gifpic"></iframe>';
     $("#ptxt").append(gif);                  // append the gif to #ptxt div
-}
-
-/// Error for ajax code
-function ajaxError() {                       // function that will throw error if gif doesn't load
-    console.log("Error in Ajax code");       // send message to console
 }
