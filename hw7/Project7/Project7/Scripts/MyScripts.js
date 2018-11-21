@@ -47,8 +47,20 @@ function getWord() {                        // function to get the previous word
         type: "Post",                       // set the send method of post
         dataType: "Json",                   // the type of data being sent is Json
         url: "../Translate/" + preWord,     // use translate/preWord<value> in the url
-        success: functionName,              // use the function
+        success: displayPanel,              // use the displayPanel function
         error: errorOnAjax                  // or, send error
     });
+}
+
+/// This function takes the word input and evaluates it
+/// to see if it is a string that will be used to retrieve
+/// a gif or not.
+/// <param name="word">the word to evaluate</param>
+function displayPanel(word) {               // function to evaluate the word
+    if (typeof word == "string") {          // compare type of word to string
+        $("#ptxt").html(word += word + " ");// return word after another word if word is a string
+    } else {                                // if special word,
+        functionName(word.data.embed_url);  // call function to get a gif
+    }
 }
 
