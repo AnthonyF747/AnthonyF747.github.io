@@ -47,8 +47,8 @@ function getWord() {                        // function to get the previous word
         type: "Post",                       // set the send method of post
         dataType: "Json",                   // the type of data being sent is Json
         url: "../Translate/" + preWord,     // use translate/preWord<value> in the url
-        success: displayPanel,              // use the displayPanel function
-        error: errorOnAjax                  // or, send error
+        success: checkWord,                 // use the displayPanel function
+        error: ajaxError                    // or, send error
     });
 }
 
@@ -56,11 +56,23 @@ function getWord() {                        // function to get the previous word
 /// to see if it is a string that will be used to retrieve
 /// a gif or not.
 /// <param name="word">the word to evaluate</param>
-function displayPanel(word) {               // function to evaluate the word
+function checkWord(word) {                  // function to evaluate the word
     if (typeof word == "string") {          // compare type of word to string
-        $("#ptxt").html(word += word + " ");// return word after another word if word is a string
+        $("#ptxt").append(word);            // append the word to the div
     } else {                                // if special word,
-        functionName(word.data.embed_url);  // call function to get a gif
+        displayGif(word.data.embed_url);    // call function to get a gif
     }
 }
 
+/// A function to display the gif in the div (#ptxt)
+/// <param name="source">The source where gif is coming from</param>
+function displayGif(source) {                // function to display the gif
+                                             // get the gif, set the size, store it in 'gif' variable
+    var gif = '<iframe src=" ' + source + '" width="150" height="200" class="gifpic"></iframe>';
+    $("#ptxt").append(gif);                  // append the gif to #ptxt div
+}
+
+/// Error for ajax code
+function ajaxError() {                       // function that will throw error if gif doesn't load
+    console.log("Error in Ajax code");       // send message to console
+}
