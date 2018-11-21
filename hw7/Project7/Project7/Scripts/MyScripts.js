@@ -29,6 +29,9 @@ function inputText() {                      // function for the textbox and disp
     });
 }
 
+/// Button to clear the textbox and the #ptxt div.
+/// The page will also reload in order to get the 
+/// div results to show up again after button is pressed.
 function cleardiv() {                       // function to clear the textbox and the 'resultrow' div
     $("button").click(function () {         // trigger an event when the button is clicked
         $("#resultrow").empty();            // set 'resultrow' to empty to clear div
@@ -37,6 +40,8 @@ function cleardiv() {                       // function to clear the textbox and
     });
 }
 
+/// Used to get the previous word for evaluation and
+/// to set up ajax for requests
 function getWord() {                        // function to get the previous word and get ajax set up
     var value = $("input").val();           // putting the input from the textbox into 'value' variable
     var word = value.split(" ");            // split the values entered and put them in the word variable
