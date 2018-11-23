@@ -18,7 +18,7 @@ namespace Project7.Controllers
             return View();
         }
 
-        public JsonResult GetGif (string inputData)
+        public JsonResult GetGif(string inputData)
         {
             string _myGiphyURL = "http://api.giphy.com/v1/stickers/translate?api_key=" + _myGiphyKey + "&s=" + inputData;
 
@@ -36,3 +36,4 @@ namespace Project7.Controllers
             return Json(jsonResponse, JsonRequestBehavior.AllowGet);
         }
     }
+}
