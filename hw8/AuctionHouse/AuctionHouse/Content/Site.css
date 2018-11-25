@@ -22,3 +22,11 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#jumpic {
+    background-image: url("/Content/images/gavel.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
+    color: black;
+    background-color: honeydew;
+}
