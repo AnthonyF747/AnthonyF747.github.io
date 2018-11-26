@@ -23,15 +23,12 @@ namespace AuctionHouse.Controllers
         }
 
         [HttpPost]
-        public ActionResult CheckName(string fullName)
+        public ActionResult CheckName(string phoneNumber)
         {
-            Seller seller;
             foreach (var n in _auctionDb.Sellers)
             {
-                if (fullName == n.SellerFullName)
+                if (phoneNumber == n.SellerPhoneNumber)
                 {
-                    seller = _auctionDb.Sellers.Find(n.SellerFullName);
-                    ViewBag.SellerId = seller;
                     return Redirect("/Items/Create");
                 }
             }
