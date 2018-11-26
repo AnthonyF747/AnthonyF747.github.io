@@ -1,0 +1,42 @@
+﻿@model AuctionHouse.Models.Buyer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Buyer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuyerEmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuyerEmailAddress)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BuyerID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
