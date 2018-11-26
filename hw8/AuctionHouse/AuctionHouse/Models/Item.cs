@@ -27,12 +27,8 @@ namespace AuctionHouse.Models
 
         public int? SellerID { get; set; }
 
-        public int? BuyerID { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Bid> Bids { get; set; }
-
-        public virtual Buyer Buyer { get; set; }
 
         public virtual Seller Seller { get; set; }
     }

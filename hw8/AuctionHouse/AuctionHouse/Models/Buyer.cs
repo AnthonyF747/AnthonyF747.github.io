@@ -12,7 +12,7 @@ namespace AuctionHouse.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Buyer()
         {
-            Items = new HashSet<Item>();
+            Bids = new HashSet<Bid>();
         }
 
         public int BuyerID { get; set; }
@@ -30,6 +30,6 @@ namespace AuctionHouse.Models
         public string BuyerEmailAddress { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Item> Items { get; set; }
+        public virtual ICollection<Bid> Bids { get; set; }
     }
 }

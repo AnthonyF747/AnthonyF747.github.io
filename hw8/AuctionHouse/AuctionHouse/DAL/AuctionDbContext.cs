@@ -8,7 +8,7 @@ namespace AuctionHouse.Models
     public partial class AuctionDbContext : DbContext
     {
         public AuctionDbContext()
-            : base("name=AuctionDbContext")
+            : base("name=AuctionDbContext1")
         {
         }
 

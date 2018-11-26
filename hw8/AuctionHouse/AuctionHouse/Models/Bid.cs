@@ -17,6 +17,10 @@ namespace AuctionHouse.Models
 
         public int? ItemID { get; set; }
 
+        public int? BuyerID { get; set; }
+
+        public virtual Buyer Buyer { get; set; }
+
         public virtual Item Item { get; set; }
     }
 }
