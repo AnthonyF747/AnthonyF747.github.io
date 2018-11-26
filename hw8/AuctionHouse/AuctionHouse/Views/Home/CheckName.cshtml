@@ -3,7 +3,7 @@
     ViewBag.Title = "CheckName";
 }
 
-h2>Check Account</h2>
+<h2>Check Account</h2>
 <p class="lead">First, let's check if you have an account</p>
 
 @using (Html.BeginForm())
@@ -16,9 +16,9 @@ h2>Check Account</h2>
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     </div>
     <div class="form-group">
-        @Html.Label("Please Enter Your Phone Number")
+        @Html.Label("Please Enter Your Full Name")
         <div class="col-md-10">
-            @Html.TextBox("phoneNumber", null, new { @class = "form-control" })
+            @Html.TextBox("fullName", null, new { @class = "form-control" })
         </div>
     </div>
     <button class="btn btn-primary btn-sm" type="submit">Submit</button>
