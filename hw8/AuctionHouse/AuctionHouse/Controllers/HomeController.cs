@@ -34,5 +34,24 @@ namespace AuctionHouse.Controllers
             }
             return Redirect("/Sellers/Create");
         }
+
+        [HttpGet]
+        public ActionResult CheckBuyer()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CheckBuyer(string phoneNumber)
+        {
+            foreach (var n in _auctionDb.Buyers)
+            {
+                if (phoneNumber == n.BuyerPhoneNumber)
+                {
+                    return Redirect("/Bids/Create");
+                }
+            }
+            return Redirect("/Buyers/Create");
+        }
     }
 }

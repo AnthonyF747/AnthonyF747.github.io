@@ -206,6 +206,7 @@
     <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
+    <Content Include="Views\Home\CheckBuyer.cshtml" />
     <Content Include="Views\Bids\Create.cshtml" />
     <Content Include="Views\Bids\Delete.cshtml" />
     <Content Include="Views\Bids\Details.cshtml" />

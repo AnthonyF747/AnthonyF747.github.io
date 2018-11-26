@@ -52,7 +52,7 @@ namespace AuctionHouse.Controllers
             {
                 db.Buyers.Add(buyer);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Redirect("/Bids/Create");
             }
 
             return View(buyer);
