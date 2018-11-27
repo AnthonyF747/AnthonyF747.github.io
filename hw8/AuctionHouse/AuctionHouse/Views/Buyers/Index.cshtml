@@ -35,9 +35,7 @@
             @Html.DisplayFor(modelItem => item.BuyerEmailAddress)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BuyerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BuyerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BuyerID })
+            @Html.ActionLink("Details", "Details", new { id=item.BuyerID })
         </td>
     </tr>
 }
