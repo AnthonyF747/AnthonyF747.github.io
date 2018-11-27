@@ -53,5 +53,11 @@ namespace AuctionHouse.Controllers
             }
             return Redirect("/Buyers/Create");
         }
+
+        [HttpGet]
+        public ActionResult CheckBids()
+        {
+            return View();
+        }
     }
 }
