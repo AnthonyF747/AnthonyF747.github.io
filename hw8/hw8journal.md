@@ -4,4 +4,4 @@ After the last two homework assignments, I'm glad I have some basic knowledge of
 
 The landing page:
 
-![alt-text](img/landingPage.JPG)
+![alt-text]("img/landingPage.JPG")
