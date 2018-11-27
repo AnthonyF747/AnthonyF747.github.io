@@ -49,7 +49,7 @@ namespace AuctionHouse.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "BidID,BidAmount,ItemID,BuyerID")] Bid bid)
+        public ActionResult Create([Bind(Include = "BidID,BidAmount,TimeStamp,ItemID,BuyerID")] Bid bid)
         {
             if (ModelState.IsValid)
             {

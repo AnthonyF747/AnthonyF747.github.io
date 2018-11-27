@@ -13,7 +13,7 @@ namespace AuctionHouse.Models
 
         public decimal BidAmount { get; set; }
 
-        public DateTime BidTimeStamp { get; set; }
+        public DateTime BidTimeStamp { get; set; } = DateTime.Now;
 
         public int? ItemID { get; set; }
 
