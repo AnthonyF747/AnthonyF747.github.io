@@ -6,6 +6,14 @@ Class diagram for the database:
 
 ![alt-text](img/auctionCD.JPG)
 
+The Seller and Buyer classes have a 1 to many relationship with the Item class since a seller or buyer can sale or buy many items, and the Item class has a 1 to many relationship with the Bid class since an item can have many bids.
+
+The database wasn't that difficult to set up along with a basic up/down script: 
+
+![alt-text](img/upscript.JPG)
+
+![alt-text](img/downscript.JPG)
+
 The landing page:
 
 ![alt-text](img/landingPage.PNG)
