@@ -4,7 +4,7 @@ After the last two homework assignments, I'm glad I have some basic knowledge of
 
 Class diagram for the database:
 
-![alt-text](img/ClassDiagramAuctionHouse.vsdx)
+![alt-text](img/auctionCD.JPG)
 
 The landing page:
 
