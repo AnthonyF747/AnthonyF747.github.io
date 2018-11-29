@@ -17,6 +17,8 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw7 journal](hw7/hw7journal.md)
 
+[hw8 journal](hw8/hw8journal.md)
+
 
 ## Homework and Demos
 
@@ -38,4 +40,10 @@ This page will provide the links to journals, homework, demos, and code.
 [code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw5/Project5/Project5)
 
 ### Homework 6
-[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw6/Project6/Project6/Project6)
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hmk6/WWImporters/WWImporters)
+
+### Homework 7
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw7/Project7/Project7)
+
+### Homework 8
+[code](https://github.com/AnthonyF747/AnthonyF747.github.io/tree/master/hw8/AuctionHouse/AuctionHouse)
