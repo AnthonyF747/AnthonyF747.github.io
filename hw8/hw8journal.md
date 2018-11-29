@@ -116,3 +116,5 @@ Here is the code for the checkAccountView:
     </div>
     <button class="btn btn-primary btn-sm" type="submit">Submit</button>
     }
+    
+

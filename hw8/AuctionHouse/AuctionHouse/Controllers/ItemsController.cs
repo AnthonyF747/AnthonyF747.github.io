@@ -7,12 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AuctionHouse.Models;
+using AuctionHouse.Models.ModelViews;
 
 namespace AuctionHouse.Controllers
 {
     public class ItemsController : Controller
     {
-        private AuctionDbContext db = new AuctionDbContext();
+        private readonly AuctionDbContext db = new AuctionDbContext();
 
         // GET: Items
         public ActionResult Index()
@@ -28,7 +29,9 @@ namespace AuctionHouse.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+
             Item item = db.Items.Find(id);
+
             if (item == null)
             {
                 return HttpNotFound();
