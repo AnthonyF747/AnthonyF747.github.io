@@ -137,3 +137,20 @@ Here is the code for the checkAccountView:
 The seller and buyer both have the matching pages:
 
 ![alt-text](img/sellerCreate.JPG)
+
+Here is adding a seller to the database:
+
+![alt-text](img/sellerEntry.JPG)
+
+After submitting the form:
+
+![alt-text](img/sellerList.JPG)
+
+Now the new item is in the database and so is the seller. If the seller was in the database already, the seller will be taken directly to the Items/Create page. The buyer works the same, so if the buyer is in the database, the redirect action takes them to the /Bids/Create page. 
+
+![alt-text](img/createBid.JPG)
+
+After entering the bid:
+
+![alt-text](img/bidEntry.JPG)
+
