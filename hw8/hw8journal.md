@@ -144,7 +144,7 @@ Here is adding a seller to the database:
 
 After submitting the form:
 
-![alt-text](img/sellerList.JPG)
+![alt-text](img/newSellerItem.JPG)
 
 Now the new item is in the database and so is the seller. If the seller was in the database already, the seller will be taken directly to the Items/Create page. The buyer works the same, so if the buyer is in the database, the redirect action takes them to the /Bids/Create page. 
 
