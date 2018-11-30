@@ -15,7 +15,7 @@ namespace AuctionHouse.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(_auctionDb.Bids.OrderByDescending(t => t.BidTimeStamp).Take(10).ToList());
         }
 
         [HttpGet]
