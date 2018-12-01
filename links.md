@@ -19,6 +19,8 @@ This page will provide the links to journals, homework, demos, and code.
 
 [hw8 journal](hw8/hw8journal.md)
 
+[hw9 journal](hw9/hw9journal.md)
+
 
 ## Homework and Demos
 
