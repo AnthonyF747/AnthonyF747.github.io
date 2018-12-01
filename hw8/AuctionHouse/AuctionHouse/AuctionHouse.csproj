@@ -206,7 +206,6 @@
     <Content Include="Views\Buyers\Index.cshtml" />
     <Content Include="Views\Items\Create.cshtml" />
     <Content Include="Views\Items\Delete.cshtml" />
-    <Content Include="Views\Items\Details.cshtml" />
     <Content Include="Views\Items\Edit.cshtml" />
     <Content Include="Views\Items\Index.cshtml" />
     <Content Include="Views\Home\CheckBuyer.cshtml" />
@@ -216,6 +215,8 @@
     <Content Include="Views\Bids\Edit.cshtml" />
     <Content Include="Views\Bids\Index.cshtml" />
     <Content Include="Views\Home\CheckBids.cshtml" />
+    <Content Include="Views\Items\BidDetails.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

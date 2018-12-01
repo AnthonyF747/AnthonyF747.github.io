@@ -1,0 +1,24 @@
+﻿@model AuctionHouse.Models.Item
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div id="refresh">
+    <h4>Live Bids</h4>
+    <hr />
+    <div id="resultdiv">
+
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/Scripts/MyScripts.js"></script>
+}
+
