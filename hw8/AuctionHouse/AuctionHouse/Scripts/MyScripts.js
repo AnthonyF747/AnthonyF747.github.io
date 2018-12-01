@@ -15,7 +15,7 @@ setInterval(function () {
     $.ajax({
         method: "GET",
         dataType: "Json",
-        url: "..\..\Bid\BidItem",
+        url: "Items/BidDetails",
         contentType: "application/JSON, charset=utf-8",
         async: true,
         success: function (data) {
