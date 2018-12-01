@@ -26,7 +26,7 @@ Don't forget to fill in the username and password to connect to the database.
 
 ![alt-text](img/afterSQLSignon.JPG)
 
-The connection string needs to be set up in the web_config file in Visual Studio project and also in the application settings for the project on Azure. To get the connection string, go to the Azure database and click the connection string link. This connection string can be copied to paste into the appropriate places. Don't push to github with the username/password combination because you will get nasty letters from Azure/GitHub telling you that the information is out there for everyone to see, so be sure to "X" them out before pushing to github.
+The connection string needs to be set up in the web_config file in Visual Studio project and also in the application settings for the project on Azure. To get the connection string, go to the Azure database and click the connection string link. This connection string can be copied to paste into the appropriate places. Don't push to github with the username/password combination because you will get nasty letters from Azure/GitHub telling you that the information is out there for everyone to see, so be sure to "X" them out before pushing to github. The name of the connection string is the same as the dbcontext name used in the project and select sql server as what is being used.
 
 ![alt-text](img/connectStrin.JPG)
 
@@ -36,3 +36,14 @@ After setting the connection strings, create a web app on Azure. This will not h
 
 ![alt-text](img/createWebApp.JPG)
 
+The finishing touches include building the project and publishing it to Azure. Click the publish button and select existing group if using a group that already exists in Azure.
+
+![alt-text](img/publish.JPG)
+
+![alt-text](img/appService.JPG)
+
+If you add a new project:
+
+![alt-text](img/newGroup.JPG)
+
+I didn't quite understand the part about clicking something to keep the app_data stuff from being deployed, so I guess I will look for that checkbox. Otherwise, these steps should deploy the project to Azure.
