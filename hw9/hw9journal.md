@@ -26,3 +26,13 @@ Don't forget to fill in the username and password to connect to the database.
 
 ![alt-text](img/afterSQLSignon.JPG)
 
+The connection string needs to be set up in the web_config file in Visual Studio project and also in the application settings for the project on Azure. To get the connection string, go to the Azure database and click the connection string link. This connection string can be copied to paste into the appropriate places. Don't push to github with the username/password combination because you will get nasty letters from Azure/GitHub telling you that the information is out there for everyone to see, so be sure to "X" them out before pushing to github.
+
+![alt-text](img/connectStrin.JPG)
+
+![alt-text](img/appSetting.JPG)
+
+After setting the connection strings, create a web app on Azure. This will not have the project in it but will be a shell to add the project.
+
+![alt-text](img/createWebApp.JPG)
+
