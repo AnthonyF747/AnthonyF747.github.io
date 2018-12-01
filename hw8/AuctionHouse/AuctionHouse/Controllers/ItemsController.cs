@@ -39,6 +39,16 @@ namespace AuctionHouse.Controllers
             return View(item);
         }
 
+        [HttpGet]
+        public JsonResult BidDetails(int? id)
+        {
+            var data = db.Bids.Where(i => i.Item.ItemID == id)
+                                 .Select(i => new { Buyer = i.Buyer.BuyerFullName, BidAmount = i.BidAmount })
+                                 .OrderByDescending(p => p.BidAmount)
+                                 .ToList();
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
         // GET: Items/Create
         public ActionResult Create()
         {
