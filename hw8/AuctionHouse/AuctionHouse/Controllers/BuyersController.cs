@@ -1,4 +1,17 @@
-﻿using System;
+﻿/// Buyers controller will control all buyer methods.
+/// Some of the methods are not utilized buy are
+/// here in case they are needed at a later date.
+/// All methods were scaffolded.
+/// 
+/// Author: Anthony Franco
+/// Date: November 30, 2018
+/// Class: CS460 Software Engineering
+/// Assignment: Homework 8
+/// Description: create a web site with buyers, sellers,
+/// items, and bids. The site will include a database to
+/// hold all information and be deployed to Azure.
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;

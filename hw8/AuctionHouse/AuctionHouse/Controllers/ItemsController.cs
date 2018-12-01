@@ -1,4 +1,17 @@
-﻿using System;
+﻿/// Items controller will control methods associated 
+/// with items in the database. Some methods may not 
+/// be implemented but remain in case they are needed
+/// at a later time. Methods were scaffolded.
+/// 
+/// Author: Anthony Franco
+/// Date: November 30, 2018
+/// Class: CS460 Software Engineering
+/// Assignment: Homework 8
+/// Description: Creating a web site with buyers, sellers,
+/// items, and bids. The site has a database and will be
+/// deployed to Azure.
+
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -39,14 +52,21 @@ namespace AuctionHouse.Controllers
             return View(item);
         }
 
+        /// <summary>
+        /// BidDetails is for the live bid page that displays all
+        /// bids as they occur. **This doesn't not fully work**
+        /// </summary>
+        /// <param name="id">The id of the item</param>
+        /// <returns name="Json">JSON results of the search</returns>
         [HttpGet]
-        public JsonResult BidDetails(int? id)
+        public JsonResult BidDetails(int? id)                          // the item id to be viewed
         {
-               var data = db.Bids.Where(i => i.Item.ItemID == id)
-                                 .Select(i => new { Buyer = i.Buyer.BuyerFullName, BidAmount = i.BidAmount })
-                                 .OrderByDescending(p => p.BidAmount)
-                                 .ToList();
-            return Json(data, JsonRequestBehavior.AllowGet);
+               var data = db.Bids.Where(i => i.Item.ItemID == id)      // store the matching item
+                                                                       // select the buyer
+                                 .Select(i => new { Buyer = i.Buyer.BuyerFullName, i.BidAmount })  
+                                 .OrderByDescending(p => p.BidAmount)  // order bid amounts by descending order
+                                 .ToList();                            // list the results
+            return Json(data, JsonRequestBehavior.AllowGet);           // display the results of the search
         }
 
         // GET: Items/Create
