@@ -15,7 +15,7 @@ setInterval(function () {
     $.ajax({
         method: "POST",
         dataType: "Json",
-        url: "Home/Details",
+        url: "Items/BidDetails",
         contentType: "application/JSON, charset=utf-8",
         async: true,
         success: function (data) {
