@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<AuctionHouse.Models.Bid>
+
+@{
     ViewBag.Title = "Home Index";
 }
 
@@ -66,6 +68,49 @@
                         Please use the Buyer's Registration link to sign up and begin your bidding.
                     </p>
                     <a href="/Home/CheckBuyer" class="card-link">Bid on an item</a>
+                </div>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Here are the top 10 bids:</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-md-10">
+                    <table class="table">
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Item.ItemID)</th>
+                            <th>@Html.DisplayNameFor(model => model.Item.ItemName)</th>
+                            <th>@Html.DisplayNameFor(model => model.Buyer.BuyerFullName)</th>
+                            <th>@Html.DisplayNameFor(model => model.BidAmount)</th>
+                            <th>@Html.DisplayNameFor(model => model.BidTimeStamp)</th>
+                        </tr>
+                        @foreach (var b in Model)
+                        {
+                            <tr>
+                                <th>@Html.DisplayFor(item => b.Item.ItemID)</th>
+                                <th>@Html.ActionLink(b.Item.ItemName, "Details", "Items", new { id = b.Item.ItemID }, null)</th>
+                                <th>@Html.DisplayFor(bidder => b.Buyer.BuyerFullName)</th>
+                                <th>@Html.DisplayFor(bid => b.BidAmount)</th>
+                                <td>
+                                    @if(b.BidTimeStamp.Date == DateTime.Today)
+                                    {
+                                        @(string.Format("{0:T}", b.BidTimeStamp))
+                                    }
+                                    else
+                                    {
+                                        @Html.DisplayFor(time => b.BidTimeStamp)
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </table>
                 </div>
             </div>
         </div>

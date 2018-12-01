@@ -15,7 +15,7 @@ namespace AuctionHouse.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(_auctionDb.Bids.OrderByDescending(t => t.BidTimeStamp).Take(10).ToList());
         }
 
         [HttpGet]
@@ -59,42 +59,6 @@ namespace AuctionHouse.Controllers
         [HttpGet]
         public ActionResult Details()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Details(int? id)
-        {
-            ItemViewModel _IVModel = new ItemViewModel
-            {
-                ThisItem = _auctionDb.Items.Find(id)
-            };
-
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-
-            Item item = _auctionDb.Items.Find(id);
-
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-
-            ViewBag.setFlag = false;
-
-            if (_IVModel.ThisItem.Bids.Count() > 0)
-            {
-                ViewBag.setFlag = true;
-
-                int bidID = _IVModel.ThisBuyer.Bids.FirstOrDefault().BidID;
-
-                _IVModel.ThisItem = _auctionDb.Items.Find(bidID);
-
-                ViewBag.CustomerBid = _auctionDb.Items.SelectMany(b => b.Bids)
-                                        .OrderByDescending(p => p.BidAmount);
-            }
             return View();
         }
     }
