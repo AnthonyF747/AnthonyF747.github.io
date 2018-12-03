@@ -167,3 +167,13 @@ Obviously, it's not working but I hope to figure something out before Scot grade
 [ajax](https://www.w3schools.com/js/js_ajax_xmlfile.asp)
 
 [jquery](https://www.w3schools.com/jquery/default.asp)
+
+[jquery](https://learn.jquery.com/ajax/key-concepts/)
+
+[jquerymethods](https://learn.jquery.com/ajax/jquery-ajax-methods/)
+
+[ajaxjson](https://www.javatpoint.com/ajax-json-example)
+
+[mozillaajax](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
+
+[ajax](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-ajax-with-jquery--cms-25126)
