@@ -160,3 +160,10 @@ I wish I had more time with the Ajax and JSON stuff because I really don't under
 
 Obviously, it's not working but I hope to figure something out before Scot grades my project. If I don't get to it, I'll be working on understanding why so I know what's going on next term.
 
+[json](https://www.w3schools.com/js/js_json_arrays.asp)
+
+[json2](https://www.w3schools.com/js/js_json_html.asp)
+
+[ajax](https://www.w3schools.com/js/js_ajax_xmlfile.asp)
+
+[jquery](https://www.w3schools.com/jquery/default.asp)
