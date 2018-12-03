@@ -177,3 +177,7 @@ Obviously, it's not working but I hope to figure something out before Scot grade
 [mozillaajax](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started)
 
 [ajax](https://webdesign.tutsplus.com/tutorials/a-beginners-guide-to-ajax-with-jquery--cms-25126)
+
+[mozillajson](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+
+[microsoftjson](https://msdn.microsoft.com/en-us/library/bb299886.aspx)
