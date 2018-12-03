@@ -156,7 +156,7 @@ After entering the bid:
 
 I wish I had more time with the Ajax and JSON stuff because I really don't understand how it works. I know what I'm doing over winter break.
 
-![alt-text](img/liveBidPage)
+![alt-text](img/liveBidPage.JPG)
 
 Obviously, it's not working but I hope to figure something out before Scot grades my project. If I don't get to it, I'll be working on understanding why so I know what's going on next term.
 
